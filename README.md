@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://morphe.software/add-source?github=mrdarksidetm/Gboard-patches"><img alt="Latest release" src="assests/images/Morphe_Badge.svg" height="100"></a>
+  <a href="https://morphe.software/add-source?github=junksidetm/Gboard-patches"><img alt="Latest release" src="assests/images/Morphe_Badge.svg" height="100"></a>
 </p>
 
 ## Overview
@@ -297,7 +297,7 @@ Features tailored to Traditional Chinese and Zhuyin input workflows.
 
 Add this repository as a Morphe source:
 
-- [Open in Morphe](https://morphe.software/add-source?github=mrdarksidetm/Gboard-patches)
+- [Open in Morphe](https://morphe.software/add-source?github=junksidetm/Gboard-patches)
 - Or manually add `https://github.com/junksidetm/Gboard-patches`
 
 ## Build

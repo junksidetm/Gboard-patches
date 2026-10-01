@@ -78,7 +78,7 @@ Assert-Condition ($writingToolsContent -match 'ALL_LANGUAGES_ALLOWLIST_VALUE') "
 Write-Host "`n4. Checking Attribution & Credits..." -ForegroundColor Yellow
 $constantsPath = Join-Path $root "patches/src/main/kotlin/dev/jason/gboardpatches/patches/shared/Constants.kt"
 $constantsContent = Get-Content -Raw $constantsPath
-Assert-Condition ($constantsContent -match 'github\.com/mrdarksidetm') "Constants.kt attributes author to mrdarksidetm"
+Assert-Condition ($constantsContent -match 'github\.com/junksidetm') "Constants.kt attributes author to junksidetm"
 Assert-Condition ($constantsContent -match 'github\.com/jasonwu1994') "Constants.kt credits upstream jasonwu1994"
 
 Write-Host "`n==> ALL INVARIANTS PASSED SUCCESSFULLY!" -ForegroundColor Green

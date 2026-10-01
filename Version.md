@@ -365,3 +365,20 @@
   - `README.md`
   - `Version.md`
 - **Status**: 100% (Completed & Synced)
+
+## [2026-10-01 13:20:00 IST] - Release Bundle and Invariant Alignment for junksidetm
+- **Action**: Aligned release bundle metadata, author constants, and invariant validation checks to target `junksidetm/Gboard-patches` to ensure GitHub Actions release workflow succeeds.
+- **Changes**:
+  - `patches-bundle.json`: Updated `download_url` to `https://github.com/junksidetm/Gboard-patches/releases/download/v1.1.2/patches-1.1.2.mpp`.
+  - `README.md`: Updated Morphe badge and open source links to `junksidetm`.
+  - `GboardPatchesSettingsActivity.java`: Updated about author and repository URLs to `junksidetm`.
+  - `Constants.kt`: Updated `GBOARD_PATCH_AUTHOR`, `GBOARD_PATCH_AUTHOR_URL`, and `GBOARD_PATCH_REPOSITORY_URL` to `junksidetm`.
+  - `scripts/verify-invariants.ps1`: Updated author attribution test to expect `junksidetm`.
+- **Files Modified**:
+  - `patches-bundle.json`
+  - `README.md`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsActivity.java`
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/shared/Constants.kt`
+  - `scripts/verify-invariants.ps1`
+  - `Version.md`
+- **Status**: 100% (Completed & Verified)
