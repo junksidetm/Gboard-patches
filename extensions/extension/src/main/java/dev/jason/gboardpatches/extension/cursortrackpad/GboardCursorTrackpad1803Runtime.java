@@ -10,16 +10,17 @@ public final class GboardCursorTrackpad1803Runtime {
 
     public static Object applyOverriddenFlagValue(String flagName, Object stockResult) {
         try {
-            if (!(GboardCursorTrackpad1803Policy.FREE_CURSOR_FLAG.equals(flagName)
-                    || GboardCursorTrackpad1803Policy.FREE_CURSOR_LOCK_MODE_FLAG.equals(flagName))
-                    || !Boolean.FALSE.equals(stockResult)) {
+            if (!GboardCursorTrackpad1803Policy.isCursorTrackpadFlag(flagName)) {
                 return stockResult;
             }
             SharedPreferences preferences = GboardFlagRuntimeContext.preferencesOrNull();
-            return preferences == null
-                    ? stockResult
-                    : applyOverriddenFlagValue(flagName, stockResult, preferences);
+            boolean enabled = GboardCursorTrackpadSettings.readEnabled(preferences);
+            return GboardCursorTrackpad1803Policy.maybeForceFlag(flagName, stockResult, enabled);
         } catch (Throwable ignored) {
+            if (GboardCursorTrackpad1803Policy.isCursorTrackpadFlag(flagName)
+                    && GboardCursorTrackpadSettings.isCachedEnabled()) {
+                return Boolean.TRUE;
+            }
             return stockResult;
         }
     }

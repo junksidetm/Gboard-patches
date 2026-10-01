@@ -81,5 +81,21 @@ $constantsContent = Get-Content -Raw $constantsPath
 Assert-Condition ($constantsContent -match 'github\.com/junksidetm') "Constants.kt attributes author to junksidetm"
 Assert-Condition ($constantsContent -match 'github\.com/jasonwu1994') "Constants.kt credits upstream jasonwu1994"
 
+# --- Invariant 5: Cursor Trackpad Mode Permanence ---
+Write-Host "`n5. Checking Cursor Trackpad Mode Permanence..." -ForegroundColor Yellow
+$trackpadPolicyPath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Policy.java"
+$trackpadPolicyContent = Get-Content -Raw $trackpadPolicyPath
+Assert-Condition ($trackpadPolicyContent -match 'isCursorTrackpadFlag') "Policy defines isCursorTrackpadFlag"
+Assert-Condition (-not ($trackpadPolicyContent -match '!Boolean\.FALSE\.equals\(stockResult\)')) "Policy does not restrict forcing to Boolean.FALSE (permanent override)"
+
+$trackpadSettingsPath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadSettings.java"
+$trackpadSettingsContent = Get-Content -Raw $trackpadSettingsPath
+Assert-Condition ($trackpadSettingsContent -match 'isCachedEnabled') "Settings provides cached fallback for transient preference resolution failures"
+
+$trackpadRuntimePath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Runtime.java"
+$trackpadRuntimeContent = Get-Content -Raw $trackpadRuntimePath
+Assert-Condition ($trackpadRuntimeContent -match 'isCursorTrackpadFlag') "Runtime checks isCursorTrackpadFlag directly"
+Assert-Condition (-not ($trackpadRuntimeContent -match '!Boolean\.FALSE\.equals\(stockResult\)')) "Runtime does not bypass override on non-FALSE stock results"
+
 Write-Host "`n==> ALL INVARIANTS PASSED SUCCESSFULLY!" -ForegroundColor Green
 exit 0

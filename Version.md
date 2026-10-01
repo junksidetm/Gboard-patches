@@ -394,3 +394,26 @@
   - `patches-bundle.json`
   - `Version.md`
 - **Status**: 100% (Completed & Verified)
+
+## [2026-10-01 16:30:00 IST] - Upstream Sync & Release Policy Mandate & Permanent Cursor Trackpad Fix
+- **Action**: Formalized the mandatory upstream synchronization, analysis, and GitHub Actions release policy; resolved the cursor trackpad mode auto-disabling defect by making trackpad flag overrides permanent.
+- **Upstream Sync & Release Policy**:
+  - Whenever there is a new release or code changes in the original upstream repository (`jasonwu1994/Gboard-patches`), we analyze the upstream changes and verify whether they conflict with any of our custom modifications.
+  - If no unresolvable conflicts exist, we synchronize the upstream changes, re-integrate and certify all our custom fork modifications (Custom 3D Emoji Font, Pixel Rambler & Advanced Voice for English US/India, AI Writing Tools persistence, Material 3 Expressive UI, and Permanent Cursor Trackpad Mode), verify all 5 fork invariants via `scripts/verify-invariants.ps1`, and produce a new release built remotely via GitHub Actions.
+- **Cursor Trackpad Mode Permanence Fix**:
+  - **Issue Resolved**: Previously, "Enable cursor trackpad mode" showed as enabled in Settings, but automatically stopped functioning during keyboard use until toggled off, on, and Gboard restarted.
+  - **Root Cause**: `GboardCursorTrackpad1803Policy` and `GboardCursorTrackpad1803Runtime` contained a brittle `!Boolean.FALSE.equals(stockResult)` condition that bypassed overrides whenever Gboard's Phenotype background refresh returned `null` or unpopulated stock results. Additionally, transient context resolution failures in `GboardFlagRuntimeContext.preferencesOrNull()` caused the runtime to fall back to disabled.
+  - **Remedy**:
+    - `GboardCursorTrackpad1803Policy.java`: Removed `!Boolean.FALSE.equals(stockResult)` gate; added `isCursorTrackpadFlag()` to unconditionally force `Boolean.TRUE` for `free_cursor` and `free_cursor_lock_mode` whenever the feature is enabled.
+    - `GboardCursorTrackpad1803Runtime.java`: Streamlined override logic to directly evaluate `isCursorTrackpadFlag()`, with fallback to `isCachedEnabled()` during transient preference lookup interruptions or exceptions.
+    - `GboardCursorTrackpadSettings.java`: Added thread-safe `cachedEnabled` state tracking so the enabled preference remains persistently active in memory across process and thread lifecycles.
+    - `GboardCursorTrackpad1803PolicyTest.java`: Added test coverage verifying permanent forcing even when stock result is `null`.
+    - `scripts/verify-invariants.ps1`: Added Invariant 5 (Cursor Trackpad Mode Permanence) safeguarding against regressions.
+- **Files Modified**:
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadSettings.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Policy.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Runtime.java`
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803PolicyTest.java`
+  - `scripts/verify-invariants.ps1`
+  - `Version.md`
+- **Status**: 100% (Completed & Invariants Verified)

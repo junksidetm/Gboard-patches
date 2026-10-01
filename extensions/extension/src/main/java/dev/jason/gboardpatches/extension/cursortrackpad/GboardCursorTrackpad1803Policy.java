@@ -7,14 +7,16 @@ public final class GboardCursorTrackpad1803Policy {
     private GboardCursorTrackpad1803Policy() {
     }
 
+    public static boolean isCursorTrackpadFlag(String flagName) {
+        return FREE_CURSOR_FLAG.equals(flagName)
+                || FREE_CURSOR_LOCK_MODE_FLAG.equals(flagName);
+    }
+
     public static Object maybeForceFlag(
             String flagName,
             Object stockResult,
             boolean enabled) {
-        if (!enabled
-                || !(FREE_CURSOR_FLAG.equals(flagName)
-                        || FREE_CURSOR_LOCK_MODE_FLAG.equals(flagName))
-                || !Boolean.FALSE.equals(stockResult)) {
+        if (!enabled || !isCursorTrackpadFlag(flagName)) {
             return stockResult;
         }
         return Boolean.TRUE;
