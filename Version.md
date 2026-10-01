@@ -382,3 +382,15 @@
   - `scripts/verify-invariants.ps1`
   - `Version.md`
 - **Status**: 100% (Completed & Verified)
+
+## [2026-10-01 16:00:00 IST] - Upstream Release v3.11.0 Alignment with Custom Fork Modifications
+- **Action**: Aligned Gboard Patches release version to match upstream original repository release `v3.11.0` while preserving and certifying all custom fork enhancements (Custom 3D Emoji Font, Pixel Rambler & Voice Typing for English US/India, AI Writing Tools, Material 3 Expressive UI).
+- **Changes**:
+  - `gradle.properties`: Updated version from `1.1.2` to `3.11.0` to match upstream original repository release baseline.
+  - `patches-bundle.json`: Updated `version` to `3.11.0`, `download_url` to `https://github.com/junksidetm/Gboard-patches/releases/download/v3.11.0/patches-3.11.0.mpp`, and enriched release notes with upstream v3.11.0 features alongside fork modifications.
+  - `scripts/verify-invariants.ps1`: Verified all 4 core fork invariants pass 100%.
+- **Files Modified**:
+  - `gradle.properties`
+  - `patches-bundle.json`
+  - `Version.md`
+- **Status**: 100% (Completed & Verified)
