@@ -298,7 +298,7 @@ Features tailored to Traditional Chinese and Zhuyin input workflows.
 Add this repository as a Morphe source:
 
 - [Open in Morphe](https://morphe.software/add-source?github=mrdarksidetm/Gboard-patches)
-- Or manually add `https://github.com/mrdarksidetm/Gboard-patches`
+- Or manually add `https://github.com/junksidetm/Gboard-patches`
 
 ## Build
 
@@ -327,7 +327,7 @@ Generated outputs:
 
 ## Credits & Attribution
 
-- **Fork Maintainer & Feature Developer:** [@mrdarksidetm](https://github.com/mrdarksidetm) — Custom Emoji TTF font engine, English US/India Rambler & Voice persistence, AI Writing tools hardening, Autonomous Upstream Sync Engine, live emoji preview, and fork maintenance.
+- **Fork Maintainer & Feature Developer:** [@junksidetm](https://github.com/junksidetm) — Custom Emoji TTF font engine, English US/India Rambler & Voice persistence, AI Writing tools hardening, Autonomous Upstream Sync Engine, live emoji preview, and fork maintenance.
 - **Original Author & Upstream Base:** [@jasonwu1994](https://github.com/jasonwu1994) — Creator of the original [Gboard-patches](https://github.com/jasonwu1994/Gboard-patches) project.
 - **Patcher Ecosystem:** [Morphe](https://morphe.software) — Modern bytecode patching framework for Android apps.
 

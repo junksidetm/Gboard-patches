@@ -352,3 +352,16 @@
   - `assests/images/Morphe_Badge.svg` (Created)
   - `README.md` (Modified)
   - `Version.md` (Appended)
+
+## [2026-09-27 12:00:00 IST] - Codeberg Repository Synchronization
+- **Action:** Added Codeberg remote (`codeberg.org/mrdarksidetm/Gboard-patches`) and verified commit signature integrity.
+- **Changes:**
+  - **Remote Architecture:** Configured `codeberg` remote `git@codeberg.org:mrdarksidetm/Gboard-patches.git`.
+- **Status:** 100% (Configured).
+
+## [2026-10-01 12:47:00 IST] - README Documentation GitHub Links Migration
+- **Action**: Updated README.md documentation links, badges, and author references to point to active GitHub account `junksidetm` while preserving GitLab and Codeberg mappings.
+- **Files Modified**:
+  - `README.md`
+  - `Version.md`
+- **Status**: 100% (Completed & Synced)
