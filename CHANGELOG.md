@@ -1,3 +1,15 @@
+## [3.12.0](https://github.com/jasonwu1994/Gboard-patches/compare/v3.11.0...v3.12.0) (2026-10-04)
+
+### ✨ New Features
+
+* **Gboard:** add the `Frosted Glass` patch, bringing real-time background blur and customizable theme transparency to the keyboard. 👀
+* **Gboard:** fix cursor trackpad mode auto-disabling glitch by making it permanently enabled by default (Rambler pattern) across background Phenotype sync and process lifecycles.
+
+### ✨ 新功能
+
+* **Gboard:** 新增 `Frosted Glass` Patch，為鍵盤加入即時背景模糊效果，並支援自訂主題透明度。👀
+* **Gboard:** 修復游標觸控板模式自動停用問題，預設永久啟用並在背景同步與行程重啟時維持啟用。
+
 ## [3.11.0](https://github.com/jasonwu1994/Gboard-patches/compare/v3.10.0...v3.11.0) (2026-09-22)
 
 ### ✨ New Features

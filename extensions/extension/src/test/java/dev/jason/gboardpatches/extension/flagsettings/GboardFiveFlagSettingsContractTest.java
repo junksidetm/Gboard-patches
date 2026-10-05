@@ -53,8 +53,8 @@ public final class GboardFiveFlagSettingsContractTest {
 
         Assert.assertEquals("pref_force_cursor_trackpad_mode",
                 GboardCursorTrackpadSettings.PREF_KEY_ENABLED);
-        Assert.assertFalse(GboardCursorTrackpadSettings.DEFAULT_ENABLED);
-        Assert.assertFalse(GboardCursorTrackpadSettings.readEnabled(preferences));
+        Assert.assertTrue(GboardCursorTrackpadSettings.DEFAULT_ENABLED);
+        Assert.assertTrue(GboardCursorTrackpadSettings.readEnabled(preferences));
 
         Assert.assertEquals("pref_access_points_menu_redesign_enabled",
                 GboardAccessPointsMenuSettings.PREF_KEY_ENABLED);

@@ -417,3 +417,64 @@
   - `scripts/verify-invariants.ps1`
   - `Version.md`
 - **Status**: 100% (Completed & Invariants Verified)
+## [2026-10-05 20:55:00 IST] - Upstream v3.12.0 Sync & Cursor Trackpad Default-On Rambler Fix
+- **Action**: Resolved GitHub Actions `upstream-sync.yml` merge conflict by ingesting upstream `v3.12.0` (Frosted Glass patch and LAN FTP fixes), upgraded release baseline to `v3.12.0`, and permanently eliminated the cursor trackpad 2-day disabling defect by implementing the Rambler default-on architecture pattern.
+- **GitHub Actions Upstream Sync Resolution**:
+  - **Issue**: Daily GitHub Actions sync workflow failed at step "Attempt merge on sync branch" due to upstream `jasonwu1994/Gboard-patches` publishing commit `6f8064a` (`v3.12.0`: "feat: add Gboard Frosted Glass patch") which caused git conflicts with fork-specific features (`custom_emoji_font`, `cursortrackpad`, `advancedvoice`, `writingtools`, and `junksidetm` attribution).
+  - **Remedy**: Synchronized upstream `v3.12.0` baseline cleanly into the fork:
+    - Added Frosted Glass runtime suite: `GboardFrostedGlassLifecycleRuntime.java`, `GboardFrostedGlassRuntime.java`, `GboardFrostedGlassSettings.java`, `GboardFrostedGlassSettingsFeature.java`, and `GboardFrostedGlassSettingsRuntime.java`.
+    - Added Frosted Glass patch suite: `GboardFrostedGlassFeatureMarkerPatch.kt` and `GboardFrostedGlassLifecyclePatch.kt`.
+    - Registered `FEATURE_FROSTED_GLASS` in `GboardPatchesFeatureAvailability.java` and attached `GboardFrostedGlassSettingsFeature` in `GboardKeyboardLayoutSettingsGroupFeature.java` alongside `GboardEmojiFontSettingsFeature`.
+    - Added Frosted Glass localization strings to `gboard_settings_text.xml`.
+    - Integrated runtime calls (`FROSTED_GLASS_RUNTIME_ON_INPUT_VIEW_STARTED`, `FROSTED_GLASS_RUNTIME_AFTER_CONFIGURE_WINDOW`, `FROSTED_GLASS_RUNTIME_ON_INPUT_WINDOW_HIDDEN`) into `RuntimeAbi.kt`.
+    - Registered `gboardFrostedGlassPatch` in `GboardPatchRegistry.kt` and added to `morpheRegistrations`.
+    - Integrated `frosted_glass` into `gboard-port-product-catalog.json` (44 total features sorted alphabetically) and recalculated canonical SHA-256 in `gboard-port-product-catalog.sha256`.
+    - Updated contract tests in `GboardPortProductCatalogContractTest.kt` to cover `frosted_glass` version-sensitive migration scope.
+    - Updated dependency catalog: added `hidden-api-bypass = 4.3` to `gradle/libs.versions.toml`, `extensions/extension/build.gradle.kts`, and added `dependencyResolutionManagement` to `settings.gradle.kts`.
+    - Merged upstream `LanFtpEngine.java` fix reversing server and session executor shutdown order.
+    - Upgraded release metadata to `3.12.0` in `gradle.properties`, `patches-bundle.json`, `patches-list.json`, `CHANGELOG.md`, and `README.md`.
+- **Cursor Trackpad Mode Permanence Fix (Rambler Pattern)**:
+  - **Issue Resolved**: "Enable cursor trackpad mode" showed as enabled in Settings, but automatically stopped working every ~2 days during keyboard operation until toggled off and on again.
+  - **Root Cause**: In `GboardCursorTrackpadSettings.java`, `DEFAULT_ENABLED` was set to `false`, with `cachedEnabled = false` and `cachedInitialized = false`. When Gboard executed periodic background Phenotype flag synchronizations or restarted its service process under Android memory management, `GboardFlagRuntimeContext.preferencesOrNull()` momentarily evaluated to `null`. As a consequence, `readEnabled(null)` returned `false`, and Gboard cached `false` for `free_cursor` and `free_cursor_lock_mode` in its internal Phenotype storage, while the settings UI still showed `true` from disk SharedPreferences.
+  - **Remedy**:
+    - `GboardCursorTrackpadSettings.java`: Implemented the proven Rambler default-on architecture pattern (`GboardAdvancedVoiceSettings`): set `DEFAULT_ENABLED = true;`, initialized `cachedEnabled = true;` and `cachedInitialized = true;`. Whenever preferences resolution is transiently unavailable or uninitialized during background syncs, `readEnabled(null)` permanently defaults to `true`. User explicit opt-out via Settings continues to write and cache `false` reliably.
+    - `GboardCursorTrackpad1803PolicyTest.java`: Added unit test `defaultEnabledIsTrueAndResilientToNullPreferences()` verifying that `DEFAULT_ENABLED`, `isCachedEnabled()`, `readEnabled(null)`, and runtime flag evaluation unconditionally resolve to `Boolean.TRUE` without requiring context.
+    - `GboardFiveFlagSettingsContractTest.java`: Updated contract assertions to verify `DEFAULT_ENABLED == true` and `readEnabled(preferences) == true` by default.
+- **Verification & Fork Invariants**:
+  - Validated all 5 core fork pillars:
+    1. Custom Emoji Font Feature (.ttf loader, reflection inspection, fallback chain, SHA-256 catalog hash).
+    2. Voice & Rambler Configuration (Rambler default backend, en-US and en-IN universal support).
+    3. AI Writing Tools Persistence (proofread and writing_tools flags, universal language tags allowlist).
+    4. Author Attribution & Credits (`junksidetm` repository and upstream `jasonwu1994` credit).
+    5. Cursor Trackpad Mode Permanence (`DEFAULT_ENABLED = true`, unconditional flag overrides, cached fallback).
+  - All 5 invariant checks passed 100%.
+- **Files Created/Modified**:
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassLifecycleRuntime.java` (Created)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassRuntime.java` (Created)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassSettings.java` (Created)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassSettingsFeature.java` (Created)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassSettingsRuntime.java` (Created)
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/frostedglass/GboardFrostedGlassFeatureMarkerPatch.kt` (Created)
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/frostedglass/GboardFrostedGlassLifecyclePatch.kt` (Created)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadSettings.java` (Modified)
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803PolicyTest.java` (Modified)
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/flagsettings/GboardFiveFlagSettingsContractTest.java` (Modified)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardKeyboardLayoutSettingsGroupFeature.java` (Modified)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpEngine.java` (Modified)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesFeatureAvailability.java` (Modified)
+  - `extensions/extension/src/main/settings-text/gboard_settings_text.xml` (Modified)
+  - `extensions/extension/build.gradle.kts` (Modified)
+  - `gradle/libs.versions.toml` (Modified)
+  - `settings.gradle.kts` (Modified)
+  - `gradle.properties` (Modified to 3.12.0)
+  - `patches-bundle.json` (Modified to 3.12.0)
+  - `patches-list.json` (Modified to 3.12.0)
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPatchRegistry.kt` (Modified)
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeAbi.kt` (Modified)
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.json` (Modified)
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.sha256` (Modified)
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPortProductCatalogContractTest.kt` (Modified)
+  - `CHANGELOG.md` (Modified)
+  - `README.md` (Modified)
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Invariants Certified)

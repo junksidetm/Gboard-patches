@@ -496,7 +496,9 @@
       "feature_id": "custom_theme",
       "public_patch_name": "Custom Theme",
       "feature_marker": "dev.jason.gboardpatches.feature.custom_theme",
-      "target_family_ids": ["theme.import"],
+      "target_family_ids": [
+        "theme.import"
+      ],
       "migration_scope": "version-sensitive",
       "consumer_files": [
         "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme/GboardCustomThemeAssetsPatch.kt",
@@ -507,7 +509,26 @@
         "patches/src/main/resources/custom-theme-assets/catalog.json"
       ],
       "contributions": [
-        { "contribution_id": "custom_theme.bytecode_and_resources", "anchor_family_id": "dedicated_bytecode", "phase": "dedicated", "order": 100, "required_bindings": ["custom_theme_fragment_peer_field", "custom_theme_launcher_launch", "custom_theme_peer_context_field", "custom_theme_peer_launcher_field", "custom_theme_peer_result_handler", "custom_theme_plus_handler", "custom_theme_result_handler", "custom_theme_validator"], "runtime_calls": ["CUSTOM_THEME_RUNTIME_HANDLE_ACTIVITY_RESULT", "CUSTOM_THEME_RUNTIME_INTERCEPT_PLUS"] }
+        {
+          "contribution_id": "custom_theme.bytecode_and_resources",
+          "anchor_family_id": "dedicated_bytecode",
+          "phase": "dedicated",
+          "order": 100,
+          "required_bindings": [
+            "custom_theme_fragment_peer_field",
+            "custom_theme_launcher_launch",
+            "custom_theme_peer_context_field",
+            "custom_theme_peer_launcher_field",
+            "custom_theme_peer_result_handler",
+            "custom_theme_plus_handler",
+            "custom_theme_result_handler",
+            "custom_theme_validator"
+          ],
+          "runtime_calls": [
+            "CUSTOM_THEME_RUNTIME_HANDLE_ACTIVITY_RESULT",
+            "CUSTOM_THEME_RUNTIME_INTERCEPT_PLUS"
+          ]
+        }
       ]
     },
     {
@@ -537,7 +558,10 @@
       "feature_id": "editing_access_points",
       "public_patch_name": "Toolbar Editing Buttons",
       "feature_marker": "dev.jason.gboardpatches.feature.editing_access_points",
-      "target_family_ids": ["accesspoint.1803", "editingaccesspoints"],
+      "target_family_ids": [
+        "accesspoint.1803",
+        "editingaccesspoints"
+      ],
       "migration_scope": "version-sensitive",
       "consumer_files": [
         "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/editingaccesspoints/GboardEditingAccessPoints1803Targets.kt",
@@ -548,7 +572,19 @@
         "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/accesspoint/GboardAccessPointContributions1803Targets.kt"
       ],
       "contributions": [
-        { "contribution_id": "editing_access_points.runtime", "anchor_family_id": "dedicated_bytecode", "phase": "dedicated", "order": 1260, "required_bindings": [], "runtime_calls": ["ACCESS_POINT_CONTRIBUTIONS_1803_AFTER_CONTROLLER_CREATED", "ACCESS_POINT_CONTRIBUTIONS_1803_INCLUDE_ORDER_CATALOG", "EDITING_ACCESS_POINTS_START", "EDITING_ACCESS_POINTS_END"] }
+        {
+          "contribution_id": "editing_access_points.runtime",
+          "anchor_family_id": "dedicated_bytecode",
+          "phase": "dedicated",
+          "order": 1260,
+          "required_bindings": [],
+          "runtime_calls": [
+            "ACCESS_POINT_CONTRIBUTIONS_1803_AFTER_CONTROLLER_CREATED",
+            "ACCESS_POINT_CONTRIBUTIONS_1803_INCLUDE_ORDER_CATALOG",
+            "EDITING_ACCESS_POINTS_START",
+            "EDITING_ACCESS_POINTS_END"
+          ]
+        }
       ]
     },
     {
@@ -876,6 +912,34 @@
           "required_bindings": [],
           "runtime_calls": [
             "FLOW_MODE_RUNTIME_MAP_KEY_CODE"
+          ]
+        }
+      ]
+    },
+    {
+      "feature_id": "frosted_glass",
+      "public_patch_name": "Frosted Glass",
+      "feature_marker": "dev.jason.gboardpatches.feature.frosted_glass",
+      "target_family_ids": [
+        "frosted_glass.lifecycle"
+      ],
+      "migration_scope": "version-sensitive",
+      "consumer_files": [
+        "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/frostedglass/GboardFrostedGlassFeatureMarkerPatch.kt",
+        "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/frostedglass/GboardFrostedGlassLifecyclePatch.kt",
+        "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPatchRegistry.kt"
+      ],
+      "contributions": [
+        {
+          "contribution_id": "frosted_glass.lifecycle",
+          "anchor_family_id": "dedicated_bytecode",
+          "phase": "dedicated",
+          "order": 1950,
+          "required_bindings": [],
+          "runtime_calls": [
+            "FROSTED_GLASS_RUNTIME_ON_INPUT_VIEW_STARTED",
+            "FROSTED_GLASS_RUNTIME_AFTER_CONFIGURE_WINDOW",
+            "FROSTED_GLASS_RUNTIME_ON_INPUT_WINDOW_HIDDEN"
           ]
         }
       ]

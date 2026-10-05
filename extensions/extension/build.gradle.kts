@@ -116,6 +116,7 @@ android {
 dependencies {
     implementation(libs.apache.ftpserver.core)
     implementation(libs.apache.mina.core)
+    implementation(libs.hidden.api.bypass)
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")
 }

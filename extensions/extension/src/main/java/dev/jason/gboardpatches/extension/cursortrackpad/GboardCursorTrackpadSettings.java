@@ -6,10 +6,10 @@ import dev.jason.gboardpatches.extension.flagsettings.GboardBooleanFlagSettings;
 
 public final class GboardCursorTrackpadSettings {
     public static final String PREF_KEY_ENABLED = "pref_force_cursor_trackpad_mode";
-    public static final boolean DEFAULT_ENABLED = false;
+    public static final boolean DEFAULT_ENABLED = true;
 
-    private static volatile boolean cachedEnabled = false;
-    private static volatile boolean cachedInitialized = false;
+    private static volatile boolean cachedEnabled = true;
+    private static volatile boolean cachedInitialized = true;
 
     private GboardCursorTrackpadSettings() {
     }
