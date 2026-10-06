@@ -53,4 +53,32 @@ public class GboardEmojiFontRuntimeTest {
         }
         Assert.assertFalse(GboardEmojiFontRuntime.isMetadataEmoji(new MockNonEmojiKeyDef()));
     }
+
+    @Test
+    public void testHasAlphanumericWords() {
+        Assert.assertTrue(GboardEmojiFontRuntime.hasAlphanumericWords("English (US)"));
+        Assert.assertTrue(GboardEmojiFontRuntime.hasAlphanumericWords("Space"));
+        Assert.assertTrue(GboardEmojiFontRuntime.hasAlphanumericWords("Enter"));
+        Assert.assertTrue(GboardEmojiFontRuntime.hasAlphanumericWords("Next line"));
+        Assert.assertTrue(GboardEmojiFontRuntime.hasAlphanumericWords("Hello world"));
+
+        Assert.assertFalse(GboardEmojiFontRuntime.hasAlphanumericWords("😀"));
+        Assert.assertFalse(GboardEmojiFontRuntime.hasAlphanumericWords(""));
+        Assert.assertFalse(GboardEmojiFontRuntime.hasAlphanumericWords(null));
+        Assert.assertFalse(GboardEmojiFontRuntime.hasAlphanumericWords("a"));
+    }
+
+    @Test
+    public void testContainsEmoji() {
+        Assert.assertTrue(GboardEmojiFontRuntime.containsEmoji("😀"));
+        Assert.assertTrue(GboardEmojiFontRuntime.containsEmoji("🔥"));
+        Assert.assertTrue(GboardEmojiFontRuntime.containsEmoji("Hello 😀"));
+        Assert.assertTrue(GboardEmojiFontRuntime.containsEmoji("good morning ☀️"));
+
+        Assert.assertFalse(GboardEmojiFontRuntime.containsEmoji("Hello world"));
+        Assert.assertFalse(GboardEmojiFontRuntime.containsEmoji("English (US)"));
+        Assert.assertFalse(GboardEmojiFontRuntime.containsEmoji("Enter"));
+        Assert.assertFalse(GboardEmojiFontRuntime.containsEmoji(""));
+        Assert.assertFalse(GboardEmojiFontRuntime.containsEmoji(null));
+    }
 }

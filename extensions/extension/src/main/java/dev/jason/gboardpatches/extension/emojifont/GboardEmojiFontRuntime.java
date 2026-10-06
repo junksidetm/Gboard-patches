@@ -25,17 +25,49 @@ public final class GboardEmojiFontRuntime {
     private GboardEmojiFontRuntime() {
     }
 
+    private static File findSystemTextFont() {
+        for (String path : new String[]{
+                "/system/fonts/Roboto-Regular.ttf",
+                "/system/fonts/NotoSans-Regular.ttf",
+                "/system/fonts/GoogleSans-Regular.ttf",
+                "/system/fonts/DroidSans.ttf"
+        }) {
+            File file = new File(path);
+            if (file.exists() && file.canRead()) {
+                return file;
+            }
+        }
+        return null;
+    }
+
     public static Typeface loadTypefaceFromFile(File fontFile) {
         if (fontFile == null || !fontFile.exists() || fontFile.length() == 0) {
             return null;
         }
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
             try {
-                android.graphics.fonts.Font font =
+                android.graphics.fonts.Font customFont =
                         new android.graphics.fonts.Font.Builder(fontFile).build();
-                android.graphics.fonts.FontFamily family =
-                        new android.graphics.fonts.FontFamily.Builder(font).build();
-                return new Typeface.CustomFallbackBuilder(family)
+                android.graphics.fonts.FontFamily customFamily =
+                        new android.graphics.fonts.FontFamily.Builder(customFont).build();
+
+                File sysFontFile = findSystemTextFont();
+                if (sysFontFile != null) {
+                    try {
+                        android.graphics.fonts.Font sysTextFont =
+                                new android.graphics.fonts.Font.Builder(sysFontFile).build();
+                        android.graphics.fonts.FontFamily sysTextFamily =
+                                new android.graphics.fonts.FontFamily.Builder(sysTextFont).build();
+                        return new Typeface.CustomFallbackBuilder(sysTextFamily)
+                                .addCustomFallback(customFamily)
+                                .setSystemFallback("sans-serif")
+                                .build();
+                    } catch (Throwable t) {
+                        Log.w(TAG, "CustomFallbackBuilder with system text family failed, using emoji family as base: " + t.getMessage());
+                    }
+                }
+
+                return new Typeface.CustomFallbackBuilder(customFamily)
                         .setSystemFallback("sans-serif")
                         .build();
             } catch (Throwable t) {
@@ -341,12 +373,17 @@ public final class GboardEmojiFontRuntime {
         if (view == null || typeface == null) return;
         if (view instanceof TextView) {
             TextView tv = (TextView) view;
+            CharSequence text = tv.getText();
+            // If the view displays normal text words without any emoji (e.g. "English (US)", "Space", "Enter"),
+            // never override its typeface to prevent word separation or font collisions.
+            if (hasAlphanumericWords(text) && !containsEmoji(text)) {
+                return;
+            }
             if (forceEmojiKey) {
                 tv.setTypeface(typeface);
             } else {
-                CharSequence text = tv.getText();
                 CharSequence desc = tv.getContentDescription();
-                if (isEmojiOrSymbol(text) || isEmojiOrSymbol(desc)) {
+                if (containsEmoji(text) || isEmojiOrSymbol(text) || isEmojiOrSymbol(desc)) {
                     tv.setTypeface(typeface);
                 }
             }
@@ -357,6 +394,46 @@ public final class GboardEmojiFontRuntime {
                 applyToViewTree(vg.getChildAt(i), typeface, forceEmojiKey);
             }
         }
+    }
+
+    public static boolean hasAlphanumericWords(CharSequence text) {
+        if (text == null || text.length() == 0) return false;
+        int length = text.length();
+        int letterOrDigitCount = 0;
+        for (int i = 0; i < length; ) {
+            int codePoint = Character.codePointAt(text, i);
+            i += Character.charCount(codePoint);
+            if (Character.isLetterOrDigit(codePoint)) {
+                letterOrDigitCount++;
+                if (letterOrDigitCount >= 2) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static boolean containsEmoji(CharSequence text) {
+        if (text == null || text.length() == 0) return false;
+        int length = text.length();
+        for (int i = 0; i < length; ) {
+            int codePoint = Character.codePointAt(text, i);
+            i += Character.charCount(codePoint);
+            if (isGenuineEmojiCodePoint(codePoint)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isGenuineEmojiCodePoint(int codePoint) {
+        if (codePoint >= 0x1F000 && codePoint <= 0x1FAFF) return true; // Emoticons, Pictographs, Symbols, Transport
+        if (codePoint >= 0x2600 && codePoint <= 0x27BF) return true;   // Misc Symbols, Dingbats
+        if (codePoint >= 0x2B50 && codePoint <= 0x2B55) return true;   // Stars, circles
+        if (codePoint >= 0xFE00 && codePoint <= 0xFE0F) return true;   // Variation Selectors
+        if (codePoint >= 0xE0020 && codePoint <= 0xE007F) return true; // Tag characters (flags)
+        if (codePoint == 0x200D) return true;                          // Zero-width joiner
+        return false;
     }
 
     public static boolean isEmojiOrSymbol(CharSequence text) {

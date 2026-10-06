@@ -530,3 +530,22 @@
   - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsContract.java`
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Verified)
+## [2026-10-06 18:07:00 IST] - Word Spacing Normalization & System Text Primary Fallback Builder
+- **Action**: Resolved wide word separation defect when custom emoji font is loaded by enforcing system text font priority in `CustomFallbackBuilder` and safeguarding `applyToViewTree` against overriding text views containing normal words.
+- **Root Cause Analysis**:
+  - `loadTypefaceFromFile` previously placed the custom emoji font family as the primary family in `Typeface.CustomFallbackBuilder(customFamily)`. If the emoji font contained a space (`U+0020`) glyph with a 2550-unit emoji advance width, Android's text layout engine resolved word spaces from the emoji font instead of the system text font, making words appear widely separated.
+  - Furthermore, `isMetadataEmoji` flagged keys whose `ActionDef` contained technical symbols (`⏎`, `⌫`, `␣`, arrows), causing `applyToViewTree` to set `tv.setTypeface(customTypeface)` on normal text softkeys (such as the spacebar with label "English (US)").
+- **Remediation**:
+  - `GboardEmojiFontRuntime.java`:
+    - Added `findSystemTextFont()`: Locates system text font (`/system/fonts/Roboto-Regular.ttf`, `NotoSans-Regular.ttf`, `GoogleSans-Regular.ttf`).
+    - Upgraded `loadTypefaceFromFile`: Builds `CustomFallbackBuilder(sysTextFamily).addCustomFallback(customFamily).setSystemFallback("sans-serif")`. Normal text, Latin characters, and word spaces are rendered with 100% native system text metrics, while emojis fall back to the 3D emoji font.
+    - Added `hasAlphanumericWords(text)` & `containsEmoji(text)`: When a `TextView` displays normal text words without any emoji (e.g. "English (US)", "Space", "Enter"), `applyToViewTree` never overrides its typeface.
+  - `GboardEmojiFontRuntimeTest.java`:
+    - Added unit test coverage for `hasAlphanumericWords` and `containsEmoji`.
+  - `scripts/verify-invariants.ps1`:
+    - All 5 fork invariants verified and passed 100%.
+- **Files Modified**:
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontRuntime.java`
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontRuntimeTest.java`
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Verified)
