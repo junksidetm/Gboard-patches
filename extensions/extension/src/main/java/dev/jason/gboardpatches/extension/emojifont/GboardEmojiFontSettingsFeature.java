@@ -111,9 +111,15 @@ public final class GboardEmojiFontSettingsFeature implements GboardPatchesSettin
                             host,
                             new String[]{"font/ttf", "font/otf", "font/*", "application/x-font-ttf", "application/x-font-truetype", "application/octet-stream", "*/*"},
                             document -> {
-                                if (document != null && document.getData() != null && document.getData().length > 0) {
-                                    boolean saved = GboardEmojiFontRuntime.saveCustomEmojiFont(
-                                            hostContext, document.getData(), document.getDisplayName());
+                                if (document != null && (document.getUri() != null || (document.getData() != null && document.getData().length > 0))) {
+                                    boolean saved;
+                                    if (document.getUri() != null) {
+                                        saved = GboardEmojiFontRuntime.saveCustomEmojiFontFromUri(
+                                                hostContext, document.getUri(), document.getDisplayName());
+                                    } else {
+                                        saved = GboardEmojiFontRuntime.saveCustomEmojiFont(
+                                                hostContext, document.getData(), document.getDisplayName());
+                                    }
                                     if (saved) {
                                         GboardEmojiFontSettings.writeEnabled(preferences, true);
                                     }

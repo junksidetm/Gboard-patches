@@ -1,6 +1,7 @@
 package dev.jason.gboardpatches.extension.settings;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -329,16 +330,33 @@ public final class GboardPatchesSettingsContract {
         private final String displayName;
         private final String mimeType;
         private final byte[] data;
+        private final Uri uri;
 
         public BinaryDocument(String displayName, String mimeType, byte[] data) {
+            this(displayName, mimeType, data, null);
+        }
+
+        public BinaryDocument(String displayName, String mimeType, byte[] data, Uri uri) {
             this.displayName = displayName;
             this.mimeType = mimeType;
-            this.data = data == null ? new byte[0] : data.clone();
+            this.data = data;
+            this.uri = uri;
         }
 
         public String getDisplayName() { return displayName; }
         public String getMimeType() { return mimeType; }
-        public byte[] getData() { return data.clone(); }
+        public byte[] getData() { return data != null ? data : new byte[0]; }
+        public Uri getUri() { return uri; }
+
+        public java.io.InputStream openInputStream(Context context) throws java.io.IOException {
+            if (uri != null && context != null) {
+                java.io.InputStream stream = context.getContentResolver().openInputStream(uri);
+                if (stream != null) {
+                    return stream;
+                }
+            }
+            return new java.io.ByteArrayInputStream(getData());
+        }
     }
 
     public interface PositiveIntegerConsumer {

@@ -1351,12 +1351,15 @@ public final class GboardPatchesSettingsActivity extends Activity
             return;
         }
         try {
+            byte[] bytes = null;
+            try {
+                bytes = readBinaryDocument(uri);
+            } catch (OutOfMemoryError oom) {
+                Log.w(TAG, "Heap full reading document into byte array; falling back to direct URI streaming", oom);
+            }
             reader.accept(new GboardPatchesSettingsContract.BinaryDocument(
                     queryDisplayName(uri), getContentResolver().getType(uri),
-                    readBinaryDocument(uri)));
-        } catch (OutOfMemoryError oom) {
-            Log.e(TAG, "Out of memory reading selected binary document", oom);
-            Toast.makeText(this, "File is too large for device memory.", Toast.LENGTH_SHORT).show();
+                    bytes, uri));
         } catch (Throwable throwable) {
             Log.w(TAG, "Failed to read selected binary document", throwable);
             Toast.makeText(this, DOCUMENT_READ_FAILED, Toast.LENGTH_SHORT).show();
@@ -1394,16 +1397,42 @@ public final class GboardPatchesSettingsActivity extends Activity
         return uri.getLastPathSegment();
     }
 
+    private static final int MAX_IN_MEMORY_BINARY_DOCUMENT_BYTES = 4 * 1024 * 1024;
+
+    private long queryDocumentSize(Uri uri) {
+        try (Cursor cursor = getContentResolver().query(uri,
+                new String[]{OpenableColumns.SIZE}, null, null, null)) {
+            if (cursor != null && cursor.moveToFirst()) {
+                int index = cursor.getColumnIndex(OpenableColumns.SIZE);
+                if (index >= 0 && !cursor.isNull(index)) {
+                    return cursor.getLong(index);
+                }
+            }
+        } catch (Throwable ignored) {
+            // Fall back
+        }
+        return -1L;
+    }
+
     private byte[] readBinaryDocument(Uri uri) throws java.io.IOException {
+        long size = queryDocumentSize(uri);
+        if (size > MAX_IN_MEMORY_BINARY_DOCUMENT_BYTES) {
+            return null;
+        }
         try (InputStream input = getContentResolver().openInputStream(uri)) {
             if (input == null) {
                 throw new java.io.IOException("Content resolver returned null input stream");
             }
-            int available = Math.max(32768, Math.min(input.available(), 32 * 1024 * 1024));
+            int available = Math.max(32768, Math.min(input.available(), MAX_IN_MEMORY_BINARY_DOCUMENT_BYTES));
             ByteArrayOutputStream output = new ByteArrayOutputStream(available);
             byte[] buffer = new byte[32768];
+            int total = 0;
             int read;
             while ((read = input.read(buffer)) != -1) {
+                total += read;
+                if (total > MAX_IN_MEMORY_BINARY_DOCUMENT_BYTES) {
+                    return null;
+                }
                 output.write(buffer, 0, read);
             }
             return output.toByteArray();

@@ -499,3 +499,34 @@
   - `.github/workflows/upstream-sync.yml` (Hardened conflict branch base and PR creation)
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Verified)
+## [2026-10-06 17:47:30 IST] - Zero-OOM Font Streaming & Memory Limit Elimination
+- **Action**: Resolved "File is too large for device memory" defect in Custom Emoji Font importer by eliminating multi-copy byte array heap allocations and implementing direct ContentResolver URI streaming.
+- **Root Cause Analysis**:
+  - `GboardPatchesSettingsActivity.java` previously loaded selected binary documents into memory via `ByteArrayOutputStream` followed by `output.toByteArray()`.
+  - `BinaryDocument` then performed defensive `.clone()` operations on constructor and getter, creating four separate full-size copies of the file in the Dalvik/ART Java heap (~260+ MB for large emoji fonts).
+  - This exceeded Gboard's maximum process heap limit, triggering an `OutOfMemoryError` caught at line 1357 which toasted "File is too large for device memory."
+- **Remediation**:
+  - `GboardPatchesSettingsContract.java`: Added `Uri uri` field to `BinaryDocument` and removed redundant defensive `.clone()` calls to preserve heap headroom.
+  - `GboardPatchesSettingsActivity.java`: Passed document `Uri` to `BinaryDocument` with automatic graceful fallback to URI streaming if memory is constrained.
+  - `GboardEmojiFontRuntime.java`: Implemented `saveCustomEmojiFontFromUri(Context, Uri, String)` and `isValidFontFile(File)`, streaming font files directly from `ContentResolver` to destination cache via 64 KB buffer with zero heap duplication.
+  - `GboardEmojiFontSettingsFeature.java`: Delegated directly to `saveCustomEmojiFontFromUri` when `document.getUri()` is present.
+- **Verification**:
+  - Executed `scripts/verify-invariants.ps1`: All 5 fork invariants passed 100%.
+- **Files Modified**:
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsContract.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsActivity.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontRuntime.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontSettingsFeature.java`
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Verified)
+## [2026-10-06 17:51:00 IST] - Pre-emptive Heap Guard & Stream Abstraction for Binary Documents
+- **Action**: Added proactive in-memory size capping (4 MB) in `GboardPatchesSettingsActivity.java` and unified stream abstraction `BinaryDocument.openInputStream(Context)` to guarantee zero memory pressure when importing large custom emoji fonts.
+- **Details**:
+  - `GboardPatchesSettingsActivity.java`: Added `queryDocumentSize(Uri)` using `OpenableColumns.SIZE`. Any binary document larger than 4 MB (or exceeding 4 MB during read) bypasses in-memory byte buffer allocation completely and provides `null` data with `Uri`, eliminating GC thrashing before calling features.
+  - `GboardPatchesSettingsContract.java`: Added `BinaryDocument.openInputStream(Context)` to provide a unified streaming interface for present and future features.
+  - `scripts/verify-invariants.ps1`: Verified all 5 fork invariants pass 100%.
+- **Files Modified**:
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsActivity.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsContract.java`
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Verified)

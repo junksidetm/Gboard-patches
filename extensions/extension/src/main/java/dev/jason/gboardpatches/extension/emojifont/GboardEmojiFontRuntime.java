@@ -4,12 +4,15 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.util.concurrent.atomic.AtomicReference;
 
 public final class GboardEmojiFontRuntime {
@@ -137,6 +140,80 @@ public final class GboardEmojiFontRuntime {
             return true;
         } catch (Throwable throwable) {
             Log.w(TAG, "Failed to save custom emoji font", throwable);
+            return false;
+        }
+    }
+
+    public static boolean saveCustomEmojiFontFromUri(Context context, Uri uri, String fontName) {
+        if (context == null || uri == null) {
+            return false;
+        }
+        try {
+            File fontFile = GboardEmojiFontSettings.getFontFile(context);
+            if (fontFile == null) return false;
+
+            File parent = fontFile.getParentFile();
+            if (parent != null && !parent.exists()) {
+                parent.mkdirs();
+            }
+
+            File tempFile = new File(fontFile.getAbsolutePath() + ".tmp");
+            try (InputStream in = context.getContentResolver().openInputStream(uri);
+                 FileOutputStream fos = new FileOutputStream(tempFile)) {
+                if (in == null) return false;
+                byte[] buffer = new byte[65536];
+                int len;
+                while ((len = in.read(buffer)) != -1) {
+                    fos.write(buffer, 0, len);
+                }
+                fos.flush();
+            }
+
+            boolean valid = false;
+            try {
+                Typeface testTypeface = loadTypefaceFromFile(tempFile);
+                if (testTypeface != null) {
+                    valid = true;
+                }
+            } catch (Throwable t) {
+                Log.w(TAG, "Typeface validation check encountered non-fatal error: " + t.getMessage());
+            }
+
+            if (!valid) {
+                valid = isValidFontFile(tempFile);
+            }
+
+            if (!valid) {
+                tempFile.delete();
+                return false;
+            }
+
+            if (fontFile.exists()) {
+                fontFile.delete();
+            }
+            if (!tempFile.renameTo(fontFile)) {
+                tempFile.delete();
+                return false;
+            }
+
+            SharedPreferences prefs = GboardEmojiFontSettings.preferences(context);
+            GboardEmojiFontSettings.writeSettings(prefs, true, fontName, fontFile.length());
+            invalidateCache();
+            return true;
+        } catch (Throwable throwable) {
+            Log.w(TAG, "Failed to stream custom emoji font from URI", throwable);
+            return false;
+        }
+    }
+
+    private static boolean isValidFontFile(File file) {
+        if (file == null || !file.exists() || file.length() < 12) return false;
+        try (FileInputStream fis = new FileInputStream(file)) {
+            byte[] header = new byte[12];
+            int read = fis.read(header);
+            if (read < 12) return false;
+            return isValidFontData(header);
+        } catch (Throwable t) {
             return false;
         }
     }
