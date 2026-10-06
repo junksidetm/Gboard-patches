@@ -549,3 +549,25 @@
   - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontRuntimeTest.java`
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Verified)
+## [2026-10-06 23:41:00 IST] - Release v3.12.1 for Morphe with All Custom Fork Mods
+- **Action**: Prepared and published official Morphe-compatible release `v3.12.1` consolidating all custom fork enhancements, memory safety fixes, and font fallback protections.
+- **Included Modifications**:
+  - **Custom 3D Emoji Font (.ttf)**: In-app font picker, private font caching, and SoftKeyView live rendering without root or Magisk.
+  - **Word Spacing Normalization & Fallback Protection**: Primary system text font priority in `CustomFallbackBuilder` preventing wide word separation; safeguarded text-only softkeys from font overriding.
+  - **Memory-Safe SAF Streaming**: Direct URI streaming avoiding OOM and high GC pressure on low-RAM devices during font imports.
+  - **Permanent Cursor Trackpad Mode**: Spacebar cursor trackpad navigation enabled by default across reboots and process restarts.
+  - **Pixel Voice Typing & Rambler**: Offline voice typing backend enabled for English (US) and English (India).
+  - **AI Writing Tools**: Proofread, rewrite, and tone adjustment features unlocked across all locales.
+  - **Frosted Glass Keyboard Panel**: Live background blur for keyboard panel with custom theme opacity support (Android 12+).
+  - **Material 3 Expressive UI**: Complete Material 3 Expressive styling tokens and rounded panel customization.
+  - **Morphe Integration**: Synced release metadata and verified `.mpp` bundle pipeline for Morphe Manager.
+- **Release Metadata Updates**:
+  - `gradle.properties`: Bumped version to `3.12.1`.
+  - `patches-bundle.json`: Updated version to `3.12.1`, generated download URL, and comprehensive release description.
+  - `patches-list.json`: Updated version to `3.12.1`.
+- **Files Modified**:
+  - `gradle.properties`
+  - `patches-bundle.json`
+  - `patches-list.json`
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Verified)
