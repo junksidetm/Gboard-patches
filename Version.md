@@ -478,3 +478,24 @@
   - `README.md` (Modified)
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Invariants Certified)
+## [2026-10-06 16:41:00 IST] - Upstream DAG Merge Reconciliation & Sync Workflow Hardening
+- **Action**: Resolved GitHub Actions `upstream-sync.yml` scheduled failure by recording `upstream/main` (`6f8064a`) into Git DAG via ours merge strategy, creating missing `upstream-sync` label on repository, and hardening sync workflow PR creation logic.
+- **Root Cause Analysis of Failed GitHub Action**:
+  - Daily GitHub Actions workflow `upstream-sync.yml` failed on 2026-10-06 at 04:15:58 UTC.
+  - Previous manual sync commit `d1dc674` integrated all upstream `v3.12.0` code as a single-parent commit instead of a Git merge commit.
+  - `git merge-base HEAD upstream/main` evaluated to `cdb8a1c` (pre-v3.12.0) instead of `6f8064a`, causing the automated sync runner to detect false-positive "unmerged upstream commits".
+  - Attempted automatic merge produced 3-way merge conflicts across already-integrated files (`CHANGELOG.md`, `patches-bundle.json`, `gboard-port-product-catalog.json`, etc.).
+  - Fallback PR creation failed because the `upstream-sync` label did not exist on the remote repository and `$syncBranch` had no diff against `main`.
+- **Remediation & Hardening**:
+  - Executed `git merge -s ours upstream/main` to register upstream `v3.12.0` (`6f8064a`) in Git history DAG, making `git merge-base HEAD upstream/main` resolve to `6f8064a` and establishing a clean base for future releases.
+  - Created official `upstream-sync` label on GitHub (`junksidetm/Gboard-patches`) with hex color `#1d76db`.
+  - Updated `.github/workflows/upstream-sync.yml`:
+    - Pointed `$syncBranch` to `upstream/$env:UPSTREAM_BRANCH` upon conflict abort so the branch genuinely contains the upstream delta and GitHub allows creating the PR.
+    - Added `$LASTEXITCODE` checks around `gh pr create` calls to ensure fallback PR creation succeeds even if label assignment fails.
+- **Verification**:
+  - Ran `scripts/verify-invariants.ps1`: All 5 invariant suites passed 100%.
+  - Verified `git merge-base HEAD upstream/main` matches `upstream/main` HEAD (`6f8064a`).
+- **Files Modified**:
+  - `.github/workflows/upstream-sync.yml` (Hardened conflict branch base and PR creation)
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Verified)
