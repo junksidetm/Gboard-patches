@@ -1,6 +1,13 @@
 <h1 align="center">Gboard Patches</h1>
 
 <p align="center">
+  <a href="https://github.com/junksidetm/Gboard-patches"><img src="https://img.shields.io/badge/GitHub-Main-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Main" /></a>
+  <a href="https://codeberg.org/mrdarksidetm/Gboard-patches"><img src="https://img.shields.io/badge/Codeberg-Mirror-2185d0?style=flat-square&logo=codeberg&logoColor=white" alt="Codeberg Mirror" /></a>
+  <a href="https://gitlab.com/mrdarksidetm/Gboard-patches"><img src="https://img.shields.io/badge/GitLab-Mirror-fc6d26?style=flat-square&logo=gitlab&logoColor=white" alt="GitLab Mirror" /></a>
+  <a href="https://github.com/jasonwu1994/Gboard-patches"><img src="https://img.shields.io/badge/Upstream-jasonwu1994%2FGboard--patches-blue?style=flat-square&logo=github" alt="Upstream Source" /></a>
+</p>
+
+<p align="center">
   Morphe patches for Gboard with Custom Emoji TTF font support, global usability improvements, and Taiwan-focused enhancements.
 </p>
 
@@ -336,6 +343,15 @@ Generated outputs:
 - **Fork Maintainer & Feature Developer:** [@junksidetm](https://github.com/junksidetm) — Custom Emoji TTF font engine, English US/India Rambler & Voice persistence, AI Writing tools hardening, Autonomous Upstream Sync Engine, live emoji preview, and fork maintenance.
 - **Original Author & Upstream Base:** [@jasonwu1994](https://github.com/jasonwu1994) — Creator of the original [Gboard-patches](https://github.com/jasonwu1994/Gboard-patches) project.
 - **Patcher Ecosystem:** [Morphe](https://morphe.software) — Modern bytecode patching framework for Android apps.
+
+## 🌐 Source Mirrors
+
+- **Main (GitHub)**: [github.com/junksidetm/Gboard-patches](https://github.com/junksidetm/Gboard-patches)
+- **Mirror (Codeberg)**: [codeberg.org/mrdarksidetm/Gboard-patches](https://codeberg.org/mrdarksidetm/Gboard-patches)
+- **Mirror (GitLab)**: [gitlab.com/mrdarksidetm/Gboard-patches](https://gitlab.com/mrdarksidetm/Gboard-patches)
+- **Upstream Source**: [github.com/jasonwu1994/Gboard-patches](https://github.com/jasonwu1994/Gboard-patches)
+
+---
 
 ## License
 
