@@ -592,3 +592,71 @@
   - `README.md`
   - `Version.md`
 - **Status**: 100% (Completed & Synced)
+
+
+## [2026-10-18 11:07:00 IST] - Upstream v3.13.0 Sync & Release v3.13.0 with Direct Boot Swipe Dismiss Hardening
+- **Action**: Resolved GitHub Actions `upstream-sync.yml` merge conflict by ingesting upstream `v3.13.0` (Swipe Down to Dismiss Keyboard patch and Frosted Glass Direct Boot crash fix), upgraded release baseline and patch bundle to `v3.13.0`, hardened `upstream-sync.yml` workflow against GraphQL permission errors, and proactively fixed Direct Boot crash vulnerability in the new `Swipe Down to Dismiss Keyboard` feature.
+- **GitHub Actions Upstream Sync Resolution & Root Cause Fix**:
+  - **Issue**: Daily GitHub Actions sync workflow failed at step "Attempt merge on sync branch" due to upstream `jasonwu1994/Gboard-patches` publishing `v3.13.0` (commit `976b749`: "feat: add swipe down dismissal and fix gesture conflicts and Frosted Glass boot crash"), resulting in git conflicts with fork-specific features (`custom_emoji_font`, `cursortrackpad`, `advancedvoice`, `writingtools`, `junksidetm` attribution, and version properties). Additionally, automated PR creation failed due to GraphQL permissions on standard repository GITHUB_TOKEN.
+  - **Remedy**:
+    - Synchronized upstream `v3.13.0` baseline cleanly into the fork:
+      - Added Swipe Down Dismiss runtime suite: `GboardSwipeDismissGesture.java`, `GboardSwipeDismissRuntime.java`, `GboardSwipeDismissSettings.java`, and `GboardSwipeDismissSettingsFeature.java`.
+      - Added Swipe Down Dismiss patch suite: `GboardSwipeDismissBytecodePatch.kt` and `GboardSwipeDismissFeatureMarkerPatch.kt`.
+      - Registered `FEATURE_SWIPE_DISMISS` in `GboardPatchesFeatureAvailability.java` and attached `GboardSwipeDismissSettingsFeature` in `GboardKeyboardToolsSettingsGroupFeature.java`.
+      - Added Swipe Down Dismiss localization strings to `gboard_settings_text.xml` while strictly preserving `gboard_patches_emoji_font_*` entries.
+      - Integrated runtime call `SWIPE_DISMISS_RUNTIME_ON_HEADER_TOUCH` into `RuntimeAbi.kt`.
+      - Registered `gboardSwipeDismissPatch` in `GboardPatchRegistry.kt` and added to `morpheRegistrations` alongside `gboardCustomEmojiFontPatch`.
+      - Integrated `swipe_down_to_dismiss_keyboard` into `gboard-port-product-catalog.json` (45 total features sorted alphabetically) and recalculated canonical SHA-256 (`2921dc882682680b4ddb6d9491f7436c60fcc06055ab07b3200da1bcbcc32667`) in `gboard-port-product-catalog.sha256`.
+      - Updated contract tests in `GboardPortProductCatalogContractTest.kt` to cover both `custom_emoji_font` and `swipe_down_to_dismiss_keyboard` version-sensitive migration scope.
+      - Ingested upstream Direct Boot crash fixes for Frosted Glass in `GboardFrostedGlassRuntime.java`, `GboardFrostedGlassSettingsRuntime.java`, and `GboardFlagRuntimeContext.java`.
+      - Ingested upstream `GboardClipboardContentLimitRuntime.java` and `LanFtpEngine.java` resource quiesce order fix.
+      - Hardened `.github/workflows/upstream-sync.yml` by wrapping `gh pr create` in try-catch to prevent unhandled GraphQL permission failure from masking sync status.
+      - Upgraded release metadata to `3.13.0` in `gradle.properties`, `patches-bundle.json`, `patches-list.json`, `CHANGELOG.md`, and `README.md`.
+- **Direct Boot Resilience Hardening (Swipe Down Dismiss Feature)**:
+  - **Issue Identified & Fixed**: While upstream fixed Direct Boot crashes for `Frosted Glass`, the newly introduced `GboardSwipeDismissRuntime` and `GboardSwipeDismissSettings` accessed credential-encrypted `SharedPreferences` without verifying `isUserUnlocked(context)` and lacked exception containment in `onHeaderTouch`. If user touches the keyboard header before first unlock (e.g., lock screen password), Gboard would crash.
+  - **Remedy**:
+    - `GboardSwipeDismissSettings.java`: Added `GboardFlagRuntimeContext.isUserUnlocked(context)` check and exception handling in `readEnabled` and `writeEnabled`.
+    - `GboardSwipeDismissRuntime.java`: Added fail-closed try-catch block wrapping all touch interception logic in `onHeaderTouch`, added `isUserUnlocked` check in `enabled(context)`, and widened exception catching in `isHeaderHolder`.
+    - `GboardFrostedGlassDirectBootTest.java`: Added unit test `swipeDismissRuntimeFailsClosedDuringDirectBoot()` verifying that settings fail closed before user unlock and recover cleanly afterwards.
+- **Verification & Fork Invariants**:
+  - Validated all 5 core fork invariants:
+    1. Custom Emoji Font Feature (TTF loader, SAF streaming, custom fallback builder, SHA-256 catalog hash).
+    2. Voice & Rambler Configuration (Rambler default backend, en-US and en-IN universal support).
+    3. AI Writing Tools Persistence (proofread and writing_tools flags, universal language tags allowlist).
+    4. Author Attribution & Credits (`junksidetm` repository and upstream `jasonwu1994` credit).
+    5. Cursor Trackpad Mode Permanence (`DEFAULT_ENABLED = true`, unconditional flag overrides, cached fallback).
+  - All 5 invariant checks passed 100%.
+- **Files Created/Modified**:
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissGesture.java` (Created)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissRuntime.java` (Created & Hardened)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissSettings.java` (Created & Hardened)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissSettingsFeature.java` (Created)
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassDirectBootTest.java` (Created & Extended)
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissGestureTest.java` (Created)
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissSettingsTest.java` (Created)
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/swipedismiss/GboardSwipeDismissBytecodePatch.kt` (Created)
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/swipedismiss/GboardSwipeDismissFeatureMarkerPatch.kt` (Created)
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardSwipeDismissPatchRegistryTest.kt` (Created)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboardcontentlimit/GboardClipboardContentLimitRuntime.java` (Merged)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flagsettings/GboardFlagRuntimeContext.java` (Merged)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassRuntime.java` (Merged)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassSettingsRuntime.java` (Merged)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardKeyboardToolsSettingsGroupFeature.java` (Merged)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpEngine.java` (Merged)
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesFeatureAvailability.java` (Merged)
+  - `extensions/extension/src/main/settings-text/gboard_settings_text.xml` (Resolved & Merged)
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpEngineLifecycleTest.java` (Merged)
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardSettingsGroupingTest.java` (Merged)
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPatchRegistry.kt` (Resolved & Merged)
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeAbi.kt` (Resolved & Merged)
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.json` (Resolved & Merged)
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.sha256` (Recalculated)
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPortProductCatalogContractTest.kt` (Merged)
+  - `.github/workflows/upstream-sync.yml` (Hardened)
+  - `gradle.properties` (Bumped to 3.13.0)
+  - `patches-bundle.json` (Bumped to 3.13.0 & Synced)
+  - `patches-list.json` (Bumped to 3.13.0 & Synced)
+  - `CHANGELOG.md` (Updated)
+  - `README.md` (Updated)
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Invariants Certified)

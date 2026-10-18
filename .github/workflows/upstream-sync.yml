@@ -116,16 +116,20 @@ jobs:
           Please inspect the `$syncBranch` branch, resolve conflicts manually, and merge once verified.
           "@
 
-              if (-not $existingPr) {
-                  gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync] Merge conflict detected from jasonwu1994/Gboard-patches" --body "$body" --label "upstream-sync"
-                  if ($LASTEXITCODE -ne 0) {
-                      gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync] Merge conflict detected from jasonwu1994/Gboard-patches" --body "$body"
+              try {
+                  if (-not $existingPr) {
+                      gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync] Merge conflict detected from jasonwu1994/Gboard-patches" --body "$body" --label "upstream-sync"
+                      if ($LASTEXITCODE -ne 0) {
+                          gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync] Merge conflict detected from jasonwu1994/Gboard-patches" --body "$body"
+                      }
+                  } else {
+                      gh pr comment $existingPr --body "$body"
                   }
-              } else {
-                  gh pr comment $existingPr --body "$body"
+              } catch {
+                  Write-Host "Warning: Could not create or comment on PR automatically: $_" -ForegroundColor Yellow
               }
 
-              throw "Merge conflict detected. Automated PR opened on $syncBranch."
+              throw "Merge conflict detected between upstream and fork custom enhancements. Sync branch $syncBranch pushed."
           }
 
           Write-Host "Merge succeeded cleanly without git conflicts."
@@ -191,13 +195,17 @@ jobs:
 
           The `main` branch remains protected and untouched. Please review `$syncBranch`.
           "@
-              if (-not $existingPr) {
-                  gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync Regression] Invariant or test check failed" --body "$body" --label "upstream-sync"
-                  if ($LASTEXITCODE -ne 0) {
-                      gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync Regression] Invariant or test check failed" --body "$body"
+              try {
+                  if (-not $existingPr) {
+                      gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync Regression] Invariant or test check failed" --body "$body" --label "upstream-sync"
+                      if ($LASTEXITCODE -ne 0) {
+                          gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync Regression] Invariant or test check failed" --body "$body"
+                      }
+                  } else {
+                      gh pr comment $existingPr --body "$body"
                   }
-              } else {
-                  gh pr comment $existingPr --body "$body"
+              } catch {
+                  Write-Host "Warning: Could not create or comment on PR automatically: $_" -ForegroundColor Yellow
               }
               throw "Upstream updates broke invariants or tests."
           }
