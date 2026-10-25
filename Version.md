@@ -668,3 +668,1206 @@
   - `extensions/extension/src/main/settings-text/gboard_settings_text.xml`
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Verified)
+
+## [2026-10-21 00:30:00 IST] - Comprehensive Repository Directory & File System Index
+- **Action**: Fully indexed all repository directories (302) and files (895), mapping structural hierarchy and defining the functional responsibility of each component.
+- **Directory Structure & Purpose**:
+  - `.github/`: GitHub platform repository configuration and community templates.
+  - `.github/workflows/`: GitHub Actions CI/CD workflows for builds, releases, and tests.
+  - `assests/`: Visual assets, iconography, vector drawables, images, and fonts.
+  - `assests/images/`: Asset directory storing images resources.
+  - `docs/`: Project documentation, architectural specifications, and web showcase.
+  - `docs/assets/`: Repository directory component: `docs/assets`.
+  - `docs/assets/features/`: Repository directory component: `docs/assets/features`.
+  - `docs/assets/features/web-clipboard/`: Repository directory component: `docs/assets/features/web-clipboard`.
+  - `extensions/`: Repository directory component: `extensions`.
+  - `extensions/calculator/`: Repository directory component: `extensions/calculator`.
+  - `extensions/calculator/src/`: Repository directory component: `extensions/calculator/src`.
+  - `extensions/calculator/src/main/`: Repository directory component: `extensions/calculator/src/main`.
+  - `extensions/calculator/src/main/java/`: Repository directory component: `extensions/calculator/src/main/java`.
+  - `extensions/calculator/src/main/java/dev/`: Repository directory component: `extensions/calculator/src/main/java/dev`.
+  - `extensions/calculator/src/main/java/dev/jason/`: Repository directory component: `extensions/calculator/src/main/java/dev/jason`.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/`: Repository directory component: `extensions/calculator/src/main/java/dev/jason/gboardpatches`.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/`: Repository directory component: `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension`.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/`: Repository directory component: `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator`.
+  - `extensions/calculator/src/test/`: Repository directory component: `extensions/calculator/src/test`.
+  - `extensions/calculator/src/test/java/`: Repository directory component: `extensions/calculator/src/test/java`.
+  - `extensions/calculator/src/test/java/dev/`: Repository directory component: `extensions/calculator/src/test/java/dev`.
+  - `extensions/calculator/src/test/java/dev/jason/`: Repository directory component: `extensions/calculator/src/test/java/dev/jason`.
+  - `extensions/calculator/src/test/java/dev/jason/gboardpatches/`: Repository directory component: `extensions/calculator/src/test/java/dev/jason/gboardpatches`.
+  - `extensions/calculator/src/test/java/dev/jason/gboardpatches/extension/`: Repository directory component: `extensions/calculator/src/test/java/dev/jason/gboardpatches/extension`.
+  - `extensions/calculator/src/test/java/dev/jason/gboardpatches/extension/calculator/`: Repository directory component: `extensions/calculator/src/test/java/dev/jason/gboardpatches/extension/calculator`.
+  - `extensions/extension/`: Repository directory component: `extensions/extension`.
+  - `extensions/extension/native-payload/`: Repository directory component: `extensions/extension/native-payload`.
+  - `extensions/extension/native-payload/arm64-v8a/`: Repository directory component: `extensions/extension/native-payload/arm64-v8a`.
+  - `extensions/extension/src/`: Repository directory component: `extensions/extension/src`.
+  - `extensions/extension/src/main/`: Repository directory component: `extensions/extension/src/main`.
+  - `extensions/extension/src/main/java/`: Repository directory component: `extensions/extension/src/main/java`.
+  - `extensions/extension/src/main/java/dev/`: Repository directory component: `extensions/extension/src/main/java/dev`.
+  - `extensions/extension/src/main/java/dev/jason/`: Repository directory component: `extensions/extension/src/main/java/dev/jason`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accessibilitylayout/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accessibilitylayout`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspoint/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspoint`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointcount/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointcount`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointsmenu/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointsmenu`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/addsymbols/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/addsymbols`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/bluetoothmicrophone`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/calculator/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/calculator`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/hooks/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/hooks`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/sections/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/sections`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboardcontentlimit/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboardcontentlimit`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/closeproactivesuggestions/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/closeproactivesuggestions`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/core/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/core`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/developeroptions/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/developeroptions`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/editingaccesspoints/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/editingaccesspoints`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojisize/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojisize`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/featureflags/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/featureflags`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flagsettings/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flagsettings`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flowmode/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flowmode`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/config/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/config`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/settings/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/settings`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/manualincognito/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/manualincognito`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/ocr/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/ocr`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickinsert/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickinsert`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickjs/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickjs`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/roundedkeyboard/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/roundedkeyboard`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/keyboardpreview/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/keyboardpreview`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settingshomepage/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settingshomepage`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/splitkeyboard/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/splitkeyboard`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/symbolfooter/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/symbolfooter`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinbottomrow`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinslide/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinslide`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyintoggle/`: Repository directory component: `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyintoggle`.
+  - `extensions/extension/src/main/res/`: Repository directory component: `extensions/extension/src/main/res`.
+  - `extensions/extension/src/main/res/drawable/`: Repository directory component: `extensions/extension/src/main/res/drawable`.
+  - `extensions/extension/src/main/res/raw/`: Repository directory component: `extensions/extension/src/main/res/raw`.
+  - `extensions/extension/src/main/res/values/`: Repository directory component: `extensions/extension/src/main/res/values`.
+  - `extensions/extension/src/main/res/values-night/`: Repository directory component: `extensions/extension/src/main/res/values-night`.
+  - `extensions/extension/src/main/settings-text/`: Repository directory component: `extensions/extension/src/main/settings-text`.
+  - `extensions/extension/src/test/`: Repository directory component: `extensions/extension/src/test`.
+  - `extensions/extension/src/test/java/`: Repository directory component: `extensions/extension/src/test/java`.
+  - `extensions/extension/src/test/java/dev/`: Repository directory component: `extensions/extension/src/test/java/dev`.
+  - `extensions/extension/src/test/java/dev/jason/`: Repository directory component: `extensions/extension/src/test/java/dev/jason`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accessibilitylayout/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accessibilitylayout`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accesspointcount/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accesspointcount`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accesspointsmenu/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accesspointsmenu`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/addsymbols/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/addsymbols`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/flagstore`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/bluetoothmicrophone`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/calculator/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/calculator`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboard/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboard`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboardcontentlimit/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboardcontentlimit`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/closeproactivesuggestions/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/closeproactivesuggestions`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/cursortrackpad/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/cursortrackpad`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/developeroptions/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/developeroptions`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/editingaccesspoints/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/editingaccesspoints`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/emojifont/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/emojifont`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/emojisize/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/emojisize`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/featureflags/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/featureflags`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/flagsettings/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/flagsettings`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/flowmode/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/flowmode`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/frostedglass/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/frostedglass`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/keyboard/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/keyboard`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/config/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/config`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/settings/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/settings`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/manualincognito/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/manualincognito`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/ocr/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/ocr`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/quickinsert/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/quickinsert`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/quickjs/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/quickjs`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/rambler/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/rambler`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/roundedkeyboard/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/roundedkeyboard`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/keyboardpreview/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/keyboardpreview`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settingshomepage/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settingshomepage`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/spacebarlogo/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/spacebarlogo`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/splitkeyboard/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/splitkeyboard`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/swipedismiss/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/swipedismiss`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/symbolfooter/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/symbolfooter`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/websearch/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/websearch`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinbottomrow`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinslide/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinslide`.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyintoggle/`: Repository directory component: `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyintoggle`.
+  - `extensions/extension/src/test/java/j$/`: Repository directory component: `extensions/extension/src/test/java/j$`.
+  - `extensions/extension/src/test/java/j$/time/`: Repository directory component: `extensions/extension/src/test/java/j$/time`.
+  - `gradle/`: Gradle wrapper distribution configurations and wrapper JAR binary.
+  - `gradle/wrapper/`: Gradle wrapper bootstrapping properties and executable JAR.
+  - `patches/`: Repository directory component: `patches`.
+  - `patches/src/`: Repository directory component: `patches/src`.
+  - `patches/src/bindingCompiler/`: Repository directory component: `patches/src/bindingCompiler`.
+  - `patches/src/bindingCompiler/kotlin/`: Repository directory component: `patches/src/bindingCompiler/kotlin`.
+  - `patches/src/bindingCompiler/kotlin/dev/`: Repository directory component: `patches/src/bindingCompiler/kotlin/dev`.
+  - `patches/src/bindingCompiler/kotlin/dev/jason/`: Repository directory component: `patches/src/bindingCompiler/kotlin/dev/jason`.
+  - `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/`: Repository directory component: `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches`.
+  - `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/tools/`: Repository directory component: `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/tools`.
+  - `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/tools/bindings/`: Repository directory component: `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/tools/bindings`.
+  - `patches/src/bindingCompiler/resources/`: Repository directory component: `patches/src/bindingCompiler/resources`.
+  - `patches/src/bindingCompiler/resources/gboard/`: Repository directory component: `patches/src/bindingCompiler/resources/gboard`.
+  - `patches/src/main/`: Repository directory component: `patches/src/main`.
+  - `patches/src/main/kotlin/`: Repository directory component: `patches/src/main/kotlin`.
+  - `patches/src/main/kotlin/dev/`: Repository directory component: `patches/src/main/kotlin/dev`.
+  - `patches/src/main/kotlin/dev/jason/`: Repository directory component: `patches/src/main/kotlin/dev/jason`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/about/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/about`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accessibilitylayout/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accessibilitylayout`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accesspointcount/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accesspointcount`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accesspointsmenu/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accesspointsmenu`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/backuprestore/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/backuprestore`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/bluetoothmicrophone/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/bluetoothmicrophone`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboardcontentlimit/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboardcontentlimit`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/closeproactivesuggestions/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/closeproactivesuggestions`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/cursortrackpad/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/cursortrackpad`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/developeroptions/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/developeroptions`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/editingaccesspoints/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/editingaccesspoints`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojisize/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojisize`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/featureflags/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/featureflags`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/flowmode/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/flowmode`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/frostedglass/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/frostedglass`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/lanftp/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/lanftp`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/latinglobe/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/latinglobe`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/longpressquickactions/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/longpressquickactions`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/manualincognito/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/manualincognito`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/ocr/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/ocr`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/packagerename/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/packagerename`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/quickinsert/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/quickinsert`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/rambler/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/rambler`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/roundedkeyboard/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/roundedkeyboard`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/settingshomepage/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/settingshomepage`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/signaturebypass/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/signaturebypass`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/spacebarlogo/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/spacebarlogo`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/splitkeyboard/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/splitkeyboard`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/swipedismiss/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/swipedismiss`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/symbolfooter/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/symbolfooter`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/websearch/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/websearch`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinbottomrow/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinbottomrow`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinslide/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinslide`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyintraditionalsimplifiedtoggle/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyintraditionalsimplifiedtoggle`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/registry/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/registry`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/accesspoint/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/accesspoint`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi`.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/shared/`: Repository directory component: `patches/src/main/kotlin/dev/jason/gboardpatches/patches/shared`.
+  - `patches/src/main/resources/`: Repository directory component: `patches/src/main/resources`.
+  - `patches/src/main/resources/custom-theme-assets/`: Repository directory component: `patches/src/main/resources/custom-theme-assets`.
+  - `patches/src/main/resources/gboard/`: Repository directory component: `patches/src/main/resources/gboard`.
+  - `patches/src/main/resources/lan-ftp-res/`: Repository directory component: `patches/src/main/resources/lan-ftp-res`.
+  - `patches/src/main/resources/lan-ftp-res/drawable/`: Repository directory component: `patches/src/main/resources/lan-ftp-res/drawable`.
+  - `patches/src/main/resources/lan-ftp-res/xml/`: Repository directory component: `patches/src/main/resources/lan-ftp-res/xml`.
+  - `patches/src/main/resources/settings-previews/`: Repository directory component: `patches/src/main/resources/settings-previews`.
+  - `patches/src/main/resources/settings-previews/accessibilitylayout/`: Repository directory component: `patches/src/main/resources/settings-previews/accessibilitylayout`.
+  - `patches/src/main/resources/settings-previews/accesspointcount/`: Repository directory component: `patches/src/main/resources/settings-previews/accesspointcount`.
+  - `patches/src/main/resources/settings-previews/accesspointsmenu/`: Repository directory component: `patches/src/main/resources/settings-previews/accesspointsmenu`.
+  - `patches/src/main/resources/settings-previews/clipboard/`: Repository directory component: `patches/src/main/resources/settings-previews/clipboard`.
+  - `patches/src/main/resources/settings-previews/closeproactivesuggestions/`: Repository directory component: `patches/src/main/resources/settings-previews/closeproactivesuggestions`.
+  - `patches/src/main/resources/settings-previews/cursortrackpad/`: Repository directory component: `patches/src/main/resources/settings-previews/cursortrackpad`.
+  - `patches/src/main/resources/settings-previews/customtheme/`: Repository directory component: `patches/src/main/resources/settings-previews/customtheme`.
+  - `patches/src/main/resources/settings-previews/editingaccesspoints/`: Repository directory component: `patches/src/main/resources/settings-previews/editingaccesspoints`.
+  - `patches/src/main/resources/settings-previews/emojisize/`: Repository directory component: `patches/src/main/resources/settings-previews/emojisize`.
+  - `patches/src/main/resources/settings-previews/keyboard/`: Repository directory component: `patches/src/main/resources/settings-previews/keyboard`.
+  - `patches/src/main/resources/settings-previews/manualincognito/`: Repository directory component: `patches/src/main/resources/settings-previews/manualincognito`.
+  - `patches/src/main/resources/settings-previews/quickinsert/`: Repository directory component: `patches/src/main/resources/settings-previews/quickinsert`.
+  - `patches/src/main/resources/settings-previews/settingshomepage/`: Repository directory component: `patches/src/main/resources/settings-previews/settingshomepage`.
+  - `patches/src/main/resources/settings-previews/splitkeyboard/`: Repository directory component: `patches/src/main/resources/settings-previews/splitkeyboard`.
+  - `patches/src/main/resources/settings-previews/websearch/`: Repository directory component: `patches/src/main/resources/settings-previews/websearch`.
+  - `patches/src/main/resources/settings-previews/zhuyinbottomrow/`: Repository directory component: `patches/src/main/resources/settings-previews/zhuyinbottomrow`.
+  - `patches/src/main/resources/web-clipboard-assets/`: Repository directory component: `patches/src/main/resources/web-clipboard-assets`.
+  - `patches/src/main/resources/web-clipboard-assets/assets/`: Repository directory component: `patches/src/main/resources/web-clipboard-assets/assets`.
+  - `patches/src/main/resources/web-clipboard-res/`: Repository directory component: `patches/src/main/resources/web-clipboard-res`.
+  - `patches/src/main/resources/web-clipboard-res/drawable/`: Repository directory component: `patches/src/main/resources/web-clipboard-res/drawable`.
+  - `patches/src/patchMetadata/`: Repository directory component: `patches/src/patchMetadata`.
+  - `patches/src/patchMetadata/kotlin/`: Repository directory component: `patches/src/patchMetadata/kotlin`.
+  - `patches/src/patchMetadata/kotlin/dev/`: Repository directory component: `patches/src/patchMetadata/kotlin/dev`.
+  - `patches/src/patchMetadata/kotlin/dev/jason/`: Repository directory component: `patches/src/patchMetadata/kotlin/dev/jason`.
+  - `patches/src/patchMetadata/kotlin/dev/jason/gboardpatches/`: Repository directory component: `patches/src/patchMetadata/kotlin/dev/jason/gboardpatches`.
+  - `patches/src/patchMetadata/kotlin/dev/jason/gboardpatches/util/`: Repository directory component: `patches/src/patchMetadata/kotlin/dev/jason/gboardpatches/util`.
+  - `patches/src/test/`: Repository directory component: `patches/src/test`.
+  - `patches/src/test/kotlin/`: Repository directory component: `patches/src/test/kotlin`.
+  - `patches/src/test/kotlin/dev/`: Repository directory component: `patches/src/test/kotlin/dev`.
+  - `patches/src/test/kotlin/dev/jason/`: Repository directory component: `patches/src/test/kotlin/dev/jason`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/about/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/about`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/lanftp/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/lanftp`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/packagerename/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/packagerename`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/rambler/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/rambler`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/spacebarlogo/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/spacebarlogo`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinbottomrow/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinbottomrow`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinslide/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinslide`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyintraditionalsimplifiedtoggle/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyintraditionalsimplifiedtoggle`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/tools/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/tools`.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/tools/bindings/`: Repository directory component: `patches/src/test/kotlin/dev/jason/gboardpatches/tools/bindings`.
+  - `patches/src/test/resources/`: Repository directory component: `patches/src/test/resources`.
+  - `patches/src/test/resources/gboard/`: Repository directory component: `patches/src/test/resources/gboard`.
+  - `patches/src/test/resources/gboard/18.0.3/`: Repository directory component: `patches/src/test/resources/gboard/18.0.3`.
+  - `patches/src/test/resources/gboard/18.0.3/about/`: Repository directory component: `patches/src/test/resources/gboard/18.0.3/about`.
+  - `patches/src/test/resources/gboard/18.0.3/package-rename/`: Repository directory component: `patches/src/test/resources/gboard/18.0.3/package-rename`.
+  - `patches/src/test/resources/gboard/18.0.3/settings-homepage-override/`: Repository directory component: `patches/src/test/resources/gboard/18.0.3/settings-homepage-override`.
+  - `release-assets/`: Repository directory component: `release-assets`.
+  - `release-assets/custom-theme-previews/`: Repository directory component: `release-assets/custom-theme-previews`.
+  - `release-assets/custom-theme-previews/v1/`: Repository directory component: `release-assets/custom-theme-previews/v1`.
+  - `scripts/`: Operational scripts, automation workflows, build hooks, and utility tooling.
+  - `tools/`: Repository directory component: `tools`.
+  - `tools/custom-theme-previews/`: Repository directory component: `tools/custom-theme-previews`.
+- **File System Manifest & Functional Roles**:
+  - `.editorconfig`: Editor configuration standardizing indentation, character encoding, and whitespace handling.
+  - `.gitattributes`: Git configuration enforcing line-ending normalization and repository attribute definitions.
+  - `.github/FUNDING.yml`: These are supported funding model platforms.
+  - `.github/workflows/custom-theme-previews-release.yml`: Automated CI/CD workflow (`Custom Theme preview release`) managing pipeline stages, builds, tests, or releases.
+  - `.github/workflows/release.yml`: Automated CI/CD workflow (`Release Gboard Patches`) managing pipeline stages, builds, tests, or releases.
+  - `.github/workflows/upstream-sync.yml`: Automated CI/CD workflow (`Autonomous Upstream Sync & Verification`) managing pipeline stages, builds, tests, or releases.
+  - `.gitignore`: Git exclusion specifications ignoring build artifacts, local secrets, and IDE temporary caches.
+  - `.gitlab-ci.yml`: GitLab CI/CD automated pipeline specification for test execution and mirror synchronization.
+  - `assests/images/Morphe_Badge.svg`: Scalable vector graphic resource for UI iconography and branding.
+  - `CHANGELOG.md`: # [3.13.0](https://github.com/jasonwu1994/Gboard-patches/compare/v3.12.0...v3.13.0) (2026-10-15).
+  - `docs/assets/features/web-clipboard/01-pairing-gate.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `docs/assets/features/web-clipboard/02-conversation-view.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `extensions/calculator/build.gradle.kts`: Gradle build script defining compiler plugins, dependencies, and build configurations.
+  - `extensions/calculator/src/main/AndroidManifest.xml`: Android application manifest defining package identity, permissions, services, and activities.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorDisplaySnapshot.java`: Defines `GboardCalculatorDisplaySnapshot` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorEngine.java`: Defines `GboardCalculatorEngine` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorLifecycleRuntime.java`: Kept local so the feature-scoped RVE never links against shared settings classes.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorRuntime.java`: Defines `GboardCalculatorRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSafety.java`: Calculator callbacks must never escape into Gboard.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSessionState.java`: Defines `GboardCalculatorSessionState` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSuggestion.java`: Defines `GboardCalculatorSuggestion` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSuggestionView.java`: Defines `GboardCalculatorSuggestionView` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorText.java`: Defines `GboardCalculatorText` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/test/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorEngineTest.java`: Defines `GboardCalculatorEngineTest` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/test/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSafetyTest.java`: Defines `GboardCalculatorSafetyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/test/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSessionStateTest.java`: Defines `GboardCalculatorSessionStateTest` implementing application logic, UI composable, or data entity.
+  - `extensions/calculator/src/test/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSuggestionTest.java`: Defines `GboardCalculatorSuggestionTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/build.gradle.kts`: Gradle build script defining compiler plugins, dependencies, and build configurations.
+  - `extensions/extension/native-payload/arm64-v8a/libgboardpatches_quickjs.so`: Repository asset file: `libgboardpatches_quickjs.so`.
+  - `extensions/extension/src/main/AndroidManifest.xml`: Android application manifest defining package identity, permissions, services, and activities.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accessibilitylayout/GboardAccessibilityLayout1803Policy.java`: Defines `GboardAccessibilityLayout1803Policy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accessibilitylayout/GboardAccessibilityLayout1803Runtime.java`: Defines `GboardAccessibilityLayout1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accessibilitylayout/GboardAccessibilityLayoutSettings.java`: Defines `GboardAccessibilityLayoutSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accessibilitylayout/GboardAccessibilityLayoutSettingsFeature.java`: Defines `GboardAccessibilityLayoutSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspoint/GboardAccessPointContributions1803Runtime.java`: Defines `GboardAccessPointContributions1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointcount/GboardAccessPointCountPolicy.java`: Defines `GboardAccessPointCountPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointcount/GboardAccessPointCountRuntime.java`: Defines `GboardAccessPointCountRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointcount/GboardAccessPointCountSettings.java`: Defines `GboardAccessPointCountSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointcount/GboardAccessPointCountSettingsFeature.java`: Defines `GboardAccessPointCountSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointsmenu/GboardAccessPointsMenu1803Policy.java`: Defines `GboardAccessPointsMenu1803Policy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointsmenu/GboardAccessPointsMenu1803Runtime.java`: Defines `GboardAccessPointsMenu1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointsmenu/GboardAccessPointsMenuSettings.java`: Defines `GboardAccessPointsMenuSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/accesspointsmenu/GboardAccessPointsMenuSettingsFeature.java`: Defines `GboardAccessPointsMenuSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/addsymbols/GboardAddSymbolsDataset.java`: Defines `GboardAddSymbolsDataset` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/addsymbols/GboardAddSymbolsRuntime.java`: Defines `GboardAddSymbolsRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/addsymbols/GboardAddSymbolsSoftKeyRuntime.java`: Defines `GboardAddSymbolsSoftKeyRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803Policy.java`: Defines `GboardAdvancedVoice1803Policy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803Runtime.java`: Defines `GboardAdvancedVoice1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803RuntimeSettings.java`: Defines `GboardAdvancedVoice1803RuntimeSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803StockPolicy.java`: Defines `GboardAdvancedVoice1803StockPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceSettings.java`: Defines `GboardAdvancedVoiceSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceSettingsFeature.java`: Defines `GboardAdvancedVoiceSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardDictationPayloadDetector.java`: Continue to the next allowlisted target package.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardOfflineSpeechLanguageFormatter.java`: Defines `GboardOfflineSpeechLanguageFormatter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardSpeechServicesDetector.java`: Defines `GboardSpeechServicesDetector` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardVoiceInputMode.java`: Repository asset file: `GboardVoiceInputMode.java`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStorageStatus.java`: Defines `GboardFlagStorageStatus` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreColdStartInitializer.java`: Defines `GboardFlagStoreColdStartInitializer` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreDiff.java`: Defines `GboardFlagStoreDiff` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreDiffSettingsFeature.java`: Defines `GboardFlagStoreDiffSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreFiles.java`: Defines `GboardFlagStoreFiles` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreInitProvider.java`: Defines `GboardFlagStoreInitProvider` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreManager.java`: Version-neutral target-context module for inspecting, staging, and atomically replacing.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreSettingsFeature.java`: Defines `GboardFlagStoreSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/GboardBackupRestoreSettingsFeature.java`: Defines `GboardBackupRestoreSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/GboardExportFileNames.java`: Defines `GboardExportFileNames` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/GboardPatchesBackupManager.java`: Defines `GboardPatchesBackupManager` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/GboardPatchesRestorePreviewFeature.java`: Defines `GboardPatchesRestorePreviewFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/backuprestore/GboardPatchesRestoreResultFeature.java`: Defines `GboardPatchesRestoreResultFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/GboardBluetoothMicrophone1803Policy.java`: Defines `GboardBluetoothMicrophone1803Policy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/GboardBluetoothMicrophone1803Runtime.java`: Defines `GboardBluetoothMicrophone1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/GboardBluetoothMicrophoneSettings.java`: Defines `GboardBluetoothMicrophoneSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/GboardBluetoothMicrophoneSettingsFeature.java`: Defines `GboardBluetoothMicrophoneSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSettings.java`: Defines `GboardCalculatorSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSettingsFeature.java`: Defines `GboardCalculatorSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardCardPreviewFeature.java`: Defines `GboardClipboardCardPreviewFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardColumnCountFeature.java`: Defines `GboardClipboardColumnCountFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardCountdownFeature.java`: Defines `GboardClipboardCountdownFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardCreationTimeFeature.java`: Defines `GboardClipboardCreationTimeFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardMaxCountFeature.java`: Defines `GboardClipboardMaxCountFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardOrderIndexFeature.java`: Defines `GboardClipboardOrderIndexFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardPreviewLinesFeature.java`: Defines `GboardClipboardPreviewLinesFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardRetentionFeature.java`: Defines `GboardClipboardRetentionFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/features/GboardClipboardSensitiveContentFeature.java`: Defines `GboardClipboardSensitiveContentFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/GboardClipboardRuntime.java`: Defines `GboardClipboardRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/GboardClipboardRuntimeSupport.java`: Defines `GboardClipboardRuntimeSupport` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/hooks/GboardClipboardColumnCountHookAdapter.java`: Defines `GboardClipboardColumnCountHookAdapter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/hooks/GboardClipboardLoaderHookAdapter.java`: Defines `GboardClipboardLoaderHookAdapter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/hooks/GboardClipboardPruneHookAdapter.java`: Defines `GboardClipboardPruneHookAdapter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/runtime/hooks/GboardClipboardUiHookAdapter.java`: Defines `GboardClipboardUiHookAdapter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/GboardClipboardSettings.java`: Defines `GboardClipboardSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/GboardClipboardSettingsFeature.java`: Defines `GboardClipboardSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/GboardClipboardSettingsSupport.java`: Defines `GboardClipboardSettingsSupport` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/GboardClipboardSyncSettingsSection.java`: Defines `GboardClipboardSyncSettingsSection` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/GboardWebClipboardSettingsFeature.java`: Defines `GboardWebClipboardSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/sections/GboardClipboardLayoutSettingsSection.java`: Defines `GboardClipboardLayoutSettingsSection` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/sections/GboardClipboardMetadataSettingsSection.java`: Defines `GboardClipboardMetadataSettingsSection` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboard/settings/sections/GboardClipboardRetentionSettingsSection.java`: Defines `GboardClipboardRetentionSettingsSection` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboardcontentlimit/GboardClipboardContentLimitPolicy.java`: Defines `GboardClipboardContentLimitPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboardcontentlimit/GboardClipboardContentLimitRuntime.java`: Defines `GboardClipboardContentLimitRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboardcontentlimit/GboardClipboardContentLimitSettings.java`: Defines `GboardClipboardContentLimitSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/clipboardcontentlimit/GboardClipboardContentLimitSettingsRow.java`: Defines `GboardClipboardContentLimitSettingsRow` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/closeproactivesuggestions/GboardCloseProactiveSuggestionsPolicy.java`: Defines `GboardCloseProactiveSuggestionsPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/closeproactivesuggestions/GboardCloseProactiveSuggestionsRuntime.java`: Defines `GboardCloseProactiveSuggestionsRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/closeproactivesuggestions/GboardCloseProactiveSuggestionsSettings.java`: The feature screen safely falls back without propagating into Gboard.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/closeproactivesuggestions/GboardCloseProactiveSuggestionsSettingsFeature.java`: Defines `GboardCloseProactiveSuggestionsSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/core/PatchedServiceBridge.java`: The patched app keeps settings in-process, so no extra bridge setup is required.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Policy.java`: Defines `GboardCursorTrackpad1803Policy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Runtime.java`: Defines `GboardCursorTrackpad1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadSettings.java`: Defines `GboardCursorTrackpadSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadSettingsFeature.java`: Defines `GboardCursorTrackpadSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeCatalog.java`: Defines `GboardCustomThemeCatalog` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeGalleryFeature.java`: Defines `GboardCustomThemeGalleryFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeGalleryView.java`: Defines `GboardCustomThemeGalleryView` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeInstaller.java`: Defines `GboardCustomThemeInstaller` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeOfficialImportRuntime.java`: Defines `GboardCustomThemeOfficialImportRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemePreviewRepository.java`: Defines `GboardCustomThemePreviewRepository` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeRepository.java`: Cache deletion is best-effort and never touches installed themes.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeSettings.java`: Invalid or unavailable preferences fail closed.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeSettingsFeature.java`: Defines `GboardCustomThemeSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeTargetContract.java`: Defines `GboardCustomThemeTargetContract` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeZipImporter.java`: Defines `GboardCustomThemeZipImporter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/customtheme/GboardThemeImportContract.java`: Defines `GboardThemeImportContract` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/developeroptions/GboardDeveloperOptionsSettingsFeature.java`: Defines `GboardDeveloperOptionsSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/editingaccesspoints/EditorAction.java`: Repository asset file: `EditorAction.java`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/editingaccesspoints/EditorActionSession.java`: A selection read can cross an editor callback. Never dispatch into a replaced session.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/editingaccesspoints/GboardEditingAccessPoints1803Contribution.java`: Defines `GboardEditingAccessPoints1803Contribution` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/editingaccesspoints/GboardEditingAccessPointsRuntime.java`: Keep the adapter alive, but never retain the service or its InputConnection strongly.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/editingaccesspoints/GboardEditingAccessPointsSettings.java`: Accept portable settings backups containing Boolean or string values.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/editingaccesspoints/GboardEditingAccessPointsSettingsFeature.java`: Defines `GboardEditingAccessPointsSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontRuntime.java`: Defines `GboardEmojiFontRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontSettings.java`: Defines `GboardEmojiFontSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontSettingsFeature.java`: Defines `GboardEmojiFontSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojisize/GboardEmojiSize1803Policy.java`: Defines `GboardEmojiSize1803Policy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojisize/GboardEmojiSize1803Runtime.java`: Defines `GboardEmojiSize1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojisize/GboardEmojiSizeSettings.java`: Defines `GboardEmojiSizeSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojisize/GboardEmojiSizeSettingsFeature.java`: Defines `GboardEmojiSizeSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/featureflags/GboardFeatureFlagsRuntime.java`: Defines `GboardFeatureFlagsRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flagsettings/GboardBooleanFlagSettings.java`: Defines `GboardBooleanFlagSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flagsettings/GboardBooleanFlagSettingsFeature.java`: Defines `GboardBooleanFlagSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flagsettings/GboardFlagRuntimeContext.java`: Defines `GboardFlagRuntimeContext` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flowmode/GboardFlowModePolicy.java`: Defines `GboardFlowModePolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flowmode/GboardFlowModeRuntime.java`: Defines `GboardFlowModeRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flowmode/GboardFlowModeSettings.java`: The feature screen safely falls back without propagating into Gboard.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/flowmode/GboardFlowModeSettingsFeature.java`: Defines `GboardFlowModeSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassLifecycleRuntime.java`: Defines `GboardFrostedGlassLifecycleRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassRuntime.java`: Floating mode uses the same semantic root without the docked outline suffix.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassSettings.java`: Defines `GboardFrostedGlassSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassSettingsFeature.java`: Defines `GboardFrostedGlassSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassSettingsRuntime.java`: Fall through to theme transparency mode when preferences are unavailable.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/GboardPatchExtension.java`: Placeholder extension entry point for future bytecode patches.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardAiVoiceSettingsGroupFeature.java`: Defines `GboardAiVoiceSettingsGroupFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardEnglishUppercaseToggleRuntime.java`: Defines `GboardEnglishUppercaseToggleRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardEnglishUppercaseToggleSettings.java`: Defines `GboardEnglishUppercaseToggleSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardEnglishUppercaseToggleSettingsFeature.java`: Defines `GboardEnglishUppercaseToggleSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardKeyboardLayoutSettingsGroupFeature.java`: Defines `GboardKeyboardLayoutSettingsGroupFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardKeyboardToolsSettingsGroupFeature.java`: Defines `GboardKeyboardToolsSettingsGroupFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardLatinGlobeKeyIgnoreIntervalRuntime.java`: Defines `GboardLatinGlobeKeyIgnoreIntervalRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardLatinGlobeKeyIgnoreIntervalSettings.java`: Defines `GboardLatinGlobeKeyIgnoreIntervalSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/keyboard/GboardLatinGlobeKeyIgnoreIntervalSettingsFeature.java`: Defines `GboardLatinGlobeKeyIgnoreIntervalSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpAllFilesAccess.java`: Defines `LanFtpAllFilesAccess` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpLifecycleExecutor.java`: Defines `LanFtpLifecycleExecutor` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpLocalNetworkPermission.java`: Defines `LanFtpLocalNetworkPermission` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpLocalNetworkPreflight.java`: Defines `LanFtpLocalNetworkPreflight` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpNetworkResolver.java`: Defines `LanFtpNetworkResolver` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpNotificationContent.java`: Defines `LanFtpNotificationContent` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpNotificationController.java`: Defines `LanFtpNotificationController` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpRuntimeEventPublisher.java`: The provider remains queryable if an OEM drops a best-effort change signal.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpRuntimeLockController.java`: Defines `LanFtpRuntimeLockController` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpRuntimeObserver.java`: Defines `LanFtpRuntimeObserver` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpRuntimeRegistry.java`: Defines `LanFtpRuntimeRegistry` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpRuntimeStatus.java`: Defines `LanFtpRuntimeStatus` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpServerConfigSnapshot.java`: Defines `LanFtpServerConfigSnapshot` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpServerController.java`: Defines `LanFtpServerController` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpServerState.java`: Defines `LanFtpServerState` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpService.java`: Defines `LanFtpService` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpServiceCommand.java`: Defines `LanFtpServiceCommand` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpSessionBundleCodec.java`: Defines `LanFtpSessionBundleCodec` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpStatusProvider.java`: Defines `LanFtpStatusProvider` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpTileService.java`: Defines `LanFtpTileService` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/config/LanFtpPreferences.java`: Defines `LanFtpPreferences` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpDocument.java`: Defines `LanFtpDocument` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpDocumentStore.java`: Defines `LanFtpDocumentStore` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpFile.java`: Defines `LanFtpFile` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpFileSystemFactory.java`: Defines `LanFtpFileSystemFactory` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpFileSystemView.java`: Defines `LanFtpFileSystemView` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpStagingDocumentStore.java`: Keeps an in-flight upload hidden until it can safely replace the final file.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpUploadLifecycle.java`: Defines `LanFtpUploadLifecycle` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LocalLanFtpDocumentStore.java`: Defines `LocalLanFtpDocumentStore` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/SafLanFtpDocumentStore.java`: Defines `SafLanFtpDocumentStore` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpAborCommand.java`: Defines `LanFtpAborCommand` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpActivityFtplet.java`: Defines `LanFtpActivityFtplet` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpActivityObserver.java`: Defines `LanFtpActivityObserver` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpBoundedServerContext.java`: Defines `LanFtpBoundedServerContext` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpConnectionAdmissionFilter.java`: Defines `LanFtpConnectionAdmissionFilter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpControlQueueLimiter.java`: The reservation is acquired atomically in accept().
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpCredentialPolicy.java`: Defines `LanFtpCredentialPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpDataCommandSupport.java`: Defines `LanFtpDataCommandSupport` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpEngine.java`: Defines `LanFtpEngine` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpFeatCommand.java`: Defines `LanFtpFeatCommand` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpLoginRateLimiter.java`: Defines `LanFtpLoginRateLimiter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpModeCommand.java`: Defines `LanFtpModeCommand` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpPasvCommand.java`: Rejection must not leave an earlier passive listener open.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpPath.java`: Defines `LanFtpPath` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpPortPolicy.java`: Defines `LanFtpPortPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpRejectedCommand.java`: Rejection must also close any passive listener prepared by the client.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpRetrCommand.java`: Defines `LanFtpRetrCommand` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpServerConfig.java`: Defines `LanFtpServerConfig` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpSessionInfo.java`: Defines `LanFtpSessionInfo` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpStorCommand.java`: Defines `LanFtpStorCommand` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpTransferCoordinator.java`: Defines `LanFtpTransferCoordinator` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpTransferProgress.java`: Defines `LanFtpTransferProgress` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpTransferSpeedSampler.java`: Defines `LanFtpTransferSpeedSampler` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpTypeCommand.java`: Defines `LanFtpTypeCommand` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpUserManager.java`: Defines `LanFtpUserManager` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/settings/GboardLanFtpSettingsFeature.java`: Defines `GboardLanFtpSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/lanftp/settings/LanFtpSettingsDisplayFormatter.java`: Defines `LanFtpSettingsDisplayFormatter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardEditingShortcutDispatchGuard.java`: Defines `GboardEditingShortcutDispatchGuard` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardEditingShortcutPolicy.java`: Defines `GboardEditingShortcutPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDrag1803Adapter.java`: Defines `GboardGlobeDrag1803Adapter` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragBoundSlotRegistry.java`: Defines `GboardGlobeDragBoundSlotRegistry` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragGestureState.java`: A popup event is not a pointer release. Keep ownership until lifecycle completion.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragPhysicalSlotPolicy.java`: Defines `GboardGlobeDragPhysicalSlotPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragPort.java`: Defines `GboardGlobeDragPort` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragPortFactory.java`: Defines `GboardGlobeDragPortFactory` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragRuntime.java`: Defines `GboardGlobeDragRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragSession.java`: Defines `GboardGlobeDragSession` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActions1803Policy.java`: Defines `GboardLongPressQuickActions1803Policy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActions1803ReflectionHandles.java`: Defines `GboardLongPressQuickActions1803ReflectionHandles` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActions1803Runtime.java`: Defines `GboardLongPressQuickActions1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActionsRuntimeSettings.java`: Defines `GboardLongPressQuickActionsRuntimeSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActionsSettings.java`: Defines `GboardLongPressQuickActionsSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActionsSettingsFeature.java`: Defines `GboardLongPressQuickActionsSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/manualincognito/GboardManualIncognitoAccessPointSupport.java`: Defines `GboardManualIncognitoAccessPointSupport` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/manualincognito/GboardManualIncognitoPolicy.java`: Defines `GboardManualIncognitoPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/manualincognito/GboardManualIncognitoRuntime.java`: Defines `GboardManualIncognitoRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/manualincognito/GboardManualIncognitoSessionPolicy.java`: Defines `GboardManualIncognitoSessionPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/manualincognito/GboardManualIncognitoSettings.java`: Defines `GboardManualIncognitoSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/manualincognito/GboardManualIncognitoSettingsFeature.java`: Defines `GboardManualIncognitoSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/ocr/GboardOcrEngine.java`: Repository asset file: `GboardOcrEngine.java`.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/ocr/GboardOcrModuleInstaller.java`: Defines `GboardOcrModuleInstaller` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/ocr/GboardOcrRuntime.java`: Defines `GboardOcrRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/ocr/GboardOcrSettings.java`: Defines `GboardOcrSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/ocr/GboardOcrSettingsFeature.java`: Defines `GboardOcrSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickinsert/GboardQuickInsertPolicy.java`: Defines `GboardQuickInsertPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickinsert/GboardQuickInsertRuntime.java`: Defines `GboardQuickInsertRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickinsert/GboardQuickInsertSettings.java`: The feature screen safely falls back without propagating into Gboard.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickinsert/GboardQuickInsertSettingsFeature.java`: Defines `GboardQuickInsertSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickjs/QuickJsNgBridge.java`: Defines `QuickJsNgBridge` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/quickjs/QuickJsNgLibraryLoader.java`: Defines `QuickJsNgLibraryLoader` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/GboardRambler1803OfficialSelectionRuntime.java`: Defines `GboardRambler1803OfficialSelectionRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/GboardRambler1803StockPolicy.java`: Defines `GboardRambler1803StockPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/roundedkeyboard/GboardRoundedKeyboardConfig.java`: Defines `GboardRoundedKeyboardConfig` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/roundedkeyboard/GboardRoundedKeyboardRuntime.java`: Defines `GboardRoundedKeyboardRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/roundedkeyboard/GboardRoundedKeyboardSettings.java`: Defines `GboardRoundedKeyboardSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/roundedkeyboard/GboardRoundedKeyboardSettingsFeature.java`: Defines `GboardRoundedKeyboardSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardFeatureGroup.java`: Defines `GboardFeatureGroup` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardManagedDialogRunner.java`: Asynchronous dialog lifecycle callbacks must not affect the host app.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesFeatureAvailability.java`: Defines `GboardPatchesFeatureAvailability` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesNavigationPath.java`: Defines `GboardPatchesNavigationPath` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettings.java`: Defines `GboardPatchesSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsActivity.java`: Defines `GboardPatchesSettingsActivity` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsContract.java`: Defines `GboardPatchesSettingsContract` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsFeatureRegistry.java`: Defines `GboardPatchesSettingsFeatureRegistry` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsOrchestrator.java`: Owns settings host state transitions without depending on Android lifecycle or UI classes.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsProvider.java`: Defines `GboardPatchesSettingsProvider` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsScrollState.java`: Defines `GboardPatchesSettingsScrollState` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardRestartCrashRecoveryGuard.java`: Defines `GboardRestartCrashRecoveryGuard` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardSettingsLocaleManager.java`: Defines `GboardSettingsLocaleManager` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardSettingsText.java`: Defines `GboardSettingsText` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardTilePreferencesActivity.java`: Defines `GboardTilePreferencesActivity` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/keyboardpreview/GboardKeyboardPreviewController.java`: Defines `GboardKeyboardPreviewController` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settingshomepage/GboardSettingsHomepageRuntime.java`: Defines `GboardSettingsHomepageRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settingshomepage/GboardSettingsHomepageSettings.java`: Defines `GboardSettingsHomepageSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settingshomepage/GboardSettingsHomepageSettingsFeature.java`: Defines `GboardSettingsHomepageSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogo1803Runtime.java`: Defines `GboardSpacebarLogo1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogoColorPickerView.java`: Defines `GboardSpacebarLogoColorPickerView` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogoContract.java`: Defines `GboardSpacebarLogoContract` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogoDialogs.java`: Defines `GboardSpacebarLogoDialogs` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogoRuntime.java`: Defines `GboardSpacebarLogoRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogoSettings.java`: Defines `GboardSpacebarLogoSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogoSettingsFeature.java`: Defines `GboardSpacebarLogoSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/splitkeyboard/GboardSplitKeyboard1803Policy.java`: Defines `GboardSplitKeyboard1803Policy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/splitkeyboard/GboardSplitKeyboard1803Runtime.java`: Defines `GboardSplitKeyboard1803Runtime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/splitkeyboard/GboardSplitKeyboardSettings.java`: Defines `GboardSplitKeyboardSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/splitkeyboard/GboardSplitKeyboardSettingsFeature.java`: Defines `GboardSplitKeyboardSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissGesture.java`: 1. Disqualify upward movement past touch slop (e.g. dragging a candidate to delete target).
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissRuntime.java`: Defines `GboardSwipeDismissRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissSettings.java`: Defines `GboardSwipeDismissSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissSettingsFeature.java`: Defines `GboardSwipeDismissSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/symbolfooter/GboardSymbolFooterOrderDragOverlay.java`: Defines `GboardSymbolFooterOrderDragOverlay` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/symbolfooter/GboardSymbolFooterOrderEditorDialog.java`: Defines `GboardSymbolFooterOrderEditorDialog` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/symbolfooter/GboardSymbolFooterOrderReorderAnimator.java`: Defines `GboardSymbolFooterOrderReorderAnimator` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/symbolfooter/GboardSymbolFooterOrderRuntime.java`: Defines `GboardSymbolFooterOrderRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/symbolfooter/GboardSymbolFooterOrderSettings.java`: Defines `GboardSymbolFooterOrderSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/symbolfooter/GboardSymbolFooterOrderSettingsFeature.java`: Defines `GboardSymbolFooterOrderSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/GboardQuickJsFeature.java`: Defines `GboardQuickJsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTarget.java`: Defines `GboardTarget` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeRuntime.java`: Defines `GboardTopRowSwipeRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeRuntimeSupport.java`: Defines `GboardTopRowSwipeRuntimeSupport` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeSettings.java`: Defines `GboardTopRowSwipeSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeSettingsFeature.java`: Defines `GboardTopRowSwipeSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeSlotEditorDialog.java`: Defines `GboardTopRowSwipeSlotEditorDialog` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeStrings.java`: Defines `GboardTopRowSwipeStrings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/toprowswipe/QuickJsScriptEvaluator.java`: Defines `QuickJsScriptEvaluator` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncHttpsSocketFactory.java`: Defines `ClipboardSyncHttpsSocketFactory` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncIngressContract.java`: Defines `ClipboardSyncIngressContract` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncLoopbackAuth.java`: Defines `ClipboardSyncLoopbackAuth` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncLoopbackIngressClient.java`: Defines `ClipboardSyncLoopbackIngressClient` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncService.java`: Defines `ClipboardSyncService` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncWebPortal.java`: Defines `ClipboardSyncWebPortal` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/GboardWebClipboardCaptureBootstrap.java`: Defines `GboardWebClipboardCaptureBootstrap` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardEchoSuppressor.java`: Defines `WebClipboardEchoSuppressor` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardEndpointResolver.java`: Fall back to the placeholder below.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardPackageReplacedReceiver.java`: Defines `WebClipboardPackageReplacedReceiver` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardPreferences.java`: Defines `WebClipboardPreferences` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardTileController.java`: Defines `WebClipboardTileController` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardTileService.java`: Defines `WebClipboardTileService` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/GboardCustomTabsProviderResolver.java`: Defines `GboardCustomTabsProviderResolver` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/GboardFloatingWebSearchAccessPoint1803Contribution.java`: Defines `GboardFloatingWebSearchAccessPoint1803Contribution` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/GboardFloatingWebSearchLauncher.java`: Defines `GboardFloatingWebSearchLauncher` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/GboardFloatingWebSearchRuntime.java`: Defines `GboardFloatingWebSearchRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/GboardFloatingWebSearchSettings.java`: Defines `GboardFloatingWebSearchSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/GboardFloatingWebSearchSettingsFeature.java`: Defines `GboardFloatingWebSearchSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/GboardFloatingWebSearchSettingsSnapshot.java`: Defines `GboardFloatingWebSearchSettingsSnapshot` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/websearch/GboardFloatingWebSearchSettingsStore.java`: Defines `GboardFloatingWebSearchSettingsStore` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsOfficialPreferences.java`: Defines `GboardAiWritingToolsOfficialPreferences` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsRuntime.java`: Defines `GboardAiWritingToolsRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsSettings.java`: Defines `GboardAiWritingToolsSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsSettingsFeature.java`: Defines `GboardAiWritingToolsSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsVoiceCommandPolicy.java`: Defines `GboardAiWritingToolsVoiceCommandPolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsVoiceCommandRuntime.java`: Defines `GboardAiWritingToolsVoiceCommandRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/GboardZhuyinBottomRowWeightRuntime.java`: Defines `GboardZhuyinBottomRowWeightRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/GboardZhuyinBottomRowWeightRuntimeSupport.java`: Defines `GboardZhuyinBottomRowWeightRuntimeSupport` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/GboardZhuyinBottomRowWeightSettings.java`: Defines `GboardZhuyinBottomRowWeightSettings` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/GboardZhuyinBottomRowWeightSettingsFeature.java`: Defines `GboardZhuyinBottomRowWeightSettingsFeature` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlidePolicy.java`: Defines `GboardZhuyinSlidePolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlideRuntime.java`: Defines `GboardZhuyinSlideRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlideRuntimeSupport.java`: Defines `GboardZhuyinSlideRuntimeSupport` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyintoggle/GboardZhuyinTraditionalSimplifiedTogglePolicy.java`: Defines `GboardZhuyinTraditionalSimplifiedTogglePolicy` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyintoggle/GboardZhuyinTraditionalSimplifiedToggleRuntime.java`: Defines `GboardZhuyinTraditionalSimplifiedToggleRuntime` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/zhuyintoggle/GboardZhuyinTraditionalSimplifiedToggleRuntimeSupport.java`: Defines `GboardZhuyinTraditionalSimplifiedToggleRuntimeSupport` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/main/res/drawable/ic_arrow_back_gboard.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `extensions/extension/src/main/res/drawable/ic_gboard_patches_keyboard.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `extensions/extension/src/main/res/drawable/ic_lan_ftp_tile.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `extensions/extension/src/main/res/raw/gboard_latin_globe_key_ignore_interval_default.mp4`: Repository asset file: `gboard_latin_globe_key_ignore_interval_default.mp4`.
+  - `extensions/extension/src/main/res/raw/gboard_latin_globe_key_ignore_interval_patched.mp4`: Repository asset file: `gboard_latin_globe_key_ignore_interval_patched.mp4`.
+  - `extensions/extension/src/main/res/values/colors.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `extensions/extension/src/main/res/values-night/colors.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `extensions/extension/src/main/settings-text/gboard_settings_text.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `extensions/extension/src/test/java/cdm.java`: Defines `cdm` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/ClipboardTargetStubs.java`: Defines `fik` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accessibilitylayout/GboardAccessibilityLayout1803PolicyTest.java`: Defines `GboardAccessibilityLayout1803PolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accesspointcount/GboardAccessPointCountRuntimeTest.java`: Defines `GboardAccessPointCountRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accesspointcount/GboardAccessPointCountSettingsFeatureTest.java`: Defines `GboardAccessPointCountSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accesspointcount/GboardAccessPointCountSettingsTest.java`: Defines `GboardAccessPointCountSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/accesspointsmenu/GboardAccessPointsMenu1803PolicyTest.java`: Defines `GboardAccessPointsMenu1803PolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/addsymbols/GboardAddSymbolsRuntimeTest.java`: Defines `GboardAddSymbolsRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/addsymbols/GboardAddSymbolsSoftKeyRuntimeTest.java`: Defines `GboardAddSymbolsSoftKeyRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803PolicyTest.java`: Defines `GboardAdvancedVoice1803PolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803RuntimeReflectionTest.java`: Defines `GboardAdvancedVoice1803RuntimeReflectionTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803RuntimeSettingsTest.java`: Defines `GboardAdvancedVoice1803RuntimeSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803StockPolicyTest.java`: Defines `GboardAdvancedVoice1803StockPolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceContextSeedTest.java`: Defines `GboardAdvancedVoiceContextSeedTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceSettingsSourceTest.java`: Defines `GboardAdvancedVoiceSettingsSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceUniversalLocaleTest.java`: Defines `GboardAdvancedVoiceUniversalLocaleTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardDictationPayloadDetectorTest.java`: Defines `GboardDictationPayloadDetectorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardOfflineSpeechLanguageFormatterTest.java`: Defines `GboardOfflineSpeechLanguageFormatterTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardOfflineSpeechSupportSourceTest.java`: Defines `GboardOfflineSpeechSupportSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardSpeechServicesNavigationSourceTest.java`: Defines `GboardSpeechServicesNavigationSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardVoiceInputModeTest.java`: Defines `GboardVoiceInputModeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStorageStatusTest.java`: Defines `GboardFlagStorageStatusTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreDiffTest.java`: Defines `GboardFlagStoreDiffTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreLocalizationTest.java`: Defines `GboardFlagStoreLocalizationTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/flagstore/GboardFlagStoreSettingsFeatureTest.java`: Defines `GboardFlagStoreSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/GboardBackupRestoreLocalizationTest.java`: Defines `GboardBackupRestoreLocalizationTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/GboardExportFileNamesTest.java`: Defines `GboardExportFileNamesTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/backuprestore/GboardPatchesBackupManagerTest.java`: Defines `GboardPatchesBackupManagerTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/GboardBluetoothMicrophone1803PolicyTest.java`: Defines `GboardBluetoothMicrophone1803PolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/GboardBluetoothMicrophone1803RuntimeTest.java`: Defines `GboardBluetoothMicrophone1803RuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/GboardBluetoothMicrophoneSettingsFeatureTest.java`: Defines `GboardBluetoothMicrophoneSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/bluetoothmicrophone/GboardBluetoothMicrophoneSettingsTest.java`: Defines `GboardBluetoothMicrophoneSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/calculator/GboardCalculatorSettingsContractTest.java`: Defines `GboardCalculatorSettingsContractTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboard/GboardClipboardRuntimeBehaviorTest.java`: Defines `GboardClipboardRuntimeBehaviorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboard/GboardClipboardSettingsFeatureTest.java`: Defines `GboardClipboardSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboard/GboardClipboardWebFeatureSourceTest.java`: Defines `GboardClipboardWebFeatureSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboard/GboardWebClipboardSettingsFeatureTest.java`: Defines `GboardWebClipboardSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/clipboardcontentlimit/GboardClipboardContentLimitSettingsTest.java`: Defines `GboardClipboardContentLimitSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/closeproactivesuggestions/GboardCloseProactiveSuggestionsContractTest.java`: Defines `GboardCloseProactiveSuggestionsContractTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803PolicyTest.java`: Defines `GboardCursorTrackpad1803PolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeFailureBehaviorTest.java`: Defines `GboardCustomThemeFailureBehaviorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeGalleryFeatureTest.java`: Defines `GboardCustomThemeGalleryFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeInstallerTest.java`: Defines `GboardCustomThemeInstallerTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeNavigationSourceTest.java`: Defines `GboardCustomThemeNavigationSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeOfficialImportSourceTest.java`: Defines `GboardCustomThemeOfficialImportSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemePreviewRepositoryTest.java`: Defines `GboardCustomThemePreviewRepositoryTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeVersionBindingsTest.java`: Defines `GboardCustomThemeVersionBindingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/customtheme/GboardCustomThemeZipImporterSafetyTest.java`: Defines `GboardCustomThemeZipImporterSafetyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/developeroptions/GboardDeveloperOptionsSettingsFeatureTest.java`: Defines `GboardDeveloperOptionsSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/editingaccesspoints/EditorActionSessionTest.java`: Defines `EditorActionSessionTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/editingaccesspoints/GboardEditingAccessPointsPolicyTest.java`: Defines `GboardEditingAccessPointsPolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/editingaccesspoints/GboardEditingAccessPointsSettingsFeatureTest.java`: Defines `GboardEditingAccessPointsSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontRuntimeTest.java`: Common emojis.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/emojisize/GboardEmojiSize1803PolicyTest.java`: Defines `GboardEmojiSize1803PolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/featureflags/GboardDeviceIntelligenceFeatureFlagSourceTest.java`: Defines `GboardDeviceIntelligenceFeatureFlagSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/featureflags/GboardFeatureFlagsRuntimeBehaviorTest.java`: Defines `GboardFeatureFlagsRuntimeBehaviorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/flagsettings/GboardFiveFlagSettingsContractTest.java`: Defines `GboardFiveFlagSettingsContractTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/flowmode/GboardFlowModeContractTest.java`: Defines `GboardFlowModeContractTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/frostedglass/GboardFrostedGlassDirectBootTest.java`: Defines `GboardFrostedGlassDirectBootTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/keyboard/GboardEnglishUppercaseToggleRuntimeBehaviorTest.java`: Defines `GboardEnglishUppercaseToggleRuntimeBehaviorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/keyboard/GboardEnglishUppercaseToggleSettingsFeatureTest.java`: Defines `GboardEnglishUppercaseToggleSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/keyboard/GboardEnglishUppercaseToggleSettingsTest.java`: Defines `GboardEnglishUppercaseToggleSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/keyboard/GboardLatinGlobeKeyIgnoreIntervalRuntimeTest.java`: Defines `GboardLatinGlobeKeyIgnoreIntervalRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/keyboard/GboardLatinGlobeKeyIgnoreIntervalSettingsFeatureTest.java`: Defines `GboardLatinGlobeKeyIgnoreIntervalSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/keyboard/GboardLatinGlobeKeyIgnoreIntervalSettingsTest.java`: Defines `GboardLatinGlobeKeyIgnoreIntervalSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpAllFilesAccessSourceTest.java`: Defines `LanFtpAllFilesAccessSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpControllerArchitectureSourceTest.java`: Defines `LanFtpControllerArchitectureSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpLifecycleExecutorTest.java`: Defines `LanFtpLifecycleExecutorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpLocalNetworkPermissionTest.java`: Defines `LanFtpLocalNetworkPermissionTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpLocalNetworkPreflightTest.java`: Defines `LanFtpLocalNetworkPreflightTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpNoRetainedUploadSourceTest.java`: Defines `LanFtpNoRetainedUploadSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpNotificationContentTest.java`: Defines `LanFtpNotificationContentTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpPasswordRevisionSourceTest.java`: Defines `LanFtpPasswordRevisionSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpPlainValueTypesTest.java`: Defines `LanFtpPlainValueTypesTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpRuntimeEventArchitectureSourceTest.java`: Defines `LanFtpRuntimeEventArchitectureSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpRuntimeObserverTest.java`: Defines `LanFtpRuntimeObserverTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpRuntimeRegistryTest.java`: Defines `LanFtpRuntimeRegistryTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpServiceContainmentSourceTest.java`: Defines `LanFtpServiceContainmentSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/android/LanFtpStartupFailureStateTest.java`: Defines `LanFtpStartupFailureStateTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/config/LanFtpPreferencesTest.java`: Defines `LanFtpPreferencesTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpCredentialPolicyTest.java`: Defines `LanFtpCredentialPolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpEngineIntegrationTest.java`: Defines `LanFtpEngineIntegrationTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpEngineLifecycleTest.java`: Defines `LanFtpEngineLifecycleTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpLoginRateLimiterTest.java`: Defines `LanFtpLoginRateLimiterTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpNetworkResolverTest.java`: Defines `LanFtpNetworkResolverTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpPathTest.java`: Defines `LanFtpPathTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpServerConfigTest.java`: Defines `LanFtpServerConfigTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/LanFtpUserManagerTest.java`: Defines `LanFtpUserManagerTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/InMemoryLanFtpDocumentStore.java`: Defines `InMemoryLanFtpDocumentStore` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpFileSystemTest.java`: Defines `LanFtpFileSystemTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpLargeStreamingTest.java`: Defines `LanFtpLargeStreamingTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpStagingDocumentStoreTest.java`: Defines `LanFtpStagingDocumentStoreTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LanFtpStorIntegrationTest.java`: Defines `LanFtpStorIntegrationTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/fs/LocalLanFtpDocumentStoreTest.java`: Defines `LocalLanFtpDocumentStoreTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpCommandSurfaceTest.java`: Defines `LanFtpCommandSurfaceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpConnectionAdmissionFilterTest.java`: Defines `LanFtpConnectionAdmissionFilterTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpControlQueueLimiterTest.java`: Defines `LanFtpControlQueueLimiterTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpMessageResourceTest.java`: Defines `LanFtpMessageResourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpSessionInfoTest.java`: Defines `LanFtpSessionInfoTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpTransferProgressThrottleTest.java`: Defines `LanFtpTransferProgressThrottleTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/runtime/LanFtpTransferSpeedSamplerTest.java`: Defines `LanFtpTransferSpeedSamplerTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/settings/GboardLanFtpRegistrationSourceTest.java`: Defines `GboardLanFtpRegistrationSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/settings/GboardLanFtpSafSourceTest.java`: Defines `GboardLanFtpSafSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/settings/GboardLanFtpSettingsFeatureTest.java`: Defines `GboardLanFtpSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/settings/GboardLanFtpSettingsRuntimeTest.java`: Defines `GboardLanFtpSettingsRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/lanftp/settings/LanFtpSettingsDisplayFormatterTest.java`: Defines `LanFtpSettingsDisplayFormatterTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardEditingShortcutDispatchGuardTest.java`: Defines `GboardEditingShortcutDispatchGuardTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardEditingShortcutPolicyTest.java`: Defines `GboardEditingShortcutPolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDrag1803AdapterTest.java`: Defines `GboardGlobeDrag1803AdapterTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragBoundSlotRegistryTest.java`: Defines `GboardGlobeDragBoundSlotRegistryTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragGestureStateTest.java`: Defines `GboardGlobeDragGestureStateTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragPhysicalSlotPolicyTest.java`: Defines `GboardGlobeDragPhysicalSlotPolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragRuntimeTest.java`: Defines `GboardGlobeDragRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardGlobeDragSessionTest.java`: Defines `GboardGlobeDragSessionTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActions1803PolicyTest.java`: Defines `GboardLongPressQuickActions1803PolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActions1803RuntimeTest.java`: Defines `GboardLongPressQuickActions1803RuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActionsRuntimeSettingsTest.java`: Defines `GboardLongPressQuickActionsRuntimeSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActionsSettingsFeatureTest.java`: Defines `GboardLongPressQuickActionsSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/longpressquickactions/GboardLongPressQuickActionsSettingsTest.java`: Defines `GboardLongPressQuickActionsSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/manualincognito/GboardManualIncognitoRuntimeTest.java`: Defines `GboardManualIncognitoRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/manualincognito/GboardManualIncognitoSettingsFeatureTest.java`: Defines `GboardManualIncognitoSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/ocr/GboardOcrRuntimeTest.java`: Defines `GboardOcrRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/ocr/GboardOcrSettingsFeatureTest.java`: Defines `GboardOcrSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/quickinsert/GboardQuickInsertContractTest.java`: Defines `GboardQuickInsertContractTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/quickjs/QuickJsNgBridgePayloadSourceTest.java`: Defines `QuickJsNgBridgePayloadSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/quickjs/QuickJsNgLibraryLoaderTest.java`: Defines `QuickJsNgLibraryLoaderTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/rambler/GboardRambler1803OfficialSelectionRuntimeTest.java`: Defines `GboardRambler1803OfficialSelectionRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/rambler/GboardRambler1803StockPolicyTest.java`: Defines `GboardRambler1803StockPolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/roundedkeyboard/GboardRoundedKeyboardRuntimeTest.java`: Defines `GboardRoundedKeyboardRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardManagedDialogRunnerCrashBoundaryTest.java`: Defines `GboardManagedDialogRunnerCrashBoundaryTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesMultiChoiceDialogTest.java`: Defines `GboardPatchesMultiChoiceDialogTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesNavigationPathTest.java`: Defines `GboardPatchesNavigationPathTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesRestartSourceTest.java`: Defines `GboardPatchesRestartSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsActivitySourceTest.java`: Defines `GboardPatchesSettingsActivitySourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsActivityToggleSourceTest.java`: Defines `GboardPatchesSettingsActivityToggleSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsFeatureHostTest.java`: Defines `GboardPatchesSettingsFeatureHostTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsOrchestratorTest.java`: Defines `GboardPatchesSettingsOrchestratorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsScrollStateTest.java`: Defines `GboardPatchesSettingsScrollStateTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsTestHost.java`: Defines `GboardPatchesSettingsTestHost` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardRestartCrashRecoveryGuardTest.java`: Defines `GboardRestartCrashRecoveryGuardTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardSettingsGroupingTest.java`: Defines `GboardSettingsGroupingTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardSettingsTextTest.java`: Defines `GboardSettingsTextTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/GboardTilePreferencesActivitySourceTest.java`: Defines `GboardTilePreferencesActivitySourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settings/keyboardpreview/GboardKeyboardPreviewControllerSourceTest.java`: Defines `GboardKeyboardPreviewControllerSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settingshomepage/GboardSettingsHomepageRuntimeTest.java`: Defines `GboardSettingsHomepageRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/settingshomepage/GboardSettingsHomepageSettingsFeatureTest.java`: Defines `GboardSettingsHomepageSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogoSettingsTest.java`: Defines `GboardSpacebarLogoSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/spacebarlogo/GboardSpacebarLogoSourceContractTest.java`: Defines `GboardSpacebarLogoSourceContractTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/splitkeyboard/GboardSplitKeyboard1803PolicyTest.java`: Defines `GboardSplitKeyboard1803PolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/splitkeyboard/GboardSplitKeyboard1803RuntimeTest.java`: Defines `GboardSplitKeyboard1803RuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissGestureTest.java`: Defines `GboardSwipeDismissGestureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissSettingsTest.java`: Defines `GboardSwipeDismissSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/symbolfooter/GboardSymbolFooterOrderRuntime1803Test.java`: Defines `GboardSymbolFooterOrderRuntime1803Test` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/symbolfooter/GboardSymbolFooterOrderSettingsFeatureTest.java`: Defines `GboardSymbolFooterOrderSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardQuickJsFeatureSourceTest.java`: Defines `GboardQuickJsFeatureSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSlideMarkerIntegrationTest.java`: Defines `GboardTopRowSlideMarkerIntegrationTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeDialogSafetySourceTest.java`: Defines `GboardTopRowSwipeDialogSafetySourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipePageReconciliationTest.java`: Defines `GboardTopRowSwipePageReconciliationTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeRuntimeLimitsDialogSourceTest.java`: Defines `GboardTopRowSwipeRuntimeLimitsDialogSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeRuntimeTest.java`: Defines `GboardTopRowSwipeRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeSettingsFeatureTest.java`: Defines `GboardTopRowSwipeSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeSettingsTest.java`: Defines `GboardTopRowSwipeSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/toprowswipe/GboardTopRowSwipeTransitionTest.java`: Defines `GboardTopRowSwipeTransitionTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncLoopbackAuthTest.java`: Defines `ClipboardSyncLoopbackAuthTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncServiceSourceTest.java`: Defines `ClipboardSyncServiceSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard/ClipboardSyncWebPortalSecurityTest.java`: Defines `ClipboardSyncWebPortalSecurityTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard/GboardWebClipboardCaptureBootstrapSourceTest.java`: Defines `GboardWebClipboardCaptureBootstrapSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardEchoSuppressorTest.java`: Defines `WebClipboardEchoSuppressorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardPreferencesBehaviorTest.java`: Defines `WebClipboardPreferencesBehaviorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/webclipboard/WebClipboardTileControllerTest.java`: Defines `WebClipboardTileControllerTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/websearch/GboardFloatingWebSearchContractTest.java`: Defines `GboardFloatingWebSearchContractTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsOfficialPreferencesTest.java`: Defines `GboardAiWritingToolsOfficialPreferencesTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsRuntimeLoggingTest.java`: Defines `GboardAiWritingToolsRuntimeLoggingTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsRuntimeTest.java`: Defines `GboardAiWritingToolsRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsSettingsFeatureTest.java`: Defines `GboardAiWritingToolsSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsSettingsScopeTest.java`: Defines `GboardAiWritingToolsSettingsScopeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsSettingsTest.java`: Defines `GboardAiWritingToolsSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsSignalRuntimeTest.java`: Defines `GboardAiWritingToolsSignalRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsVoiceCommandPolicyTest.java`: Defines `GboardAiWritingToolsVoiceCommandPolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsVoiceCommandRuntimeTest.java`: Defines `GboardAiWritingToolsVoiceCommandRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/GboardZhuyinBottomRowWeightRuntimeSourceTest.java`: Defines `GboardZhuyinBottomRowWeightRuntimeSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/GboardZhuyinBottomRowWeightRuntimeTest.java`: Defines `GboardZhuyinBottomRowWeightRuntimeTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/GboardZhuyinBottomRowWeightSettingsFeatureTest.java`: Defines `GboardZhuyinBottomRowWeightSettingsFeatureTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinbottomrow/GboardZhuyinBottomRowWeightSettingsTest.java`: Defines `GboardZhuyinBottomRowWeightSettingsTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlideFixtureResources.java`: Defines `GboardZhuyinSlideFixtureResources` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlidePolicyTest.java`: Defines `GboardZhuyinSlidePolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlideRuntimeBehaviorTest.java`: Defines `GboardZhuyinSlideRuntimeBehaviorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlideRuntimeSourceTest.java`: Defines `GboardZhuyinSlideRuntimeSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlideTargetFixture.java`: Defines `GboardZhuyinSlideTargetFixture` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyinslide/GboardZhuyinSlideToggleRefreshIntegrationTest.java`: Defines `GboardZhuyinSlideToggleRefreshIntegrationTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyintoggle/GboardZhuyinToggleTargetFixture.java`: Defines `GboardZhuyinToggleTargetFixture` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyintoggle/GboardZhuyinTraditionalSimplifiedTogglePolicyTest.java`: Defines `GboardZhuyinTraditionalSimplifiedTogglePolicyTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyintoggle/GboardZhuyinTraditionalSimplifiedToggleRuntimeBehaviorTest.java`: Defines `GboardZhuyinTraditionalSimplifiedToggleRuntimeBehaviorTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/zhuyintoggle/GboardZhuyinTraditionalSimplifiedToggleRuntimeSourceTest.java`: Defines `GboardZhuyinTraditionalSimplifiedToggleRuntimeSourceTest` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dga.java`: Defines `dga` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dgb.java`: Defines `dgb` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dgc.java`: Defines `dgc` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dgd.java`: Defines `dgd` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dge.java`: Defines `dge` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dgf.java`: Defines `dgf` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dgg.java`: Defines `dgg` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/dog.java`: Defines `dog` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/gqd.java`: Defines `gqd` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/gvu.java`: Defines `gvu` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/hcv_test_monitor.java`: Defines `hcv_test_monitor` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/hcw.java`: Defines `hcw` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/j$/time/Instant.java`: Defines `Instant` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/lvi.java`: Defines `lvi` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/mpw.java`: Defines `mpw` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/mqc.java`: Defines `mqc` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/njl.java`: Defines `njl` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/njr.java`: Defines `njr` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/njt.java`: Defines `njt` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/njz.java`: Defines `njz` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/oql.java`: Defines `oql` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/oth.java`: Repository asset file: `oth.java`.
+  - `extensions/extension/src/test/java/oti.java`: Defines `oti` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/otk.java`: Defines `otk` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/ouc.java`: Repository asset file: `ouc.java`.
+  - `extensions/extension/src/test/java/oud.java`: Defines `oud` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/ovv.java`: Defines `ovv` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/owd.java`: Defines `owd` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/oxe.java`: Defines `oxe` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/pbj.java`: Defines `pbj` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/pei.java`: Defines `pei` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/pnp.java`: Defines `pnp` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/SymbolFooter1803TargetStubs.java`: Defines `gri` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/vme.java`: Defines `vme` implementing application logic, UI composable, or data entity.
+  - `extensions/extension/src/test/java/wcz.java`: Defines `wcz` implementing application logic, UI composable, or data entity.
+  - `gradle/libs.versions.toml`: noinspection GradleDependency.
+  - `gradle/wrapper/gradle-wrapper.jar`: Gradle wrapper Java runtime binary used to bootstrap Gradle.
+  - `gradle/wrapper/gradle-wrapper.properties`: Configures the pinned Gradle distribution version and download URL for the wrapper.
+  - `gradle.properties`: Gradle daemon runtime flags, JVM memory allocation limits, and AndroidX enablement.
+  - `gradlew`: Unix shell executable for the Gradle build wrapper.
+  - `gradlew.bat`: Windows batch script executable for the Gradle build wrapper.
+  - `LICENSE`: Open-source software license defining terms of use, distribution, and attribution.
+  - `NOTICE`: Repository asset file: `NOTICE`.
+  - `patches/build.gradle.kts`: Gradle build script defining compiler plugins, dependencies, and build configurations.
+  - `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/tools/bindings/GboardPortBundleSchema.kt`: Defines `GboardPortBundleSchema` implementing application logic, UI composable, or data entity.
+  - `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/tools/bindings/GboardTargetBuildCompiler.kt`: Defines `CompiledGboardTargetBuild` implementing application logic, UI composable, or data entity.
+  - `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/tools/bindings/TargetBindingCompiler.kt`: Defines `VerifiedProjection` implementing application logic, UI composable, or data entity.
+  - `patches/src/bindingCompiler/kotlin/dev/jason/gboardpatches/tools/bindings/TargetBindingGenerator.kt`: Defines `TargetBindingGenerator` implementing application logic, UI composable, or data entity.
+  - `patches/src/bindingCompiler/resources/gboard/gboard-port-bundle.schema.json`: JSON data configuration or metadata dictionary.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/about/GboardAboutPageResourcePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accessibilitylayout/GboardAccessibilityLayoutFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accessibilitylayout/GboardAccessibilityLayoutFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accesspointcount/GboardAccessPointCountFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accesspointcount/GboardAccessPointCountFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accesspointsmenu/GboardAccessPointsMenuFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/accesspointsmenu/GboardAccessPointsMenuFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardAddSymbolsBytecodeUtils.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardCustomSymbolsFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardZhuyinCustomSymbolsCorpusPatch.kt`: Defines `v` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardZhuyinCustomSymbolsEmoticonStatePatch.kt`: Defines `register` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardZhuyinCustomSymbolsEntryPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardZhuyinCustomSymbolsExtensionPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardZhuyinCustomSymbolsHistoryPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardZhuyinCustomSymbolsRecyclerPatch.kt`: Defines `v0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardZhuyinCustomSymbolsRoutingPatch.kt`: Defines `v2` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice/GboardAdvancedVoice1803ZhTwPatch.kt`: Defines `GboardAdvancedVoice1803Targets` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice/GboardAdvancedVoiceFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice/GboardAdvancedVoiceFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice/GboardAdvancedVoicePatchSupport.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/backuprestore/GboardBackupRestoreFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/backuprestore/GboardBackupRestoreManifestPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/bluetoothmicrophone/GboardBluetoothMicrophoneFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/bluetoothmicrophone/GboardBluetoothMicrophoneFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator/GboardCalculator1803Targets.kt`: Defines `GboardCalculator1803Targets` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator/GboardCalculatorExtensionPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator/GboardCalculatorFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator/GboardCalculatorLifecyclePatch.kt`: Defines `v0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/GboardClipboardAdapterPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/GboardClipboardColumnCountPatch.kt`: Defines `v0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/GboardClipboardFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/GboardClipboardLoaderPatch.kt`: Defines `v0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/GboardClipboardPatchOptions.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/GboardClipboardPatchValidation.kt`: (startRegister until startRegister + registerCount).toList().toIntArray(),.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/GboardClipboardPrunePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboardcontentlimit/GboardClipboardContentLimitFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboardcontentlimit/GboardClipboardContentLimitFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/closeproactivesuggestions/GboardCloseProactiveSuggestionsFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/closeproactivesuggestions/GboardCloseProactiveSuggestionsFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/cursortrackpad/GboardCursorTrackpadFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/cursortrackpad/GboardCursorTrackpadFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme/GboardCustomThemeAssetsPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme/GboardCustomThemeFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme/GboardCustomThemeManifestPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme/GboardCustomThemeOfficialImportPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/developeroptions/GboardDeveloperOptionsFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/editingaccesspoints/GboardEditingAccessPoints1803Targets.kt`: Defines `GboardEditingAccessPoints1803Targets` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/editingaccesspoints/GboardEditingAccessPointsFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/editingaccesspoints/GboardEditingAccessPointsLifecyclePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont/GboardEmojiFontFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont/GboardEmojiFontPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojisize/GboardEmojiSizeFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojisize/GboardEmojiSizeFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty/GboardEnglishQwertyPointerPatch.kt`: Defines `v0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty/GboardEnglishQwertySoftKeyPatch.kt`: Defines `p0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty/GboardEnglishUppercaseToggleFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/featureflags/GboardDeviceIntelligenceFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/featureflags/GboardFeatureFlagMarkerPatchUtils.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/featureflags/GboardFeatureFlagsBytecodePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/featureflags/GboardGrammarCheckerFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/featureflags/GboardInlineSuggestionsFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/featureflags/GboardKeyShapeSelectionFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/flowmode/GboardFlowModeFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/flowmode/GboardFlowModeFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/flowmode/GboardFlowModeKeyEventPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/frostedglass/GboardFrostedGlassFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/frostedglass/GboardFrostedGlassLifecyclePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/lanftp/GboardLanFtpFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/lanftp/GboardLanFtpManifestPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/latinglobe/GboardLatinGlobeKeyIgnoreIntervalBytecodePatch.kt`: Defines `v` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/latinglobe/GboardLatinGlobeKeyIgnoreIntervalFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/longpressquickactions/GboardLongPressQuickActionsFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/longpressquickactions/GboardLongPressQuickActionsGesturePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/longpressquickactions/GboardLongPressQuickActionsInputEventPatch.kt`: Defines `InputEventRegisterLayout` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/longpressquickactions/GboardLongPressQuickActionsPointerOwnerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/longpressquickactions/GboardLongPressQuickActionsSoftKeyPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/manualincognito/GboardManualIncognitoFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/manualincognito/GboardManualIncognitoLifecyclePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/manualincognito/GboardManualIncognitoPolicyPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/manualincognito/GboardManualIncognitoTargets.kt`: Defines `GboardManualIncognitoTargets` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/ocr/GboardOcrFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/ocr/GboardOcrFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/ocr/GboardOcrPatchTargets.kt`: Defines `GboardOcrPatchTargets` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/ocr/GboardOcrRuntimePatch.kt`: Defines `delegate` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/packagerename/GboardPackageRenameResourcePatch.kt`: Defines `GboardPackageRenameMapping` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/quickinsert/GboardQuickInsertFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/quickinsert/GboardQuickInsertFlagValuePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/rambler/GboardRambler1803OfficialSelectorPatch.kt`: Defines `GboardRambler1803Targets` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/roundedkeyboard/GboardRoundedKeyboardBytecodePatch.kt`: Defines `v0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/roundedkeyboard/GboardRoundedKeyboardFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/settingshomepage/GboardSettingsHomepageBytecodePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/settingshomepage/GboardSettingsHomepageFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/signaturebypass/GboardSignatureBypassBytecodePatch.kt`: Defines `LiteralShape` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/spacebarlogo/GboardSpacebarLogoFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/spacebarlogo/GboardSpacebarLogoSoftKeyPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/splitkeyboard/GboardSplitKeyboard1803Targets.kt`: Defines `GboardSplitKeyboard1803Targets` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/splitkeyboard/GboardSplitKeyboardAccessPointPatch.kt`: Defines `v0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/splitkeyboard/GboardSplitKeyboardFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/splitkeyboard/GboardSplitKeyboardModePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/swipedismiss/GboardSwipeDismissBytecodePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/swipedismiss/GboardSwipeDismissFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/symbolfooter/GboardSymbolFooterOrderBytecodePatch.kt`: Defines `v` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/symbolfooter/GboardSymbolFooterOrderFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe/GboardTopRowSwipeFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe/GboardTopRowSwipeGesturePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe/GboardTopRowSwipePatchOptions.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe/GboardTopRowSwipePointerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe/GboardTopRowSwipeSoftKeyPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard/GboardWebClipboardAssetsPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard/GboardWebClipboardCapturePatch.kt`: Defines `v10` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard/GboardWebClipboardFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard/GboardWebClipboardManifestPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/websearch/GboardFloatingWebSearchFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/websearch/GboardFloatingWebSearchManifestPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools/GboardAiWritingToolsFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools/GboardAiWritingToolsFlagValuePatch.kt`: Defines `v1` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools/GboardAiWritingToolsPatchConstants.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinbottomrow/GboardZhuyinBottomRowWeightFeatureMarkerPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinbottomrow/GboardZhuyinBottomRowWeightSoftKeyPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinslide/GboardZhuyinSlidePointerAnchorPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinslide/GboardZhuyinSlideSoftKeyPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyintraditionalsimplifiedtoggle/GboardZhuyinTraditionalSimplifiedToggleGesturePatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyintraditionalsimplifiedtoggle/GboardZhuyinTraditionalSimplifiedToggleRuntimePatch.kt`: Defines `ZhuyinTogglePopupTransformationPlan` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyintraditionalsimplifiedtoggle/GboardZhuyinTraditionalSimplifiedToggleSoftKeyPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardCapabilityWiringVerifier.kt`: Defines `GboardCapabilityWiringVerifier` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardContributionWiring.kt`: Defines `GboardContributionWiringUnit` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPatchRegistry.kt`: Defines `GboardPublishedPatchCatalog` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/accesspoint/GboardAccessPointContributions1803Patch.kt`: Defines `v0` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/accesspoint/GboardAccessPointContributions1803Targets.kt`: Defines `GboardAccessPointContributions1803Targets` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardBytecodeUtils.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardExpressionCorpusPatchState.kt`: Defines `GboardExpressionCorpusPatchState` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardFlagFamilyComposer.kt`: Defines `GboardFlagFamilyArgumentShape` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardGestureFamilyComposer.kt`: Defines `GboardGestureFamilyFeature` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardInstructionInspection.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardLifecycleDelegate.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardManifestXmlUtils.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardPatchesExtensionCarrierPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardPatchesPreviewAssetsPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardPatchesSettingsPatch.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardPointerOwnerRegisterContract.kt`: Register layout for the admitted 18.0.3 pvi#B pointer-owner method. The target.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardPointerOwnerTransformation.kt`: Defines `GboardPointerOwnerTransformation` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardResourceXmlUtils.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardSoftKeyFamilyComposer.kt`: Defines `GboardSoftKeyFamilyFeature` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardStructuralFingerprint.kt`: Kotlin source implementation file.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardTargetBinding.kt`: Defines `GboardMethodTarget` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/DexRuntimeArtifactInventory.kt`: Defines `DexRuntimeArtifactInventory` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeAbi.kt`: Defines `RuntimeCallId` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeAbiVerifier.kt`: Defines `RuntimeArtifactInventory` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeCallEmitter.kt`: Defines `RuntimeCallEmitter` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/VerifiedBytecodeTransformation.kt`: Defines `VerifiedTransformationState` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/shared/Constants.kt`: Defines `Constants` implementing application logic, UI composable, or data entity.
+  - `patches/src/main/resources/custom-theme-assets/catalog.json`: JSON data configuration or metadata dictionary.
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.json`: JSON data configuration or metadata dictionary.
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.schema.json`: JSON data configuration or metadata dictionary.
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.sha256`: Repository asset file: `gboard-port-product-catalog.sha256`.
+  - `patches/src/main/resources/gboard/gboard-version-bindings.json`: JSON data configuration or metadata dictionary.
+  - `patches/src/main/resources/gboard/gboard-version-bindings.schema.json`: JSON data configuration or metadata dictionary.
+  - `patches/src/main/resources/lan-ftp-res/drawable/ic_lan_ftp_tile.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/main/resources/lan-ftp-res/xml/gboard_patches_lan_ftp_backup_rules.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/main/resources/lan-ftp-res/xml/gboard_patches_lan_ftp_data_extraction_rules.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/main/resources/settings-previews/accessibilitylayout/06_accessibility_keyboard.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/accessibilitylayout/07_accessibility_layout_setting.jpg`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/accesspointcount/enabled.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/accesspointsmenu/03_access_points_legacy.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/accesspointsmenu/04_access_points_redesigned.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/column_count_one.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/column_count_three.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/preview_lines_default_5.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/preview_lines_extended_8.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/show_creation_time.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/show_expiry_countdown.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/show_order_index.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/show_sensitive_content_disabled.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/clipboard/show_sensitive_content_enabled.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/closeproactivesuggestions/01_close_proactive_suggestions.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/cursortrackpad/01_cursor_trackpad_mode.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/cursortrackpad/02_cursor_trackpad_setting.jpg`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/customtheme/enabled.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/editingaccesspoints/01_toolbar_editing_buttons.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/emojisize/05_emoji_size_setting.jpg`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/keyboard/gboard_flow_mode_enabled_preview.mp4`: Repository asset file: `gboard_flow_mode_enabled_preview.mp4`.
+  - `patches/src/main/resources/settings-previews/keyboard/gboard_latin_globe_key_ignore_interval_default.mp4`: Repository asset file: `gboard_latin_globe_key_ignore_interval_default.mp4`.
+  - `patches/src/main/resources/settings-previews/keyboard/gboard_latin_globe_key_ignore_interval_patched.mp4`: Repository asset file: `gboard_latin_globe_key_ignore_interval_patched.mp4`.
+  - `patches/src/main/resources/settings-previews/keyboard/gboard_long_press_quick_actions_enabled_preview.mp4`: Repository asset file: `gboard_long_press_quick_actions_enabled_preview.mp4`.
+  - `patches/src/main/resources/settings-previews/keyboard/gboard_top_row_swipe_enabled_preview.mp4`: Repository asset file: `gboard_top_row_swipe_enabled_preview.mp4`.
+  - `patches/src/main/resources/settings-previews/manualincognito/access_point.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/quickinsert/01_quick_insert_panel.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/quickinsert/02_quick_insert_access_point.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/settingshomepage/settings_style_legacy.jpg`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/settingshomepage/settings_style_new.jpg`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/splitkeyboard/08_split_keyboard.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/websearch/01_floating_web_search_browser.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/websearch/02_floating_web_search_access_point.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/settings-previews/zhuyinbottomrow/enabled.png`: Raster graphic image or icon asset used in application UI or documentation.
+  - `patches/src/main/resources/web-clipboard-assets/assets/geist-cyrillic-ext-wght-normal-DjL33-gN.woff2`: Typography font asset utilized for application text rendering.
+  - `patches/src/main/resources/web-clipboard-assets/assets/geist-cyrillic-wght-normal-BEAKL7Jp.woff2`: Typography font asset utilized for application text rendering.
+  - `patches/src/main/resources/web-clipboard-assets/assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2`: Typography font asset utilized for application text rendering.
+  - `patches/src/main/resources/web-clipboard-assets/assets/geist-latin-wght-normal-BgDaEnEv.woff2`: Typography font asset utilized for application text rendering.
+  - `patches/src/main/resources/web-clipboard-assets/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2`: Typography font asset utilized for application text rendering.
+  - `patches/src/main/resources/web-clipboard-assets/assets/index-CrrbJfwz.js`: JavaScript execution script or utility module.
+  - `patches/src/main/resources/web-clipboard-assets/assets/index-j-45Yer8.css`: Cascading Style Sheet defining presentation rules and visual styling.
+  - `patches/src/main/resources/web-clipboard-assets/favicon.svg`: Scalable vector graphic resource for UI iconography and branding.
+  - `patches/src/main/resources/web-clipboard-assets/icons.svg`: Scalable vector graphic resource for UI iconography and branding.
+  - `patches/src/main/resources/web-clipboard-assets/index.html`: HTML web page markup or documentation entrypoint.
+  - `patches/src/main/resources/web-clipboard-assets/index.txt`: Repository asset file: `index.txt`.
+  - `patches/src/main/resources/web-clipboard-res/drawable/ic_web_clipboard_tile.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/patchMetadata/kotlin/dev/jason/gboardpatches/util/PatchListGenerator.kt`: Kotlin source implementation file.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/about/GboardAboutPageResourcePatchTest.kt`: Defines `GboardAboutPageResourcePatchTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/addsymbols/GboardZhuyinCustomSymbolsRoutingPatchTest.kt`: Defines `GboardZhuyinCustomSymbolsRoutingPatchTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice/GboardAdvancedVoice1803PatchSourceTest.kt`: Defines `GboardAdvancedVoice1803PatchSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/advancedvoice/GboardAdvancedVoiceFeatureMarkerSourceTest.kt`: Defines `GboardAdvancedVoiceFeatureMarkerSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator/GboardCalculatorExtensionClosureTest.kt`: Defines `GboardCalculatorExtensionClosureTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/calculator/GboardCalculatorPatchContractTest.kt`: Defines `GboardCalculatorPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/clipboard/GboardClipboardTargetSourceContractTest.kt`: Defines `GboardClipboardTargetSourceContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/customtheme/GboardCustomThemeAssetsPatchTest.kt`: Defines `GboardCustomThemeAssetsPatchTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont/GboardEmojiFontPatchShapeTest.kt`: Defines `GboardEmojiFontPatchShapeTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty/GboardEnglishQwertyPatchSourceTest.kt`: Defines `GboardEnglishQwertyPatchSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/englishqwerty/GboardEnglishQwertyToggleRuntimeSourceTest.kt`: Defines `GboardEnglishQwertyToggleRuntimeSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/GboardTilePreferencesManifestCompositionTest.kt`: Defines `GboardTilePreferencesManifestCompositionTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/lanftp/GboardLanFtpManifestPatchTest.kt`: Defines `GboardLanFtpManifestPatchTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/packagerename/GboardPackageRenameFixtureProvenanceTest.kt`: Defines `GboardPackageRenameFixtureProvenanceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/packagerename/GboardPackageRenameTransformTest.kt`: Defines `GboardPackageRenameTransformTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/rambler/GboardRambler1803PatchSourceTest.kt`: Defines `GboardRambler1803PatchSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/spacebarlogo/GboardSpacebarLogoPatchShapeTest.kt`: Defines `GboardSpacebarLogoPatchShapeTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/toprowswipe/GboardTopRowSwipePatchShapeTest.kt`: Defines `GboardTopRowSwipePatchShapeTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard/GboardWebClipboardManifestPatchSourceTest.kt`: Defines `GboardWebClipboardManifestPatchSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/webclipboard/GboardWebClipboardRuntimePreservationTest.kt`: Defines `GboardWebClipboardRuntimePreservationTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools/GboardAiWritingTools1803AutoFixRoutePatchSourceTest.kt`: Defines `GboardAiWritingTools1803AutoFixRoutePatchSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools/GboardAiWritingTools1803GenAiInitPatchSourceTest.kt`: Defines `GboardAiWritingTools1803GenAiInitPatchSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/writingtools/GboardAiWritingToolsFlagValuePatchSourceTest.kt`: Defines `GboardAiWritingToolsFlagValuePatchSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinbottomrow/GboardZhuyinBottomRowWeightPatchShapeTest.kt`: Defines `GboardZhuyinBottomRowWeightPatchShapeTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyinslide/GboardZhuyinSlidePatchShapeTest.kt`: Defines `GboardZhuyinSlidePatchShapeTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/features/zhuyintraditionalsimplifiedtoggle/GboardZhuyinTraditionalSimplifiedTogglePatchShapeTest.kt`: Defines `GboardZhuyinTraditionalSimplifiedTogglePatchShapeTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/FeatureFlagSourceContractParser.kt`: Defines `FeatureFlagSource` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardAccessPointCountPatchContractTest.kt`: Defines `GboardAccessPointCountPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardAdvancedVoicePatchContractTest.kt`: Defines `GboardAdvancedVoicePatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardAiWritingToolsPatchRegistrySourceTest.kt`: Defines `GboardAiWritingToolsPatchRegistrySourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardBackupRestorePatchContractTest.kt`: Defines `GboardBackupRestorePatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardBluetoothMicrophonePatchContractTest.kt`: Defines `GboardBluetoothMicrophonePatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardCalculatorPatchRegistryTest.kt`: Defines `GboardCalculatorPatchRegistryTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardClipboardContentLimitPatchContractTest.kt`: Defines `GboardClipboardContentLimitPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardCompatibilitySourceTest.kt`: Defines `GboardCompatibilitySourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardContributionWiringTest.kt`: Defines `GboardContributionWiringTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardDeveloperOnlyPatchLoaderIntegrationTest.kt`: Defines `GboardDeveloperOnlyPatchLoaderIntegrationTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardDeveloperOptionsGeneratedInventoryTest.kt`: Defines `GboardDeveloperOptionsGeneratedInventoryTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardDeveloperOptionsPatchContractSourceTest.kt`: Defines `GboardDeveloperOptionsPatchContractSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardEditingAccessPointsPatchContractTest.kt`: Defines `GboardEditingAccessPointsPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardEnglishQwertyPatchRegistrySourceTest.kt`: Defines `GboardEnglishQwertyPatchRegistrySourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardFiveFlagPatchesContractTest.kt`: Defines `GboardFiveFlagPatchesContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardFloatingWebSearchPatchContractTest.kt`: Defines `GboardFloatingWebSearchPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardGrammarCheckerPatchContractTest.kt`: Defines `GboardGrammarCheckerPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardInlineSuggestionsPatchContractTest.kt`: Defines `GboardInlineSuggestionsPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardLanFtpServerPatchContractTest.kt`: Defines `GboardLanFtpServerPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardLatinGlobePatchContractTest.kt`: Defines `GboardLatinGlobePatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardLongPressQuickActionsPatchContractTest.kt`: Defines `GboardLongPressQuickActionsPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardManualIncognitoPatchContractTest.kt`: Defines `GboardManualIncognitoPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardOcrPatchContractTest.kt`: Defines `GboardOcrPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPackageRenamePatchContractTest.kt`: Defines `GboardPackageRenamePatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPortProductCatalogContractTest.kt`: Defines `GboardPortProductCatalogContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPublishedInventoryTestSupport.kt`: Kotlin source implementation file.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardPublishedPatchCatalogContractTest.kt`: Defines `GboardPublishedPatchCatalogContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardRoundedKeyboardPatchContractTest.kt`: Defines `GboardRoundedKeyboardPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardSettingsHomepagePatchContractTest.kt`: Defines `GboardSettingsHomepagePatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardSignatureBypassPatchContractTest.kt`: Defines `GboardSignatureBypassPatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardStagedReleasePatchContractTest.kt`: Defines `GboardStagedReleasePatchContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardSwipeDismissPatchRegistryTest.kt`: Defines `GboardSwipeDismissPatchRegistryTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardTargetNativeRetirementSourceTest.kt`: Defines `GboardTargetNativeRetirementSourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardThreeRuntimePatchesContractTest.kt`: Defines `GboardThreeRuntimePatchesContractTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardWebClipboardPatchRegistrySourceTest.kt`: Defines `GboardWebClipboardPatchRegistrySourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/registry/GboardZhuyinBottomRowPatchRegistrySourceTest.kt`: Defines `GboardZhuyinBottomRowPatchRegistrySourceTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardFlagFamilySelectionStoreTest.kt`: Defines `GboardFlagFamilySelectionStoreTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardGestureFamilySelectionStoreTest.kt`: Defines `GboardGestureFamilySelectionStoreTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardSoftKeyFamilySelectionStoreTest.kt`: Defines `GboardSoftKeyFamilySelectionStoreTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/CompiledPatchRuntimeCallInventory.kt`: Defines `CompiledPatchRuntimeCalls` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/CompiledPatchRuntimeCallInventoryTest.kt`: Defines `CompiledPatchRuntimeCallInventoryTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/DexRuntimeArtifactInventoryTest.kt`: Defines `DexRuntimeArtifactInventoryTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeAbiVerifierTest.kt`: Defines `RuntimeAbiVerifierTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeCallEmitterTest.kt`: Defines `RuntimeCallEmitterTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/patches/gboard/shared/VerifiedBytecodeTransformationTest.kt`: Defines `VerifiedBytecodeTransformationTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/tools/bindings/GboardTargetBuildCompilerTest.kt`: Defines `GboardTargetBuildCompilerTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/tools/bindings/TargetBindingCompilerTest.kt`: Defines `TargetBindingCompilerTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/kotlin/dev/jason/gboardpatches/tools/bindings/TargetBindingGeneratorTest.kt`: Defines `TargetBindingGeneratorTest` implementing application logic, UI composable, or data entity.
+  - `patches/src/test/resources/gboard/18.0.3/about/setting_about.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/test/resources/gboard/18.0.3/package-rename/AndroidManifest.normalized.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/test/resources/gboard/18.0.3/package-rename/provenance.json`: JSON data configuration or metadata dictionary.
+  - `patches/src/test/resources/gboard/18.0.3/package-rename/retained-resource-literals.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/test/resources/gboard/18.0.3/package-rename/settings_legacy.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/test/resources/gboard/18.0.3/package-rename/settings.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/test/resources/gboard/18.0.3/package-rename/split-manifest-inventory.json`: JSON data configuration or metadata dictionary.
+  - `patches/src/test/resources/gboard/18.0.3/settings-homepage-override/settings_legacy.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches/src/test/resources/gboard/18.0.3/settings-homepage-override/settings.xml`: Android XML layout, value dictionary, or system configuration definition.
+  - `patches-bundle.json`: JSON data configuration or metadata dictionary.
+  - `patches-list.json`: JSON data configuration or metadata dictionary.
+  - `README.md`: Repository documentation, architectural overview, usage instructions, and downstream integration guidelines.
+  - `reddit.md`: Markdown documentation article.
+  - `release-assets/custom-theme-previews/README.md`: Repository documentation, architectural overview, usage instructions, and downstream integration guidelines.
+  - `release-assets/custom-theme-previews/v1/custom-theme-previews-v1-manifest.json`: JSON data configuration or metadata dictionary.
+  - `release-assets/custom-theme-previews/v1/custom-theme-previews-v1.zip`: Compressed archive artifact.
+  - `scripts/verify-invariants.ps1`: Scripts to verify critical fork invariants for mrdarksidetm/Gboard-patches.
+  - `settings.gradle.kts`: Gradle settings script defining repository sources and module inclusion.
+  - `tools/custom-theme-previews/build-release.ps1`: PowerShell system automation and administrative execution script.
+  - `Version.md`: Permanent, immutable project ledger tracking historical changelogs, architecture evolution, and component manifests.
+- **Status**: 100% (Completed & Verified across repository)
