@@ -1666,7 +1666,7 @@ public final class GboardPatchesSettingsActivity extends Activity
                 float top = (getHeight() - iconSize) / 2f;
                 float scale = iconSize / 24f;
 
-                paint.setColor(palette.textPrimary);
+                paint.setColor(palette.accent);
                 path.reset();
                 path.moveTo(left + (4.48f * scale), top + (14.5f * scale));
                 path.cubicTo(

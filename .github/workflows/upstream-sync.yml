@@ -118,12 +118,12 @@ jobs:
 
               try {
                   if (-not $existingPr) {
-                      gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync] Merge conflict detected from jasonwu1994/Gboard-patches" --body "$body" --label "upstream-sync"
+                      $prResult = gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync] Merge conflict detected from jasonwu1994/Gboard-patches" --body "$body" --label "upstream-sync" 2>&1
                       if ($LASTEXITCODE -ne 0) {
-                          gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync] Merge conflict detected from jasonwu1994/Gboard-patches" --body "$body"
+                          $prResult = gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync] Merge conflict detected from jasonwu1994/Gboard-patches" --body "$body" 2>&1
                       }
                   } else {
-                      gh pr comment $existingPr --body "$body"
+                      gh pr comment $existingPr --body "$body" 2>&1
                   }
               } catch {
                   Write-Host "Warning: Could not create or comment on PR automatically: $_" -ForegroundColor Yellow
@@ -197,12 +197,12 @@ jobs:
           "@
               try {
                   if (-not $existingPr) {
-                      gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync Regression] Invariant or test check failed" --body "$body" --label "upstream-sync"
+                      $prResult = gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync Regression] Invariant or test check failed" --body "$body" --label "upstream-sync" 2>&1
                       if ($LASTEXITCODE -ne 0) {
-                          gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync Regression] Invariant or test check failed" --body "$body"
+                          $prResult = gh pr create --base main --head $syncBranch --title "🚨 [Upstream Sync Regression] Invariant or test check failed" --body "$body" 2>&1
                       }
                   } else {
-                      gh pr comment $existingPr --body "$body"
+                      gh pr comment $existingPr --body "$body" 2>&1
                   }
               } catch {
                   Write-Host "Warning: Could not create or comment on PR automatically: $_" -ForegroundColor Yellow

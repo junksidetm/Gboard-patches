@@ -19,17 +19,17 @@ public final class GboardRambler1803OfficialSelectionRuntime {
     }
 
     public static boolean shouldEnableAgenticDictation() {
-        if (isVoiceSettingsScopeActive()) {
-            return true;
-        }
-        if (GboardAdvancedVoice1803RuntimeSettings.isRamblerEnabled()) {
-            return true;
-        }
         if (isDefaultSelectionSuppressed()) {
             return false;
         }
+        if (isVoiceSettingsScopeActive()) {
+            return true;
+        }
         Boolean selected = officialRamblerSelected;
         if (selected == null) {
+            if (GboardAdvancedVoice1803RuntimeSettings.isRamblerEnabled()) {
+                return true;
+            }
             selected = readOfficialSelection();
         }
         return Boolean.TRUE.equals(selected);

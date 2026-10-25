@@ -201,6 +201,11 @@ public final class GboardAdvancedVoice1803Runtime {
                     args,
                     handles.orationConfigurationField,
                     handles.defaultConfigurationField,
+                    handles.disableAdvancedFeaturesField)
+                    || maybeEnableUniversalFormatter(
+                    args,
+                    handles.orationConfigurationField,
+                    handles.defaultConfigurationField,
                     handles.disableAdvancedFeaturesField)) {
                 logInfo("enabled stock formatter locale="
                         + (locale != null ? locale.toLanguageTag() : "all"));
@@ -296,6 +301,45 @@ public final class GboardAdvancedVoice1803Runtime {
     }
 
     static boolean maybeEnableExactZhTwFormatter(
+            Object[] args,
+            Field orationConfigurationField,
+            Field defaultConfigurationField,
+            Field disableAdvancedFeaturesField)
+            throws ReflectiveOperationException {
+        if (args == null
+                || args.length <= 4
+                || !(args[0] instanceof Locale)
+                || args[1] == null
+                || orationConfigurationField == null
+                || defaultConfigurationField == null
+                || disableAdvancedFeaturesField == null) {
+            return false;
+        }
+        Locale locale = (Locale) args[0];
+        Object configurationData = orationConfigurationField.get(args[1]);
+        if (configurationData == null) {
+            configurationData = defaultConfigurationField.get(null);
+        }
+        if (configurationData == null) {
+            return false;
+        }
+        boolean stockAdvancedFeaturesDisabled =
+                disableAdvancedFeaturesField.getBoolean(configurationData);
+        Object originalFormatterDisabled = args[4];
+        Object enforcedFormatterDisabled =
+                GboardAdvancedVoice1803Policy.maybeEnableExactZhTwFormatter(
+                        locale,
+                        stockAdvancedFeaturesDisabled,
+                        originalFormatterDisabled);
+        if (!Boolean.TRUE.equals(originalFormatterDisabled)
+                || !Boolean.FALSE.equals(enforcedFormatterDisabled)) {
+            return false;
+        }
+        args[4] = Boolean.FALSE;
+        return true;
+    }
+
+    static boolean maybeEnableUniversalFormatter(
             Object[] args,
             Field orationConfigurationField,
             Field defaultConfigurationField,

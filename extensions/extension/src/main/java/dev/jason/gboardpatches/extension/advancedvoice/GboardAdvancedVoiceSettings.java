@@ -128,9 +128,7 @@ public final class GboardAdvancedVoiceSettings {
             if ("true".equalsIgnoreCase((String) raw)) {
                 return true;
             }
-            if ("false".equalsIgnoreCase((String) raw)) {
-                return false;
-            }
+            return false;
         }
         return defaultValue;
     }

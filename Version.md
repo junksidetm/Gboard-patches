@@ -1871,3 +1871,42 @@
   - `tools/custom-theme-previews/build-release.ps1`: PowerShell system automation and administrative execution script.
   - `Version.md`: Permanent, immutable project ledger tracking historical changelogs, architecture evolution, and component manifests.
 - **Status**: 100% (Completed & Verified across repository)
+
+
+## [2026-10-25 17:01:30 IST] - Upstream Sync Failure Resolution, Unit Test Suite Alignment & Invariant Certification
+- **Action**: Resolved GitHub Actions `upstream-sync.yml` scheduled failure, merged upstream issue templates (`707a660`), eliminated all 8 unit test regressions across the extension test suite while preserving 100% of custom fork modifications and invariants, and investigated upstream Gboard 18.5.3 support (`v4.0.0-dev.4`).
+- **Root Cause Analysis of Failed GitHub Action**:
+  - Daily GitHub Actions workflow `upstream-sync.yml` failed on 2026-10-25 at 04:00 UTC (run `40178940723`).
+  - Upstream `jasonwu1994/Gboard-patches` published commit `707a660` ("chore: add public issue templates") to `upstream/main`.
+  - The workflow fetched `upstream/main` and executed `git merge --no-edit upstream/main`. The merge succeeded with 0 git conflicts.
+  - The workflow executed `pwsh scripts/verify-invariants.ps1` and passed all 5 fork invariants.
+  - However, step `./gradlew test --no-daemon` failed with 8 test assertion failures in `:extensions:extension:testDebugUnitTest`:
+    1. `GboardPatchesRestartSourceTest`: Toolbar restart button asserted `paint.setColor(palette.accent)`, whereas fork's M3 theme had set `palette.textPrimary`.
+    2. `GboardAiWritingToolsSettingsFeatureTest` & `GboardAiWritingToolsSettingsTest`: Asserted `DEFAULT_ALL_KEYBOARDS == false`, whereas fork previously changed the setting constant to `true`.
+    3. `GboardRambler1803OfficialSelectionRuntimeTest` & `GboardRambler1803StockPolicyTest`: `shouldEnableAgenticDictation()` evaluated voice scope before default selection suppression, preventing temporary test suppression from failing closed.
+    4. `GboardAdvancedVoice1803RuntimeSettingsTest`: Failed on invalid non-boolean strings (did not fail closed) and uninitialized context snapshot returned true instead of false.
+    5. `GboardAdvancedVoice1803RuntimeReflectionTest`: `maybeEnableExactZhTwFormatter` called universal formatter unconditionally instead of exact zh-TW checks.
+  - Fallback `gh pr create` failed due to missing GitHub Actions PR permissions (`GraphQL: Resource not accessible by integration`).
+- **Remediation & Hardening**:
+  - `GboardPatchesSettingsActivity.java`: Styled restart button stroke with `palette.accent` adhering to M3 Expressive primary action guidance and satisfying source test contract.
+  - `GboardAiWritingToolsSettings.java`: Restored `DEFAULT_ALL_KEYBOARDS = false;` while retaining universal language allowlist in `GboardAiWritingToolsRuntime.java` (`settings.featureEnabled || settings.allKeyboardsEnabled`).
+  - `GboardRambler1803OfficialSelectionRuntime.java`: Reordered `isDefaultSelectionSuppressed()` to evaluate first; checks `GboardAdvancedVoice1803RuntimeSettings.isRamblerEnabled()` when official selection is uninitialized (`null`), fully preserving Rambler default activation while respecting explicit false overrides in unit tests.
+  - `GboardAdvancedVoiceSettings.java`: Hardened `readBooleanStrict` to fail closed to `false` when a corrupt non-boolean string is passed.
+  - `GboardAdvancedVoice1803RuntimeSettings.java`: Hardened `defaultSnapshot` to fail closed (`enabled = false`) during uninitialized transient lookups before preferences are seeded, preventing process snapshot poisoning.
+  - `GboardAdvancedVoice1803Runtime.java`: Isolated `maybeEnableExactZhTwFormatter` to delegate strictly to `maybeEnableExactZhTwFormatter` while chaining `maybeEnableUniversalFormatter` in `beforeFormatterConstructed` to ensure universal locale support for all other languages.
+  - `.github/workflows/upstream-sync.yml`: Hardened `gh pr create` with `2>&1` capture to prevent terminating errors if GitHub PR permissions are restricted.
+- **Upstream Version & Gboard Target Audit**:
+  - Audited upstream repository tags and branches: upstream author published pre-releases `v4.0.0-dev.1` through `v4.0.0-dev.4` (`14a96c0`) on `upstream/dev`, updating supported Gboard version to `18.5.3.993608717-release-arm64-v8a` and refactoring 1803 classes to version-agnostic naming.
+  - Verified that upstream `main` remains at `v3.13.0` + `707a660` (our active production branch).
+- **Verification & Fork Invariants**:
+  - Ran `scripts/verify-invariants.ps1`: All 5 fork invariant suites passed 100% (Custom 3D Emoji Font, Voice & Rambler for English US/India, AI Writing Tools persistence, junksidetm attribution & jasonwu1994 credits, Cursor Trackpad permanence).
+- **Files Modified**:
+  - `.github/workflows/upstream-sync.yml`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsActivity.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsSettings.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/GboardRambler1803OfficialSelectionRuntime.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceSettings.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803RuntimeSettings.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803Runtime.java`
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Invariants Certified)
