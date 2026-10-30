@@ -1978,3 +1978,14 @@
   - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceUniversalLocaleTest.java`
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Invariants Certified)
+
+## [2026-10-30 21:56:00 IST] - Release v4.0.0 Artifact Verification & Release Completion
+- **Action**: Monitored GitHub Actions release CI workflow (`release.yml`), verified successful build completion across all patch and extension components, and certified published release `v4.0.0` with release binary asset `patches-4.0.0.mpp`.
+- **Release Verification Details**:
+  - **CI Workflow Run**: Run `41089344647` (Job ID `124178794612`) completed successfully in 1m56s with all Gradle build, patch listing generation, metadata validation, and release publishing steps passing green.
+  - **Release Title & Tag Compliance**: Release created with tag `v4.0.0` and title `v4.0.0`, strictly matching semantic versioning and release naming mandates (no prefixed/suffixed application name).
+  - **Published Artifacts**: Release asset `patches-4.0.0.mpp` built from Android release extension DEX and Morphe patch bundle is published and available for download.
+  - **Multi-Platform Sync**: All upstream merge and extension fixes are cryptographically verified and mirrored across GitHub (`junksidetm`), GitLab (`mrdarksidetm`), and Codeberg (`mrdarksidetm`).
+- **Files Modified**:
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Release v4.0.0 Published)
