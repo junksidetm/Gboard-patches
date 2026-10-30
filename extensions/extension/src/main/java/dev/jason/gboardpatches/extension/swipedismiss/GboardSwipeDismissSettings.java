@@ -19,17 +19,36 @@ public final class GboardSwipeDismissSettings {
     }
 
     public static Boolean readEnabledOrNull(SharedPreferences preferences) {
-        return GboardBooleanFlagSettings.readEnabledOrNull(preferences, PREF_KEY_ENABLED);
+        if (preferences == null) {
+            return null;
+        }
+        Object raw = preferences.getAll().get(PREF_KEY_ENABLED);
+        if (raw == null && !preferences.contains(PREF_KEY_ENABLED)) {
+            return DEFAULT_ENABLED;
+        }
+        if (raw instanceof Boolean value) {
+            return value;
+        }
+        if (raw instanceof String value) {
+            if ("true".equalsIgnoreCase(value)) {
+                return Boolean.TRUE;
+            }
+            if ("false".equalsIgnoreCase(value)) {
+                return Boolean.FALSE;
+            }
+        }
+        return null;
     }
 
     public static boolean readEnabled(SharedPreferences preferences) {
-        return GboardBooleanFlagSettings.readEnabled(
-                preferences, PREF_KEY_ENABLED, DEFAULT_ENABLED);
+        Boolean enabled = readEnabledOrNull(preferences);
+        return enabled != null ? enabled.booleanValue() : DEFAULT_ENABLED;
     }
 
     public static void ensureDefault(SharedPreferences preferences) {
-        GboardBooleanFlagSettings.ensureDefault(
-                preferences, PREF_KEY_ENABLED, DEFAULT_ENABLED);
+        if (preferences != null && !preferences.contains(PREF_KEY_ENABLED)) {
+            preferences.edit().putBoolean(PREF_KEY_ENABLED, DEFAULT_ENABLED).commit();
+        }
     }
 
     public static boolean writeEnabled(SharedPreferences preferences, boolean enabled) {

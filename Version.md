@@ -1955,3 +1955,26 @@
 - **Files Modified**:
   - `Version.md` (Appended)
 - **Status**: 100% (Completed, Multi-Platform Synced & CI Green)
+
+## [2026-10-30 21:51:00 IST] - Fix Extension Compilation Errors, Release Workflow Title Alignment & Release Re-dispatch
+- **Action**: Resolved 8 `compileReleaseJavaWithJavac` compilation errors in `:extensions:extension` following the v4.0.0 class renaming, restored `GboardEmojiSizeRuntime` from accidental merge collision with `cursortrackpad`, aligned release title format in `.github/workflows/release.yml` with project mandates, and verified all 5 fork invariants.
+- **Root Cause & Fixes**:
+  - `GboardRamblerOfficialSelectionRuntime.java`: Corrected import and reference from retired `GboardAdvancedVoice1803RuntimeSettings` to version-agnostic `GboardAdvancedVoiceRuntimeSettings`.
+  - `GboardAdvancedVoiceRuntime.java`: Corrected `GboardAdvancedVoice1803Policy.maybeEnableUniversalFormatter` call to `GboardAdvancedVoicePolicy`.
+  - `GboardEmojiSizeRuntime.java`: Replaced mis-merged cursor trackpad code with canonical emoji scale override logic.
+  - `GboardSwipeDismissSettings.java`: Implemented `readEnabledOrNull(SharedPreferences)` inline resolving missing method error on `GboardBooleanFlagSettings`.
+  - `GboardCursorTrackpadPolicyTest.java`: Updated legacy `GboardCursorTrackpad1803Policy` and `GboardCursorTrackpad1803Runtime` test assertions to `GboardCursorTrackpadPolicy` and `GboardCursorTrackpadRuntime`.
+  - `GboardAdvancedVoiceUniversalLocaleTest.java`: Updated test references from `GboardAdvancedVoice1803Runtime` to `GboardAdvancedVoiceRuntime` and `GboardAdvancedVoiceRuntimeSettings`.
+  - `.github/workflows/release.yml`: Aligned release name to match tag string `${{ steps.metadata.outputs.tag }}` directly per Release Title Naming Mandate.
+- **Verification**:
+  - Ran `scripts/verify-invariants.ps1`: All 5 critical fork invariants passed 100%.
+- **Files Modified**:
+  - `.github/workflows/release.yml`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/GboardRamblerOfficialSelectionRuntime.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceRuntime.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojisize/GboardEmojiSizeRuntime.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissSettings.java`
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadPolicyTest.java`
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceUniversalLocaleTest.java`
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Invariants Certified)

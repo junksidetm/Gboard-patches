@@ -15,13 +15,10 @@ public final class GboardEmojiSizeRuntime {
                 return stockResult;
             }
             SharedPreferences preferences = GboardFlagRuntimeContext.preferencesOrNull();
-            boolean enabled = GboardCursorTrackpadSettings.readEnabled(preferences);
-            return GboardCursorTrackpad1803Policy.maybeForceFlag(flagName, stockResult, enabled);
+            return preferences == null
+                    ? stockResult
+                    : applyOverriddenFlagValue(flagName, stockResult, preferences);
         } catch (Throwable ignored) {
-            if (GboardCursorTrackpad1803Policy.isCursorTrackpadFlag(flagName)
-                    && GboardCursorTrackpadSettings.isCachedEnabled()) {
-                return Boolean.TRUE;
-            }
             return stockResult;
         }
     }

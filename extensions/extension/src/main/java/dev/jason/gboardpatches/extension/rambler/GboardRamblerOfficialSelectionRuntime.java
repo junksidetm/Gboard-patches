@@ -4,7 +4,7 @@ import android.content.Context;
 
 import java.lang.reflect.Method;
 
-import dev.jason.gboardpatches.extension.advancedvoice.GboardAdvancedVoice1803RuntimeSettings;
+import dev.jason.gboardpatches.extension.advancedvoice.GboardAdvancedVoiceRuntimeSettings;
 
 /** Keeps Agentic capability exposure aligned with Gboard's official selector. */
 public final class GboardRamblerOfficialSelectionRuntime {
@@ -27,7 +27,7 @@ public final class GboardRamblerOfficialSelectionRuntime {
         }
         Boolean selected = officialRamblerSelected;
         if (selected == null) {
-            if (GboardAdvancedVoice1803RuntimeSettings.isRamblerEnabled()) {
+            if (GboardAdvancedVoiceRuntimeSettings.isRamblerEnabled()) {
                 return true;
             }
             selected = readOfficialSelection();

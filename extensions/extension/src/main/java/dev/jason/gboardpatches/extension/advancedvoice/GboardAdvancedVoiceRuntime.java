@@ -366,7 +366,7 @@ public final class GboardAdvancedVoiceRuntime {
                 disableAdvancedFeaturesField.getBoolean(configurationData);
         Object originalFormatterDisabled = args[4];
         Object enforcedFormatterDisabled =
-                GboardAdvancedVoice1803Policy.maybeEnableUniversalFormatter(
+                GboardAdvancedVoicePolicy.maybeEnableUniversalFormatter(
                         locale,
                         stockAdvancedFeaturesDisabled,
                         originalFormatterDisabled);

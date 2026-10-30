@@ -112,7 +112,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.metadata.outputs.tag }}
-          name: Gboard Patches ${{ steps.metadata.outputs.tag }}
+          name: ${{ steps.metadata.outputs.tag }}
           body_path: release-notes.md
           prerelease: ${{ contains(steps.metadata.outputs.tag, '-dev.') }}
           make_latest: true

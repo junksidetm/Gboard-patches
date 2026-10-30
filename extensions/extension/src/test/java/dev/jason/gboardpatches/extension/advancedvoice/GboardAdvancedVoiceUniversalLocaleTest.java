@@ -15,8 +15,8 @@ public final class GboardAdvancedVoiceUniversalLocaleTest {
         Set<Object> stock = new HashSet<Object>();
         stock.add(Locale.US);
 
-        GboardAdvancedVoice1803Runtime.UniversalSupportedLocaleSet set =
-                new GboardAdvancedVoice1803Runtime.UniversalSupportedLocaleSet(stock);
+        GboardAdvancedVoiceRuntime.UniversalSupportedLocaleSet set =
+                new GboardAdvancedVoiceRuntime.UniversalSupportedLocaleSet(stock);
 
         Locale[] testLocales = new Locale[] {
                 Locale.US,
@@ -56,14 +56,14 @@ public final class GboardAdvancedVoiceUniversalLocaleTest {
 
     @Test
     public void includeExactZhTwSupportedLocaleReturnsUniversalSetWhenEnabled() {
-        GboardAdvancedVoice1803RuntimeSettings.clearEnabledOverrideForTest();
+        GboardAdvancedVoiceRuntimeSettings.clearEnabledOverrideForTest();
         try {
-            GboardAdvancedVoice1803RuntimeSettings.setEnabledOverrideForTest(true);
+            GboardAdvancedVoiceRuntimeSettings.setEnabledOverrideForTest(true);
             Set<Object> stock = new HashSet<Object>();
             stock.add(Locale.US);
 
-            Object result = GboardAdvancedVoice1803Runtime.includeExactZhTwSupportedLocale(stock);
-            Assert.assertTrue(result instanceof GboardAdvancedVoice1803Runtime.UniversalSupportedLocaleSet);
+            Object result = GboardAdvancedVoiceRuntime.includeExactZhTwSupportedLocale(stock);
+            Assert.assertTrue(result instanceof GboardAdvancedVoiceRuntime.UniversalSupportedLocaleSet);
 
             @SuppressWarnings("unchecked")
             Set<Object> resultSet = (Set<Object>) result;
@@ -72,23 +72,23 @@ public final class GboardAdvancedVoiceUniversalLocaleTest {
             Assert.assertTrue(resultSet.contains(Locale.forLanguageTag("fr-FR")));
             Assert.assertTrue(resultSet.contains(Locale.US));
         } finally {
-            GboardAdvancedVoice1803RuntimeSettings.clearEnabledOverrideForTest();
+            GboardAdvancedVoiceRuntimeSettings.clearEnabledOverrideForTest();
         }
     }
 
     @Test
     public void after1803NativeSplitReadinessReturnsTrueWhenEnabled() {
-        GboardAdvancedVoice1803RuntimeSettings.clearEnabledOverrideForTest();
+        GboardAdvancedVoiceRuntimeSettings.clearEnabledOverrideForTest();
         try {
-            GboardAdvancedVoice1803RuntimeSettings.setEnabledOverrideForTest(true);
-            Assert.assertTrue(GboardAdvancedVoice1803Runtime.after1803NativeSplitReadiness(false));
-            Assert.assertTrue(GboardAdvancedVoice1803Runtime.after1803NativeSplitReadiness(true));
+            GboardAdvancedVoiceRuntimeSettings.setEnabledOverrideForTest(true);
+            Assert.assertTrue(GboardAdvancedVoiceRuntime.after1803NativeSplitReadiness(false));
+            Assert.assertTrue(GboardAdvancedVoiceRuntime.after1803NativeSplitReadiness(true));
 
-            GboardAdvancedVoice1803RuntimeSettings.setEnabledOverrideForTest(false);
-            Assert.assertFalse(GboardAdvancedVoice1803Runtime.after1803NativeSplitReadiness(false));
-            Assert.assertTrue(GboardAdvancedVoice1803Runtime.after1803NativeSplitReadiness(true));
+            GboardAdvancedVoiceRuntimeSettings.setEnabledOverrideForTest(false);
+            Assert.assertFalse(GboardAdvancedVoiceRuntime.after1803NativeSplitReadiness(false));
+            Assert.assertTrue(GboardAdvancedVoiceRuntime.after1803NativeSplitReadiness(true));
         } finally {
-            GboardAdvancedVoice1803RuntimeSettings.clearEnabledOverrideForTest();
+            GboardAdvancedVoiceRuntimeSettings.clearEnabledOverrideForTest();
         }
     }
 }

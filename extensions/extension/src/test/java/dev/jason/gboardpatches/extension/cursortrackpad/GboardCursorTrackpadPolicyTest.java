@@ -16,27 +16,27 @@ public final class GboardCursorTrackpadPolicyTest {
     public void disabledOrUnrelatedPreservesStock() {
         Assert.assertSame(Boolean.FALSE, GboardCursorTrackpadPolicy.maybeForceFlag(
                 "free_cursor", Boolean.FALSE, false));
-        Assert.assertNull(GboardCursorTrackpad1803Policy.maybeForceFlag(
+        Assert.assertNull(GboardCursorTrackpadPolicy.maybeForceFlag(
                 "free_cursor", null, false));
-        Assert.assertSame(Boolean.FALSE, GboardCursorTrackpad1803Policy.maybeForceFlag(
+        Assert.assertSame(Boolean.FALSE, GboardCursorTrackpadPolicy.maybeForceFlag(
                 "unrelated_flag", Boolean.FALSE, true));
-        Assert.assertNull(GboardCursorTrackpad1803Policy.maybeForceFlag(
+        Assert.assertNull(GboardCursorTrackpadPolicy.maybeForceFlag(
                 "unrelated_flag", null, true));
     }
 
     @Test
     public void enabledForcesFlagsPermanentlyEvenWhenStockResultIsNull() {
-        Assert.assertEquals(Boolean.TRUE, GboardCursorTrackpad1803Policy.maybeForceFlag(
+        Assert.assertEquals(Boolean.TRUE, GboardCursorTrackpadPolicy.maybeForceFlag(
                 "free_cursor", null, true));
-        Assert.assertEquals(Boolean.TRUE, GboardCursorTrackpad1803Policy.maybeForceFlag(
+        Assert.assertEquals(Boolean.TRUE, GboardCursorTrackpadPolicy.maybeForceFlag(
                 "free_cursor_lock_mode", null, true));
     }
 
     @Test
     public void recognizesCursorTrackpadFlags() {
-        Assert.assertTrue(GboardCursorTrackpad1803Policy.isCursorTrackpadFlag("free_cursor"));
-        Assert.assertTrue(GboardCursorTrackpad1803Policy.isCursorTrackpadFlag("free_cursor_lock_mode"));
-        Assert.assertFalse(GboardCursorTrackpad1803Policy.isCursorTrackpadFlag("unrelated_flag"));
+        Assert.assertTrue(GboardCursorTrackpadPolicy.isCursorTrackpadFlag("free_cursor"));
+        Assert.assertTrue(GboardCursorTrackpadPolicy.isCursorTrackpadFlag("free_cursor_lock_mode"));
+        Assert.assertFalse(GboardCursorTrackpadPolicy.isCursorTrackpadFlag("unrelated_flag"));
     }
 
     @Test
@@ -44,7 +44,7 @@ public final class GboardCursorTrackpadPolicyTest {
         Assert.assertTrue(GboardCursorTrackpadSettings.DEFAULT_ENABLED);
         Assert.assertTrue(GboardCursorTrackpadSettings.isCachedEnabled());
         Assert.assertTrue(GboardCursorTrackpadSettings.readEnabled(null));
-        Assert.assertEquals(Boolean.TRUE, GboardCursorTrackpad1803Runtime.applyOverriddenFlagValue("free_cursor", Boolean.FALSE));
-        Assert.assertEquals(Boolean.TRUE, GboardCursorTrackpad1803Runtime.applyOverriddenFlagValue("free_cursor_lock_mode", null));
+        Assert.assertEquals(Boolean.TRUE, GboardCursorTrackpadRuntime.applyOverriddenFlagValue("free_cursor", Boolean.FALSE));
+        Assert.assertEquals(Boolean.TRUE, GboardCursorTrackpadRuntime.applyOverriddenFlagValue("free_cursor_lock_mode", null));
     }
 }
