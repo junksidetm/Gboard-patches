@@ -3,71 +3,46 @@ package dev.jason.gboardpatches.extension.swipedismiss;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import dev.jason.gboardpatches.extension.flagsettings.GboardFlagRuntimeContext;
+import dev.jason.gboardpatches.extension.flagsettings.GboardBooleanFlagSettings;
 import dev.jason.gboardpatches.extension.settings.GboardPatchesSettings;
 
 public final class GboardSwipeDismissSettings {
-    public static final String PREF_KEY_ENABLED = "pref_swipe_down_dismiss_keyboard_enabled";
+    public static final String PREF_KEY_ENABLED = "pref_swipe_dismiss_enabled";
     public static final boolean DEFAULT_ENABLED = false;
 
     private GboardSwipeDismissSettings() {
     }
 
     public static boolean readEnabled(Context context) {
-        if (context == null || !GboardFlagRuntimeContext.isUserUnlocked(context)) {
-            return false;
-        }
-        try {
-            SharedPreferences preferences = GboardPatchesSettings.preferences(context);
-            ensureDefault(preferences);
-            return readEnabled(preferences);
-        } catch (Throwable ignored) {
-            return DEFAULT_ENABLED;
-        }
+        return GboardPatchesSettings.readRuntimeSetting(context,
+                GboardSwipeDismissSettings::readEnabled, DEFAULT_ENABLED);
     }
 
     public static Boolean readEnabledOrNull(SharedPreferences preferences) {
-        if (preferences == null) {
-            return null;
-        }
-        Object raw = preferences.getAll().get(PREF_KEY_ENABLED);
-        if (raw == null && !preferences.contains(PREF_KEY_ENABLED)) {
-            return DEFAULT_ENABLED;
-        }
-        if (raw instanceof Boolean value) {
-            return value;
-        }
-        if (raw instanceof String value) {
-            if ("true".equalsIgnoreCase(value)) {
-                return Boolean.TRUE;
-            }
-            if ("false".equalsIgnoreCase(value)) {
-                return Boolean.FALSE;
-            }
-        }
-        return null;
+        return GboardBooleanFlagSettings.readEnabledOrNull(preferences, PREF_KEY_ENABLED);
     }
 
     public static boolean readEnabled(SharedPreferences preferences) {
-        Boolean enabled = readEnabledOrNull(preferences);
-        return enabled != null ? enabled.booleanValue() : DEFAULT_ENABLED;
+        return GboardBooleanFlagSettings.readEnabled(
+                preferences, PREF_KEY_ENABLED, DEFAULT_ENABLED);
     }
 
     public static void ensureDefault(SharedPreferences preferences) {
-        if (preferences != null && !preferences.contains(PREF_KEY_ENABLED)) {
-            preferences.edit().putBoolean(PREF_KEY_ENABLED, DEFAULT_ENABLED).commit();
-        }
+        GboardBooleanFlagSettings.ensureDefault(
+                preferences, PREF_KEY_ENABLED, DEFAULT_ENABLED);
+    }
+
+    public static boolean writeEnabled(SharedPreferences preferences, boolean enabled) {
+        return GboardBooleanFlagSettings.writeEnabled(
+                preferences, PREF_KEY_ENABLED, enabled);
     }
 
     public static boolean writeEnabled(Context context, boolean enabled) {
-        if (context == null || !GboardFlagRuntimeContext.isUserUnlocked(context)) {
-            return false;
-        }
+        SharedPreferences preferences = GboardPatchesSettings.preferencesOrNull(context);
+        if (preferences == null) return false;
         try {
-            return GboardPatchesSettings.preferences(context).edit()
-                    .putBoolean(PREF_KEY_ENABLED, enabled)
-                    .commit();
-        } catch (Throwable ignored) {
+            return preferences.edit().putBoolean(PREF_KEY_ENABLED, enabled).commit();
+        } catch (RuntimeException unavailable) {
             return false;
         }
     }

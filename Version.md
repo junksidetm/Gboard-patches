@@ -1910,3 +1910,36 @@
   - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803Runtime.java`
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Invariants Certified)
+
+## [2026-10-28 16:40:00 IST] - Upstream v4.0.0 Release Sync, Gboard 18.5.4 Alignment & Fork Invariants Certification
+- **Action**: Resolved GitHub Actions scheduled `upstream-sync.yml` conflict caused by upstream releasing `v4.0.0` (commit `2eb7185`), ingested upstream Gboard 18.5.4 support and major architectural refactoring (version-agnostic class renaming), harmonized all 5 critical fork invariants, updated release bundle metadata to v4.0.0, and updated invariant verification automation.
+- **Root Cause & Architectural Remediation**:
+  - **Scheduled Sync Conflict**: Upstream `jasonwu1994/Gboard-patches` published `v4.0.0` (`2eb7185`), upgrading target Gboard to `18.5.4.993608717-release-arm64-v8a` and renaming 1803-suffixed classes to clean version-agnostic names (`GboardAdvancedVoiceRuntime`, `GboardAdvancedVoicePolicy`, `GboardCursorTrackpadRuntime`, etc.). The daily automated upstream sync workflow halted at "Attempt merge on sync branch" due to conflicts between upstream refactoring and fork enhancements.
+  - **Conflict Resolution & Feature Harmonization**:
+    - `GboardSoftKeyFamilyComposer.kt`: Mapped upstream's new `before-stock` contribution for `ZHUYIN_BOTTOM_ROW` while preserving `CUSTOM_EMOJI_FONT` softkey delegation.
+    - `RuntimeAbi.kt`: Replaced legacy 1803 emoji size runtime call with version-agnostic `GboardEmojiSizeRuntime` while preserving `EMOJI_FONT_RUNTIME_AFTER_SOFT_KEY_BOUND`.
+    - `GboardPatchesSettingsActivity.java`: Adopted upstream's v4.0.0 dynamic scrolling toolbar and large title blocks while preserving `junksidetm` attribution links (`ABOUT_AUTHOR_URL`, `ABOUT_PATCH_REPOSITORY_URL`) and SAF binary document picker handling.
+    - `GboardAdvancedVoiceRuntime.java` & `GboardAdvancedVoiceSettings.java`: Adapted universal locale override (`UniversalSupportedLocaleSet`) and default Rambler selection (`DEFAULT_BACKEND = BACKEND_RAMBLER`, `DEFAULT_ZH_TW_PUNCTUATION_ENABLED = true`) to new version-agnostic setting classes.
+    - `GboardCursorTrackpadRuntime.java` & `GboardCursorTrackpadSettings.java`: Maintained Invariant 5 (Cursor Trackpad Mode Permanence) using Rambler default-on pattern, removing stock `Boolean.FALSE` checks.
+    - `GboardSwipeDismissSettings.java` & `GboardSwipeDismissRuntime.java`: Adopted upstream's official Direct Boot safety mechanisms (`GboardPatchesSettings.isUserUnlocked`, `readRuntimeSetting`).
+    - `gboard-port-product-catalog.sha256`: Recalculated canonical SHA-256 (`f6e33dcb49b27319c7bc9f9e7f3dcff78aa79bd96763c295b46261049f9ff6e1`) for product catalog with 44 features including `custom_emoji_font`.
+    - `patches-bundle.json`: Upgraded release version to `4.0.0`, pointed download URL to `junksidetm/Gboard-patches/releases/download/v4.0.0/patches-4.0.0.mpp`, and updated changelog notes.
+    - `scripts/verify-invariants.ps1`: Upgraded path discovery to resolve both version-agnostic and legacy filenames dynamically.
+- **Verification & Fork Invariants**:
+  - Executed `scripts/verify-invariants.ps1`: All 5 critical fork invariants passed 100% (Custom 3D Emoji Font, English US/India Rambler & Voice, AI Writing Tools persistence, junksidetm attribution & jasonwu1994 credits, Cursor Trackpad permanence).
+- **Files Modified**:
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeAbi.kt`
+  - `patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/GboardSoftKeyFamilyComposer.kt`
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.sha256`
+  - `patches-bundle.json`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/settings/GboardPatchesSettingsActivity.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceRuntime.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceSettings.java`
+  - `extensions/extension/src/test/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceRuntimeSettingsTest.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojisize/GboardEmojiSizeRuntime.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadRuntime.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissSettings.java`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/swipedismiss/GboardSwipeDismissRuntime.java`
+  - `scripts/verify-invariants.ps1`
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Invariants Certified)

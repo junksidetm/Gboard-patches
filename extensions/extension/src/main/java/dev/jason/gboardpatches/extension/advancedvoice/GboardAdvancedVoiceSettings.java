@@ -49,7 +49,7 @@ public final class GboardAdvancedVoiceSettings {
         }
         if (changed) {
             if (editor.commit()) {
-                GboardAdvancedVoice1803RuntimeSettings.invalidateCachedSnapshot();
+                GboardAdvancedVoiceRuntimeSettings.invalidateCachedSnapshot();
             }
         }
     }
@@ -93,7 +93,7 @@ public final class GboardAdvancedVoiceSettings {
                 ? BACKEND_RAMBLER : BACKEND_ADVANCED;
         boolean committed = preferences.edit().putString(PREF_KEY_BACKEND, sanitized).commit();
         if (committed) {
-            GboardAdvancedVoice1803RuntimeSettings.invalidateCachedSnapshot();
+            GboardAdvancedVoiceRuntimeSettings.invalidateCachedSnapshot();
         }
         return committed;
     }
@@ -142,7 +142,7 @@ public final class GboardAdvancedVoiceSettings {
         }
         boolean committed = preferences.edit().putBoolean(key, value).commit();
         if (committed) {
-            GboardAdvancedVoice1803RuntimeSettings.invalidateCachedSnapshot();
+            GboardAdvancedVoiceRuntimeSettings.invalidateCachedSnapshot();
         }
         return committed;
     }

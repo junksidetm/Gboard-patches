@@ -1,41 +1,41 @@
-# Scripts to verify critical fork invariants for mrdarksidetm/Gboard-patches
-# Ensures that upstream merges never silently remove or overwrite our features or credits.
-
-[CmdletBinding()]
-param()
+# Scripts to verify critical fork invariants for junksidetm/Gboard-patches
+# Ensures custom fork features are never silently broken by upstream merges.
 
 $ErrorActionPreference = "Stop"
-
-Write-Host "==> Verifying Fork Invariants..." -ForegroundColor Cyan
-
-$root = Resolve-Path (Join-Path $PSScriptRoot "..")
+$root = $PSScriptRoot | Split-Path -Parent
 
 function Assert-Condition($condition, $message) {
     if (-not $condition) {
-        Write-Error "INVARIANT FAILURE: $message"
+        Write-Host "  [FAIL] $message" -ForegroundColor Red
         exit 1
+    } else {
+        Write-Host "  [OK] $message" -ForegroundColor Green
     }
-    Write-Host "  [OK] $message" -ForegroundColor Green
 }
+
+Write-Host "==> Verifying Fork Invariants..." -ForegroundColor Cyan
 
 # --- Invariant 1: Custom Emoji Font Feature ---
 Write-Host "`n1. Checking Custom Emoji Font Feature..." -ForegroundColor Yellow
-$catalogJsonPath = Join-Path $root "patches/src/main/resources/gboard/gboard-port-product-catalog.json"
-Assert-Condition (Test-Path $catalogJsonPath) "Catalog JSON exists"
-$catalogContent = Get-Content -Raw $catalogJsonPath
-Assert-Condition ($catalogContent -match '"feature_id"\s*:\s*"custom_emoji_font"') "Catalog contains custom_emoji_font"
+$catalogPath = Join-Path $root "patches/src/main/resources/gboard/gboard-port-product-catalog.json"
+Assert-Condition (Test-Path $catalogPath) "Catalog JSON exists"
+
+$catalogContent = Get-Content -Raw $catalogPath
+Assert-Condition ($catalogContent -match '"feature_id":\s*"custom_emoji_font"') "Catalog contains custom_emoji_font"
 
 $catalogShaPath = Join-Path $root "patches/src/main/resources/gboard/gboard-port-product-catalog.sha256"
 Assert-Condition (Test-Path $catalogShaPath) "Catalog SHA-256 file exists"
+
 $expectedSha = (Get-Content -Raw $catalogShaPath).Trim()
-$actualSha = (Get-FileHash -LiteralPath $catalogJsonPath -Algorithm SHA256).Hash.ToLowerInvariant()
+$hasher = [System.Security.Cryptography.SHA256]::Create()
+$actualSha = [BitConverter]::ToString($hasher.ComputeHash([System.IO.File]::ReadAllBytes($catalogPath))).Replace("-", "").ToLowerInvariant()
 Assert-Condition ($expectedSha -eq $actualSha) "Catalog SHA-256 hash matches"
 
-$emojiRuntimePath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontRuntime.java"
-Assert-Condition (Test-Path $emojiRuntimePath) "GboardEmojiFontRuntime.java exists"
+$runtimeJava = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/emojifont/GboardEmojiFontRuntime.java"
+Assert-Condition (Test-Path $runtimeJava) "GboardEmojiFontRuntime.java exists"
 
-$emojiPatchPath = Join-Path $root "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont/GboardEmojiFontPatch.kt"
-Assert-Condition (Test-Path $emojiPatchPath) "GboardEmojiFontPatch.kt exists"
+$patchKt = Join-Path $root "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/features/emojifont/GboardEmojiFontPatch.kt"
+Assert-Condition (Test-Path $patchKt) "GboardEmojiFontPatch.kt exists"
 
 $runtimeAbiPath = Join-Path $root "patches/src/main/kotlin/dev/jason/gboardpatches/patches/gboard/shared/runtimeabi/RuntimeAbi.kt"
 $runtimeAbiContent = Get-Content -Raw $runtimeAbiPath
@@ -51,16 +51,28 @@ $voiceSettingsPath = Join-Path $root "extensions/extension/src/main/java/dev/jas
 $voiceSettingsContent = Get-Content -Raw $voiceSettingsPath
 Assert-Condition ($voiceSettingsContent -match 'DEFAULT_BACKEND\s*=\s*BACKEND_RAMBLER') "DEFAULT_BACKEND is BACKEND_RAMBLER"
 
-$voiceRuntimeSettingsPath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803RuntimeSettings.java"
+$voiceRuntimeSettingsPath = if (Test-Path (Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceRuntimeSettings.java")) {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceRuntimeSettings.java"
+} else {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803RuntimeSettings.java"
+}
 $voiceRuntimeSettingsContent = Get-Content -Raw $voiceRuntimeSettingsPath
 Assert-Condition ($voiceRuntimeSettingsContent -match 'public static boolean isRamblerEnabled\(\)') "isRamblerEnabled() is defined"
 Assert-Condition ($voiceRuntimeSettingsContent -match 'BACKEND_RAMBLER\.equals\(backend\)') "isRamblerEnabled() checks BACKEND_RAMBLER"
 
-$ramblerSelectorRuntimePath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/GboardRambler1803OfficialSelectionRuntime.java"
+$ramblerSelectorRuntimePath = if (Test-Path (Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/GboardRamblerOfficialSelectionRuntime.java")) {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/GboardRamblerOfficialSelectionRuntime.java"
+} else {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/rambler/GboardRambler1803OfficialSelectionRuntime.java"
+}
 $ramblerSelectorContent = Get-Content -Raw $ramblerSelectorRuntimePath
-Assert-Condition ($ramblerSelectorContent -match 'GboardAdvancedVoice1803RuntimeSettings\.isRamblerEnabled\(\)') "Rambler selection checks isRamblerEnabled()"
+Assert-Condition ($ramblerSelectorContent -match 'isRamblerEnabled\(\)') "Rambler selection checks isRamblerEnabled()"
 
-$voiceRuntimePath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803Runtime.java"
+$voiceRuntimePath = if (Test-Path (Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceRuntime.java")) {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoiceRuntime.java"
+} else {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/advancedvoice/GboardAdvancedVoice1803Runtime.java"
+}
 $voiceRuntimeContent = Get-Content -Raw $voiceRuntimePath
 Assert-Condition ($voiceRuntimeContent -match 'UniversalSupportedLocaleSet') "UniversalSupportedLocaleSet exists"
 Assert-Condition ($voiceRuntimeContent -match 'Locale\.forLanguageTag\("en-IN"\)') "en-IN locale explicitly supported"
@@ -83,7 +95,11 @@ Assert-Condition ($constantsContent -match 'github\.com/jasonwu1994') "Constants
 
 # --- Invariant 5: Cursor Trackpad Mode Permanence ---
 Write-Host "`n5. Checking Cursor Trackpad Mode Permanence..." -ForegroundColor Yellow
-$trackpadPolicyPath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Policy.java"
+$trackpadPolicyPath = if (Test-Path (Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadPolicy.java")) {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadPolicy.java"
+} else {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Policy.java"
+}
 $trackpadPolicyContent = Get-Content -Raw $trackpadPolicyPath
 Assert-Condition ($trackpadPolicyContent -match 'isCursorTrackpadFlag') "Policy defines isCursorTrackpadFlag"
 Assert-Condition (-not ($trackpadPolicyContent -match '!Boolean\.FALSE\.equals\(stockResult\)')) "Policy does not restrict forcing to Boolean.FALSE (permanent override)"
@@ -92,10 +108,13 @@ $trackpadSettingsPath = Join-Path $root "extensions/extension/src/main/java/dev/
 $trackpadSettingsContent = Get-Content -Raw $trackpadSettingsPath
 Assert-Condition ($trackpadSettingsContent -match 'isCachedEnabled') "Settings provides cached fallback for transient preference resolution failures"
 
-$trackpadRuntimePath = Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Runtime.java"
+$trackpadRuntimePath = if (Test-Path (Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadRuntime.java")) {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpadRuntime.java"
+} else {
+    Join-Path $root "extensions/extension/src/main/java/dev/jason/gboardpatches/extension/cursortrackpad/GboardCursorTrackpad1803Runtime.java"
+}
 $trackpadRuntimeContent = Get-Content -Raw $trackpadRuntimePath
 Assert-Condition ($trackpadRuntimeContent -match 'isCursorTrackpadFlag') "Runtime checks isCursorTrackpadFlag directly"
 Assert-Condition (-not ($trackpadRuntimeContent -match '!Boolean\.FALSE\.equals\(stockResult\)')) "Runtime does not bypass override on non-FALSE stock results"
 
 Write-Host "`n==> ALL INVARIANTS PASSED SUCCESSFULLY!" -ForegroundColor Green
-exit 0
