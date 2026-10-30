@@ -1943,3 +1943,15 @@
   - `scripts/verify-invariants.ps1`
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Invariants Certified)
+
+## [2026-10-30 21:37:00 IST] - Upstream v4.0.0 Merge Finalization, Multi-Platform Mirror Sync & CI Workflow Recovery
+- **Action**: Finalized and cryptographically signed the staged upstream `v4.0.0` merge commit (`45a6c49`), synchronized verified commits across all mirrors (GitHub `junksidetm`, GitLab `mrdarksidetm`, Codeberg `mrdarksidetm`) using `sync-mirrors.js`, and verified clean green execution of GitHub Actions CI workflow `upstream-sync.yml`.
+- **Root Cause & Operational Resolution**:
+  - The scheduled daily GitHub Actions workflow (`upstream-sync.yml`) was failing at step "Attempt merge on sync branch" due to merge conflicts between upstream `v4.0.0` (`2eb7185`) and fork customizations. While conflicts had been resolved locally on October 28, the merge had not yet been committed or pushed to `origin/main`.
+  - Executed `scripts/verify-invariants.ps1` to re-certify all 5 critical fork pillars (Custom 3D Emoji Font, English US/India Rambler & Voice, AI Writing Tools persistence, junksidetm attribution & jasonwu1994 credits, Cursor Trackpad permanence)—all 5 suites passed 100%.
+  - Finalized merge commit `45a6c49` with verified SSH signature (`id_ed25519_junksidetm`).
+  - Executed `sync-mirrors.js` to push verified commits across GitHub (`junksidetm`), GitLab (`mrdarksidetm`), and Codeberg (`mrdarksidetm`).
+  - Dispatched GitHub Actions workflow `upstream-sync.yml` (run `41086754402`), verifying that the runner confirms repository is fully up to date with upstream and exits with a successful green status.
+- **Files Modified**:
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed, Multi-Platform Synced & CI Green)
