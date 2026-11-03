@@ -2014,3 +2014,15 @@
   - `patches/src/main/resources/gboard/gboard-port-product-catalog.sha256`
   - `Version.md` (Appended)
 - **Status**: 100% (Completed, Invariants Certified & Merged)
+
+## [2026-11-03 13:58:30 IST] - Release v4.1.1 Artifact Verification & Release Completion
+- **Action**: Monitored GitHub Actions release CI workflow (`release.yml`), verified successful build completion across all patch and extension components, certified published release `v4.1.1` with release binary asset `patches-4.1.1.mpp`, and confirmed green status on `upstream-sync.yml`.
+- **Release Verification Details**:
+  - **CI Workflow Run**: Run `41603072144` (Job ID `125806193217`) completed successfully in 3m16s with all Gradle build, patch listing generation, metadata validation, and release publishing steps passing green.
+  - **Release Title & Tag Compliance**: Release created with tag `v4.1.1` and title `v4.1.1`, strictly matching semantic versioning and release naming mandates (no prefixed/suffixed application name).
+  - **Published Artifacts**: Release asset `patches-4.1.1.mpp` built from Android release extension DEX and Morphe patch bundle is published and available for download.
+  - **Multi-Platform Sync**: All upstream merge and extension fixes are cryptographically verified and mirrored across GitHub (`junksidetm`), GitLab (`mrdarksidetm`), and Codeberg (`mrdarksidetm`).
+  - **Upstream Sync Verification**: Workflow run `41603213628` executed and confirmed that repository is 100% up to date with upstream `main` (`54a0eef`), passing all 5 fork invariants.
+- **Files Modified**:
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed & Release v4.1.1 Published)
