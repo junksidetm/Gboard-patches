@@ -1989,3 +1989,28 @@
 - **Files Modified**:
   - `Version.md` (Appended)
 - **Status**: 100% (Completed & Release v4.0.0 Published)
+
+## [2026-11-03 13:53:00 IST] - Upstream v4.1.0 & v4.1.1 Merge Sync, Conflict Resolution & Invariant Certification
+- **Action**: Resolved GitHub Actions scheduled `upstream-sync.yml` failure by merging upstream `v4.1.0` and `v4.1.1` commits (`ab61b8d` & `54a0eef`), resolving content conflicts across `README.md`, `GboardAiWritingToolsRuntime.java`, `patches-bundle.json`, and `gboard-port-product-catalog.sha256`, certifying all 5 critical fork invariants, and preparing release v4.1.1.
+- **Root Cause & Operational Resolution**:
+  - The scheduled daily GitHub Actions workflow (`upstream-sync.yml`) failed at step "Attempt merge on sync branch" (run `41442160270`).
+  - Upstream `jasonwu1994/Gboard-patches` published `v4.1.0` (commit `ab61b8d`: dictionary models, frosted glass controls, vibration intensity) and `v4.1.1` (commit `54a0eef`: Android 13 keyboard crash fix and 6-hour Web Clipboard service fix).
+  - Merging upstream `main` (`54a0eef`) into fork `main` produced content conflicts across 4 files:
+    1. `README.md`: Merged upstream's new `Dictionaries & Predictions` and `Keypress Vibration Intensity Control` entries while preserving `Custom Emoji Font (.ttf)` and `AI Writing Tools (Persistent & Universal)` fork sections.
+    2. `GboardAiWritingToolsRuntime.java`: Reconciled `isEnabledCapabilityFlag` to maintain all fork persistent writing tools and anti-suppression flags (`FLAG_ENABLE_WRITING_TOOLS_LOG_WITH_PROOFREAD`, `FLAG_WRITING_HELPER_ENABLE_ON_TOOLBAR`, etc.).
+    3. `patches-bundle.json`: Upgraded release version to `4.1.1`, configured download URL for `patches-4.1.1.mpp`, and enriched description with upstream v4.1.0/v4.1.1 changes alongside the full custom fork suite.
+    4. `gboard-port-product-catalog.sha256`: Recalculated canonical SHA-256 (`b8debdef6e62b6d9b818b133039424ac0a9320582caa63cccfe7e00348f5539f`) for merged product catalog containing `custom_emoji_font` and upstream additions.
+- **Verification & Fork Invariants**:
+  - Executed `scripts/verify-invariants.ps1`: All 5 critical fork invariant suites passed 100%:
+    1. Custom Emoji Font Feature (.ttf loader, reflection inspection, fallback chain, SHA-256 catalog hash).
+    2. Voice & Rambler Configuration (Rambler default backend, en-US and en-IN universal support).
+    3. AI Writing Tools Persistence (proofread and writing_tools flags, universal language tags allowlist).
+    4. Author Attribution & Credits (`junksidetm` repository and upstream `jasonwu1994` credit).
+    5. Cursor Trackpad Mode Permanence (`DEFAULT_ENABLED = true`, unconditional flag overrides, cached fallback).
+- **Files Modified**:
+  - `README.md`
+  - `extensions/extension/src/main/java/dev/jason/gboardpatches/extension/writingtools/GboardAiWritingToolsRuntime.java`
+  - `patches-bundle.json`
+  - `patches/src/main/resources/gboard/gboard-port-product-catalog.sha256`
+  - `Version.md` (Appended)
+- **Status**: 100% (Completed, Invariants Certified & Merged)
