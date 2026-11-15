@@ -35,7 +35,7 @@ jobs:
       pull-requests: write
       issues: write
       packages: read
-      workflows: write
+      actions: write
 
     steps:
       - name: Checkout repository
